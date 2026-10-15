@@ -1,0 +1,1263 @@
+{
+ "label": "dpo_joint",
+ "num_tasks": 12,
+ "num_samples_per_task": 2,
+ "primary_k": 2,
+ "metadata": {
+  "policy": "dpo_joint",
+  "engine": "mock",
+  "is_mock": true,
+  "pair_types": [
+   "format_constraint",
+   "error_recovery",
+   "clarify_boundary"
+  ],
+  "seed": 42,
+  "wall_time_s": 0.0,
+  "num_predictions": 24
+ },
+ "headline": {
+  "accuracy": 0.708333,
+  "pass_at_k": 0.916667,
+  "pass_hat_k": 0.5,
+  "delta_stability": -0.416667
+ },
+ "metrics": {
+  "accuracy": {
+   "name": "accuracy",
+   "value": 0.708333,
+   "ci95": [
+    0.5,
+    0.875
+   ],
+   "n_units": 12,
+   "note": "单次采样平均正确率（任务级 bootstrap 95% CI）"
+  },
+  "pass@1": {
+   "name": "pass@1",
+   "value": 0.708333,
+   "ci95": [
+    0.541667,
+    0.875
+   ],
+   "n_units": 12,
+   "note": "n=2 采样的无偏估计"
+  },
+  "pass@2": {
+   "name": "pass@2",
+   "value": 0.916667,
+   "ci95": [
+    0.75,
+    1.0
+   ],
+   "n_units": 12,
+   "note": "n=2 采样的无偏估计"
+  },
+  "pass^1": {
+   "name": "pass^1",
+   "value": 0.708333,
+   "ci95": [
+    0.5,
+    0.875
+   ],
+   "n_units": 12,
+   "note": "k 次全对的无偏估计（n=2）"
+  },
+  "pass^2": {
+   "name": "pass^2",
+   "value": 0.5,
+   "ci95": [
+    0.25,
+    0.75
+   ],
+   "n_units": 12,
+   "note": "k 次全对的无偏估计（n=2）；n==k 时退化为 0/1，参考值 (c/n)^k = 0.604（有偏）"
+  },
+  "delta_stability": {
+   "name": "Δstability(pass^2−pass@2)",
+   "value": -0.416667,
+   "ci95": [
+    -0.75,
+    -0.166667
+   ],
+   "n_units": 12,
+   "note": "越接近 0 越稳定"
+  }
+ },
+ "by_difficulty": {
+  "hard": {
+   "num_tasks": 12,
+   "accuracy": 0.7083,
+   "accuracy_ci95": [
+    0.5,
+    0.875
+   ],
+   "pass@1": 0.7083,
+   "pass@2": 0.9167,
+   "pass^1": 0.7083,
+   "pass^2": 0.5
+  }
+ },
+ "by_category": {
+  "flight_search": {
+   "num_tasks": 12,
+   "accuracy": 0.7083,
+   "accuracy_ci95": [
+    0.5,
+    0.875
+   ],
+   "pass@1": 0.7083,
+   "pass@2": 0.9167,
+   "pass^1": 0.7083,
+   "pass^2": 0.5
+  }
+ },
+ "by_visibility": {
+  "seen": {
+   "num_tasks": 8,
+   "accuracy": 0.8125,
+   "accuracy_ci95": [
+    0.625,
+    0.9375
+   ],
+   "pass@1": 0.8125,
+   "pass@2": 1.0,
+   "pass^1": 0.8125,
+   "pass^2": 0.625
+  },
+  "unseen": {
+   "num_tasks": 4,
+   "accuracy": 0.5,
+   "accuracy_ci95": [
+    0.125,
+    0.875
+   ],
+   "pass@1": 0.5,
+   "pass@2": 0.75,
+   "pass^1": 0.5,
+   "pass^2": 0.25
+  }
+ },
+ "per_task": [
+  {
+   "task_id": "task_0001",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "n": 2,
+   "c": 2,
+   "accuracy": 1.0,
+   "outcomes": [
+    true,
+    true
+   ],
+   "error_categories": [
+    "SUCCESS",
+    "SUCCESS"
+   ],
+   "predictions": [
+    {
+     "task_id": "task_0001",
+     "passed": true,
+     "category": "SUCCESS",
+     "classification": {
+      "category": "SUCCESS",
+      "category_zh": "成功",
+      "detail": {
+       "category": "SUCCESS",
+       "category_zh": "成功",
+       "subtype": "",
+       "subtype_zh": "",
+       "message": "工具与关键参数正确",
+       "fields": [],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"PEK\", \"destination\": \"SHA\", \"date\": \"2025-07-15\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": true,
+     "lenient_ok": true,
+     "param_accuracy": 1.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "PEK",
+        "destination": "SHA",
+        "date": "2025-07-15"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    },
+    {
+     "task_id": "task_0001",
+     "passed": true,
+     "category": "SUCCESS",
+     "classification": {
+      "category": "SUCCESS",
+      "category_zh": "成功",
+      "detail": {
+       "category": "SUCCESS",
+       "category_zh": "成功",
+       "subtype": "",
+       "subtype_zh": "",
+       "message": "工具与关键参数正确",
+       "fields": [],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"PEK\", \"destination\": \"SHA\", \"date\": \"2025-07-15\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": true,
+     "lenient_ok": true,
+     "param_accuracy": 1.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "PEK",
+        "destination": "SHA",
+        "date": "2025-07-15"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "task_id": "task_0002",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "n": 2,
+   "c": 1,
+   "accuracy": 0.5,
+   "outcomes": [
+    false,
+    true
+   ],
+   "error_categories": [
+    "PARAM_ERROR",
+    "SUCCESS"
+   ],
+   "predictions": [
+    {
+     "task_id": "task_0002",
+     "passed": false,
+     "category": "PARAM_ERROR",
+     "classification": {
+      "category": "PARAM_ERROR",
+      "category_zh": "参数错误",
+      "detail": {
+       "category": "PARAM_ERROR",
+       "category_zh": "参数错误",
+       "subtype": "placeholder_value",
+       "subtype_zh": "参数填了占位符",
+       "message": "参数填了占位符：['destination']",
+       "fields": [
+        "destination"
+       ],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"SHA\", \"destination\": \"previous_value\", \"date\": \"2025-07-18\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": false,
+     "lenient_ok": false,
+     "param_accuracy": 0.6667,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "SHA",
+        "destination": "previous_value",
+        "date": "2025-07-18"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    },
+    {
+     "task_id": "task_0002",
+     "passed": true,
+     "category": "SUCCESS",
+     "classification": {
+      "category": "SUCCESS",
+      "category_zh": "成功",
+      "detail": {
+       "category": "SUCCESS",
+       "category_zh": "成功",
+       "subtype": "",
+       "subtype_zh": "",
+       "message": "工具与关键参数正确",
+       "fields": [],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"SHA\", \"destination\": \"CAN\", \"date\": \"2025-07-18\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": true,
+     "lenient_ok": true,
+     "param_accuracy": 1.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "SHA",
+        "destination": "CAN",
+        "date": "2025-07-18"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "task_id": "task_0003",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "n": 2,
+   "c": 1,
+   "accuracy": 0.5,
+   "outcomes": [
+    false,
+    true
+   ],
+   "error_categories": [
+    "PARAM_ERROR",
+    "SUCCESS"
+   ],
+   "predictions": [
+    {
+     "task_id": "task_0003",
+     "passed": false,
+     "category": "PARAM_ERROR",
+     "classification": {
+      "category": "PARAM_ERROR",
+      "category_zh": "参数错误",
+      "detail": {
+       "category": "PARAM_ERROR",
+       "category_zh": "参数错误",
+       "subtype": "wrong_value",
+       "subtype_zh": "参数值不对",
+       "message": "参数值不对：date 期望 '2025-07-21' 实际 '2025-17-21'",
+       "fields": [
+        "date"
+       ],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"SZX\", \"destination\": \"CTU\", \"date\": \"2025-17-21\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": true
+     },
+     "format_ok": true,
+     "strict_ok": false,
+     "lenient_ok": false,
+     "param_accuracy": 0.6667,
+     "defects": [],
+     "format_ok_value_wrong": true,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "SZX",
+        "destination": "CTU",
+        "date": "2025-17-21"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    },
+    {
+     "task_id": "task_0003",
+     "passed": true,
+     "category": "SUCCESS",
+     "classification": {
+      "category": "SUCCESS",
+      "category_zh": "成功",
+      "detail": {
+       "category": "SUCCESS",
+       "category_zh": "成功",
+       "subtype": "",
+       "subtype_zh": "",
+       "message": "工具与关键参数正确",
+       "fields": [],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"SZX\", \"destination\": \"CTU\", \"date\": \"2025-07-21\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": true,
+     "lenient_ok": true,
+     "param_accuracy": 1.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "SZX",
+        "destination": "CTU",
+        "date": "2025-07-21"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "task_id": "task_0004",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "n": 2,
+   "c": 1,
+   "accuracy": 0.5,
+   "outcomes": [
+    true,
+    false
+   ],
+   "error_categories": [
+    "SUCCESS",
+    "HALLUCINATION"
+   ],
+   "predictions": [
+    {
+     "task_id": "task_0004",
+     "passed": true,
+     "category": "SUCCESS",
+     "classification": {
+      "category": "SUCCESS",
+      "category_zh": "成功",
+      "detail": {
+       "category": "SUCCESS",
+       "category_zh": "成功",
+       "subtype": "",
+       "subtype_zh": "",
+       "message": "工具与关键参数正确",
+       "fields": [],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"HGH\", \"destination\": \"XIY\", \"date\": \"2025-07-24\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": true,
+     "lenient_ok": true,
+     "param_accuracy": 1.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "HGH",
+        "destination": "XIY",
+        "date": "2025-07-24"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    },
+    {
+     "task_id": "task_0004",
+     "passed": false,
+     "category": "HALLUCINATION",
+     "classification": {
+      "category": "HALLUCINATION",
+      "category_zh": "工具幻觉",
+      "detail": {
+       "category": "HALLUCINATION",
+       "category_zh": "工具幻觉",
+       "subtype": "unknown_tool",
+       "subtype_zh": "工具名不在白名单",
+       "message": "调用了不存在的工具 'search_flight'",
+       "fields": [
+        "tool"
+       ],
+       "evidence": "<tool_call>{\"name\": \"search_flight\", \"arguments\": {\"origin\": \"HGH\", \"destination\": \"XIY\", \"date\": \"2025-07-24\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": false,
+     "lenient_ok": false,
+     "param_accuracy": 0.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flight",
+       "arguments": {
+        "origin": "HGH",
+        "destination": "XIY",
+        "date": "2025-07-24"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "task_id": "task_0005",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "n": 2,
+   "c": 2,
+   "accuracy": 1.0,
+   "outcomes": [
+    true,
+    true
+   ],
+   "error_categories": [
+    "SUCCESS",
+    "SUCCESS"
+   ],
+   "predictions": [
+    {
+     "task_id": "task_0005",
+     "passed": true,
+     "category": "SUCCESS",
+     "classification": {
+      "category": "SUCCESS",
+      "category_zh": "成功",
+      "detail": {
+       "category": "SUCCESS",
+       "category_zh": "成功",
+       "subtype": "",
+       "subtype_zh": "",
+       "message": "工具与关键参数正确",
+       "fields": [],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"CKG\", \"destination\": \"KMG\", \"date\": \"2025-07-28\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": true,
+     "lenient_ok": true,
+     "param_accuracy": 1.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "CKG",
+        "destination": "KMG",
+        "date": "2025-07-28"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    },
+    {
+     "task_id": "task_0005",
+     "passed": true,
+     "category": "SUCCESS",
+     "classification": {
+      "category": "SUCCESS",
+      "category_zh": "成功",
+      "detail": {
+       "category": "SUCCESS",
+       "category_zh": "成功",
+       "subtype": "",
+       "subtype_zh": "",
+       "message": "工具与关键参数正确",
+       "fields": [],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"CKG\", \"destination\": \"KMG\", \"date\": \"2025-07-28\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": true,
+     "lenient_ok": true,
+     "param_accuracy": 1.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "CKG",
+        "destination": "KMG",
+        "date": "2025-07-28"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "task_id": "task_0006",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "n": 2,
+   "c": 2,
+   "accuracy": 1.0,
+   "outcomes": [
+    true,
+    true
+   ],
+   "error_categories": [
+    "SUCCESS",
+    "SUCCESS"
+   ],
+   "predictions": [
+    {
+     "task_id": "task_0006",
+     "passed": true,
+     "category": "SUCCESS",
+     "classification": {
+      "category": "SUCCESS",
+      "category_zh": "成功",
+      "detail": {
+       "category": "SUCCESS",
+       "category_zh": "成功",
+       "subtype": "",
+       "subtype_zh": "",
+       "message": "工具与关键参数正确",
+       "fields": [],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"XMN\", \"destination\": \"NKG\", \"date\": \"2025-08-01\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": true,
+     "lenient_ok": true,
+     "param_accuracy": 1.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "XMN",
+        "destination": "NKG",
+        "date": "2025-08-01"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    },
+    {
+     "task_id": "task_0006",
+     "passed": true,
+     "category": "SUCCESS",
+     "classification": {
+      "category": "SUCCESS",
+      "category_zh": "成功",
+      "detail": {
+       "category": "SUCCESS",
+       "category_zh": "成功",
+       "subtype": "",
+       "subtype_zh": "",
+       "message": "工具与关键参数正确",
+       "fields": [],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"XMN\", \"destination\": \"NKG\", \"date\": \"2025-08-01\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": true,
+     "lenient_ok": true,
+     "param_accuracy": 1.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "XMN",
+        "destination": "NKG",
+        "date": "2025-08-01"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "task_id": "task_0007",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "n": 2,
+   "c": 2,
+   "accuracy": 1.0,
+   "outcomes": [
+    true,
+    true
+   ],
+   "error_categories": [
+    "SUCCESS",
+    "SUCCESS"
+   ],
+   "predictions": [
+    {
+     "task_id": "task_0007",
+     "passed": true,
+     "category": "SUCCESS",
+     "classification": {
+      "category": "SUCCESS",
+      "category_zh": "成功",
+      "detail": {
+       "category": "SUCCESS",
+       "category_zh": "成功",
+       "subtype": "",
+       "subtype_zh": "",
+       "message": "工具与关键参数正确",
+       "fields": [],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"WUH\", \"destination\": \"TAO\", \"date\": \"2025-08-05\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": true,
+     "lenient_ok": true,
+     "param_accuracy": 1.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "WUH",
+        "destination": "TAO",
+        "date": "2025-08-05"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    },
+    {
+     "task_id": "task_0007",
+     "passed": true,
+     "category": "SUCCESS",
+     "classification": {
+      "category": "SUCCESS",
+      "category_zh": "成功",
+      "detail": {
+       "category": "SUCCESS",
+       "category_zh": "成功",
+       "subtype": "",
+       "subtype_zh": "",
+       "message": "工具与关键参数正确",
+       "fields": [],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"WUH\", \"destination\": \"TAO\", \"date\": \"2025-08-05\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": true,
+     "lenient_ok": true,
+     "param_accuracy": 1.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "WUH",
+        "destination": "TAO",
+        "date": "2025-08-05"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "task_id": "task_0008",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "n": 2,
+   "c": 1,
+   "accuracy": 0.5,
+   "outcomes": [
+    false,
+    true
+   ],
+   "error_categories": [
+    "HALLUCINATION",
+    "SUCCESS"
+   ],
+   "predictions": [
+    {
+     "task_id": "task_0008",
+     "passed": false,
+     "category": "HALLUCINATION",
+     "classification": {
+      "category": "HALLUCINATION",
+      "category_zh": "工具幻觉",
+      "detail": {
+       "category": "HALLUCINATION",
+       "category_zh": "工具幻觉",
+       "subtype": "unknown_tool",
+       "subtype_zh": "工具名不在白名单",
+       "message": "调用了不存在的工具 'find_flights'",
+       "fields": [
+        "tool"
+       ],
+       "evidence": "<tool_call>{\"name\": \"find_flights\", \"arguments\": {\"origin\": \"CSX\", \"destination\": \"SYX\", \"date\": \"2025-08-09\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": false,
+     "lenient_ok": false,
+     "param_accuracy": 0.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "find_flights",
+       "arguments": {
+        "origin": "CSX",
+        "destination": "SYX",
+        "date": "2025-08-09"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    },
+    {
+     "task_id": "task_0008",
+     "passed": true,
+     "category": "SUCCESS",
+     "classification": {
+      "category": "SUCCESS",
+      "category_zh": "成功",
+      "detail": {
+       "category": "SUCCESS",
+       "category_zh": "成功",
+       "subtype": "",
+       "subtype_zh": "",
+       "message": "工具与关键参数正确",
+       "fields": [],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"CSX\", \"destination\": \"SYX\", \"date\": \"2025-08-09\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": true,
+     "lenient_ok": true,
+     "param_accuracy": 1.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "CSX",
+        "destination": "SYX",
+        "date": "2025-08-09"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "task_id": "task_0009",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "n": 2,
+   "c": 0,
+   "accuracy": 0.0,
+   "outcomes": [
+    false,
+    false
+   ],
+   "error_categories": [
+    "FORMAT_ERROR",
+    "PARAM_ERROR"
+   ],
+   "predictions": [
+    {
+     "task_id": "task_0009",
+     "passed": false,
+     "category": "FORMAT_ERROR",
+     "classification": {
+      "category": "FORMAT_ERROR",
+      "category_zh": "格式错误",
+      "detail": {
+       "category": "FORMAT_ERROR",
+       "category_zh": "格式错误",
+       "subtype": "no_tool_call",
+       "subtype_zh": "完全没有 tool_call 标签",
+       "message": "输出里没有 <tool_call> 标签",
+       "fields": [],
+       "evidence": "稍等片刻，我为您查一下。"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": false,
+     "strict_ok": false,
+     "lenient_ok": false,
+     "param_accuracy": 0.0,
+     "defects": [
+      "missing_tool_call_tag"
+     ],
+     "format_ok_value_wrong": false,
+     "predicted": []
+    },
+    {
+     "task_id": "task_0009",
+     "passed": false,
+     "category": "PARAM_ERROR",
+     "classification": {
+      "category": "PARAM_ERROR",
+      "category_zh": "参数错误",
+      "detail": {
+       "category": "PARAM_ERROR",
+       "category_zh": "参数错误",
+       "subtype": "placeholder_value",
+       "subtype_zh": "参数填了占位符",
+       "message": "参数填了占位符：['date']",
+       "fields": [
+        "date"
+       ],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"HRB\", \"destination\": \"TSN\", \"date\": \"未知\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": false,
+     "lenient_ok": false,
+     "param_accuracy": 0.6667,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "HRB",
+        "destination": "TSN",
+        "date": "未知"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "task_id": "task_0010",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "n": 2,
+   "c": 2,
+   "accuracy": 1.0,
+   "outcomes": [
+    true,
+    true
+   ],
+   "error_categories": [
+    "SUCCESS",
+    "SUCCESS"
+   ],
+   "predictions": [
+    {
+     "task_id": "task_0010",
+     "passed": true,
+     "category": "SUCCESS",
+     "classification": {
+      "category": "SUCCESS",
+      "category_zh": "成功",
+      "detail": {
+       "category": "SUCCESS",
+       "category_zh": "成功",
+       "subtype": "",
+       "subtype_zh": "",
+       "message": "工具与关键参数正确",
+       "fields": [],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"URC\", \"destination\": \"LXA\", \"date\": \"2025-07-18\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": true,
+     "lenient_ok": true,
+     "param_accuracy": 1.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "URC",
+        "destination": "LXA",
+        "date": "2025-07-18"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    },
+    {
+     "task_id": "task_0010",
+     "passed": true,
+     "category": "SUCCESS",
+     "classification": {
+      "category": "SUCCESS",
+      "category_zh": "成功",
+      "detail": {
+       "category": "SUCCESS",
+       "category_zh": "成功",
+       "subtype": "",
+       "subtype_zh": "",
+       "message": "工具与关键参数正确",
+       "fields": [],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"URC\", \"destination\": \"LXA\", \"date\": \"2025-07-18\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": true,
+     "lenient_ok": true,
+     "param_accuracy": 1.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "URC",
+        "destination": "LXA",
+        "date": "2025-07-18"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "task_id": "task_0011",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "n": 2,
+   "c": 2,
+   "accuracy": 1.0,
+   "outcomes": [
+    true,
+    true
+   ],
+   "error_categories": [
+    "SUCCESS",
+    "SUCCESS"
+   ],
+   "predictions": [
+    {
+     "task_id": "task_0011",
+     "passed": true,
+     "category": "SUCCESS",
+     "classification": {
+      "category": "SUCCESS",
+      "category_zh": "成功",
+      "detail": {
+       "category": "SUCCESS",
+       "category_zh": "成功",
+       "subtype": "",
+       "subtype_zh": "",
+       "message": "工具与关键参数正确",
+       "fields": [],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"PEK\", \"destination\": \"SHA\", \"date\": \"2025-07-21\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": true,
+     "lenient_ok": true,
+     "param_accuracy": 1.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "PEK",
+        "destination": "SHA",
+        "date": "2025-07-21"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    },
+    {
+     "task_id": "task_0011",
+     "passed": true,
+     "category": "SUCCESS",
+     "classification": {
+      "category": "SUCCESS",
+      "category_zh": "成功",
+      "detail": {
+       "category": "SUCCESS",
+       "category_zh": "成功",
+       "subtype": "",
+       "subtype_zh": "",
+       "message": "工具与关键参数正确",
+       "fields": [],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"PEK\", \"destination\": \"SHA\", \"date\": \"2025-07-21\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": true,
+     "lenient_ok": true,
+     "param_accuracy": 1.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "PEK",
+        "destination": "SHA",
+        "date": "2025-07-21"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "task_id": "task_0012",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "n": 2,
+   "c": 1,
+   "accuracy": 0.5,
+   "outcomes": [
+    false,
+    true
+   ],
+   "error_categories": [
+    "PARAM_ERROR",
+    "SUCCESS"
+   ],
+   "predictions": [
+    {
+     "task_id": "task_0012",
+     "passed": false,
+     "category": "PARAM_ERROR",
+     "classification": {
+      "category": "PARAM_ERROR",
+      "category_zh": "参数错误",
+      "detail": {
+       "category": "PARAM_ERROR",
+       "category_zh": "参数错误",
+       "subtype": "wrong_value",
+       "subtype_zh": "参数值不对",
+       "message": "参数值不对：date 期望 '2025-07-24' 实际 '2025-08-24'",
+       "fields": [
+        "date"
+       ],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"SHA\", \"destination\": \"CAN\", \"date\": \"2025-08-24\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": true
+     },
+     "format_ok": true,
+     "strict_ok": false,
+     "lenient_ok": false,
+     "param_accuracy": 0.6667,
+     "defects": [],
+     "format_ok_value_wrong": true,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "SHA",
+        "destination": "CAN",
+        "date": "2025-08-24"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    },
+    {
+     "task_id": "task_0012",
+     "passed": true,
+     "category": "SUCCESS",
+     "classification": {
+      "category": "SUCCESS",
+      "category_zh": "成功",
+      "detail": {
+       "category": "SUCCESS",
+       "category_zh": "成功",
+       "subtype": "",
+       "subtype_zh": "",
+       "message": "工具与关键参数正确",
+       "fields": [],
+       "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"SHA\", \"destination\": \"CAN\", \"date\": \"2025-07-24\"}}</tool_call>"
+      },
+      "recovered_from": null,
+      "format_ok_value_wrong": false
+     },
+     "format_ok": true,
+     "strict_ok": true,
+     "lenient_ok": true,
+     "param_accuracy": 1.0,
+     "defects": [],
+     "format_ok_value_wrong": false,
+     "predicted": [
+      {
+       "name": "search_flights",
+       "arguments": {
+        "origin": "SHA",
+        "destination": "CAN",
+        "date": "2025-07-24"
+       },
+       "source": "tool_call_tag"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

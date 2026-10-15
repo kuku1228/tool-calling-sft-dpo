@@ -1,0 +1,432 @@
+{
+ "is_mock": true,
+ "baseline": "baseline_airline",
+ "experiments": [
+  "baseline_airline",
+  "dpo_format",
+  "dpo_joint",
+  "dpo_recovery",
+  "sft_only"
+ ],
+ "sources": {
+  "baseline_airline": "D:\\HuaweiMoveData\\Users\\马琬蕊\\Desktop\\项目2\\agent-optimization\\experiments\\baseline_airline\\eval_report.mock.json",
+  "dpo_format": "D:\\HuaweiMoveData\\Users\\马琬蕊\\Desktop\\项目2\\agent-optimization\\experiments\\dpo_format\\eval_report.mock.json",
+  "dpo_joint": "D:\\HuaweiMoveData\\Users\\马琬蕊\\Desktop\\项目2\\agent-optimization\\experiments\\dpo_joint\\eval_report.mock.json",
+  "dpo_recovery": "D:\\HuaweiMoveData\\Users\\马琬蕊\\Desktop\\项目2\\agent-optimization\\experiments\\dpo_recovery\\eval_report.mock.json",
+  "sft_only": "D:\\HuaweiMoveData\\Users\\马琬蕊\\Desktop\\项目2\\agent-optimization\\experiments\\sft_only\\eval_report.mock.json"
+ },
+ "headlines": {
+  "baseline_airline": {
+   "accuracy": 0.416667,
+   "pass_at_k": 0.633333,
+   "pass_hat_k": 0.2,
+   "delta_stability": -0.433333
+  },
+  "dpo_format": {
+   "accuracy": 0.416667,
+   "pass_at_k": 0.633333,
+   "pass_hat_k": 0.2,
+   "delta_stability": -0.433333
+  },
+  "dpo_joint": {
+   "accuracy": 0.416667,
+   "pass_at_k": 0.633333,
+   "pass_hat_k": 0.2,
+   "delta_stability": -0.433333
+  },
+  "dpo_recovery": {
+   "accuracy": 0.416667,
+   "pass_at_k": 0.633333,
+   "pass_hat_k": 0.2,
+   "delta_stability": -0.433333
+  },
+  "sft_only": {
+   "accuracy": 0.416667,
+   "pass_at_k": 0.633333,
+   "pass_hat_k": 0.2,
+   "delta_stability": -0.433333
+  }
+ },
+ "by_difficulty": {
+  "baseline_airline": {
+   "hard": {
+    "num_tasks": 30,
+    "accuracy": 0.4167,
+    "accuracy_ci95": [
+     0.2833,
+     0.55
+    ],
+    "pass@1": 0.4167,
+    "pass@2": 0.6333,
+    "pass^1": 0.4167,
+    "pass^2": 0.2
+   }
+  },
+  "dpo_format": {
+   "hard": {
+    "num_tasks": 30,
+    "accuracy": 0.4167,
+    "accuracy_ci95": [
+     0.2833,
+     0.55
+    ],
+    "pass@1": 0.4167,
+    "pass@2": 0.6333,
+    "pass^1": 0.4167,
+    "pass^2": 0.2
+   }
+  },
+  "dpo_joint": {
+   "hard": {
+    "num_tasks": 30,
+    "accuracy": 0.4167,
+    "accuracy_ci95": [
+     0.2833,
+     0.55
+    ],
+    "pass@1": 0.4167,
+    "pass@2": 0.6333,
+    "pass^1": 0.4167,
+    "pass^2": 0.2
+   }
+  },
+  "dpo_recovery": {
+   "hard": {
+    "num_tasks": 30,
+    "accuracy": 0.4167,
+    "accuracy_ci95": [
+     0.2833,
+     0.55
+    ],
+    "pass@1": 0.4167,
+    "pass@2": 0.6333,
+    "pass^1": 0.4167,
+    "pass^2": 0.2
+   }
+  },
+  "sft_only": {
+   "hard": {
+    "num_tasks": 30,
+    "accuracy": 0.4167,
+    "accuracy_ci95": [
+     0.2833,
+     0.55
+    ],
+    "pass@1": 0.4167,
+    "pass@2": 0.6333,
+    "pass^1": 0.4167,
+    "pass^2": 0.2
+   }
+  }
+ },
+ "by_visibility": {
+  "baseline_airline": {
+   "seen": {
+    "num_tasks": 20,
+    "accuracy": 0.525,
+    "accuracy_ci95": [
+     0.375,
+     0.7
+    ],
+    "pass@1": 0.525,
+    "pass@2": 0.75,
+    "pass^1": 0.525,
+    "pass^2": 0.3
+   },
+   "unseen": {
+    "num_tasks": 10,
+    "accuracy": 0.2,
+    "accuracy_ci95": [
+     0.05,
+     0.35
+    ],
+    "pass@1": 0.2,
+    "pass@2": 0.4,
+    "pass^1": 0.2,
+    "pass^2": 0.0
+   }
+  },
+  "dpo_format": {
+   "seen": {
+    "num_tasks": 20,
+    "accuracy": 0.525,
+    "accuracy_ci95": [
+     0.375,
+     0.7
+    ],
+    "pass@1": 0.525,
+    "pass@2": 0.75,
+    "pass^1": 0.525,
+    "pass^2": 0.3
+   },
+   "unseen": {
+    "num_tasks": 10,
+    "accuracy": 0.2,
+    "accuracy_ci95": [
+     0.05,
+     0.35
+    ],
+    "pass@1": 0.2,
+    "pass@2": 0.4,
+    "pass^1": 0.2,
+    "pass^2": 0.0
+   }
+  },
+  "dpo_joint": {
+   "seen": {
+    "num_tasks": 20,
+    "accuracy": 0.525,
+    "accuracy_ci95": [
+     0.375,
+     0.7
+    ],
+    "pass@1": 0.525,
+    "pass@2": 0.75,
+    "pass^1": 0.525,
+    "pass^2": 0.3
+   },
+   "unseen": {
+    "num_tasks": 10,
+    "accuracy": 0.2,
+    "accuracy_ci95": [
+     0.05,
+     0.35
+    ],
+    "pass@1": 0.2,
+    "pass@2": 0.4,
+    "pass^1": 0.2,
+    "pass^2": 0.0
+   }
+  },
+  "dpo_recovery": {
+   "seen": {
+    "num_tasks": 20,
+    "accuracy": 0.525,
+    "accuracy_ci95": [
+     0.375,
+     0.7
+    ],
+    "pass@1": 0.525,
+    "pass@2": 0.75,
+    "pass^1": 0.525,
+    "pass^2": 0.3
+   },
+   "unseen": {
+    "num_tasks": 10,
+    "accuracy": 0.2,
+    "accuracy_ci95": [
+     0.05,
+     0.35
+    ],
+    "pass@1": 0.2,
+    "pass@2": 0.4,
+    "pass^1": 0.2,
+    "pass^2": 0.0
+   }
+  },
+  "sft_only": {
+   "seen": {
+    "num_tasks": 20,
+    "accuracy": 0.525,
+    "accuracy_ci95": [
+     0.375,
+     0.7
+    ],
+    "pass@1": 0.525,
+    "pass@2": 0.75,
+    "pass^1": 0.525,
+    "pass^2": 0.3
+   },
+   "unseen": {
+    "num_tasks": 10,
+    "accuracy": 0.2,
+    "accuracy_ci95": [
+     0.05,
+     0.35
+    ],
+    "pass@1": 0.2,
+    "pass@2": 0.4,
+    "pass^1": 0.2,
+    "pass^2": 0.0
+   }
+  }
+ },
+ "comparisons": [
+  {
+   "baseline": "baseline_airline",
+   "treatment": "dpo_format",
+   "metric": "accuracy",
+   "baseline_value": 0.416667,
+   "treatment_value": 0.416667,
+   "abs_delta": 0.0,
+   "rel_delta": 0.0,
+   "cohens_h": 0.0,
+   "effect_size": "可忽略"
+  },
+  {
+   "baseline": "baseline_airline",
+   "treatment": "dpo_format",
+   "metric": "pass_at_k",
+   "baseline_value": 0.633333,
+   "treatment_value": 0.633333,
+   "abs_delta": 0.0,
+   "rel_delta": 0.0,
+   "cohens_h": 0.0,
+   "effect_size": "可忽略"
+  },
+  {
+   "baseline": "baseline_airline",
+   "treatment": "dpo_format",
+   "metric": "pass_hat_k",
+   "baseline_value": 0.2,
+   "treatment_value": 0.2,
+   "abs_delta": 0.0,
+   "rel_delta": 0.0,
+   "cohens_h": 0.0,
+   "effect_size": "可忽略"
+  },
+  {
+   "baseline": "baseline_airline",
+   "treatment": "dpo_format",
+   "metric": "delta_stability",
+   "baseline_value": -0.433333,
+   "treatment_value": -0.433333,
+   "abs_delta": 0.0,
+   "rel_delta": -0.0,
+   "cohens_h": 0.0,
+   "effect_size": "可忽略"
+  },
+  {
+   "baseline": "baseline_airline",
+   "treatment": "dpo_joint",
+   "metric": "accuracy",
+   "baseline_value": 0.416667,
+   "treatment_value": 0.416667,
+   "abs_delta": 0.0,
+   "rel_delta": 0.0,
+   "cohens_h": 0.0,
+   "effect_size": "可忽略"
+  },
+  {
+   "baseline": "baseline_airline",
+   "treatment": "dpo_joint",
+   "metric": "pass_at_k",
+   "baseline_value": 0.633333,
+   "treatment_value": 0.633333,
+   "abs_delta": 0.0,
+   "rel_delta": 0.0,
+   "cohens_h": 0.0,
+   "effect_size": "可忽略"
+  },
+  {
+   "baseline": "baseline_airline",
+   "treatment": "dpo_joint",
+   "metric": "pass_hat_k",
+   "baseline_value": 0.2,
+   "treatment_value": 0.2,
+   "abs_delta": 0.0,
+   "rel_delta": 0.0,
+   "cohens_h": 0.0,
+   "effect_size": "可忽略"
+  },
+  {
+   "baseline": "baseline_airline",
+   "treatment": "dpo_joint",
+   "metric": "delta_stability",
+   "baseline_value": -0.433333,
+   "treatment_value": -0.433333,
+   "abs_delta": 0.0,
+   "rel_delta": -0.0,
+   "cohens_h": 0.0,
+   "effect_size": "可忽略"
+  },
+  {
+   "baseline": "baseline_airline",
+   "treatment": "dpo_recovery",
+   "metric": "accuracy",
+   "baseline_value": 0.416667,
+   "treatment_value": 0.416667,
+   "abs_delta": 0.0,
+   "rel_delta": 0.0,
+   "cohens_h": 0.0,
+   "effect_size": "可忽略"
+  },
+  {
+   "baseline": "baseline_airline",
+   "treatment": "dpo_recovery",
+   "metric": "pass_at_k",
+   "baseline_value": 0.633333,
+   "treatment_value": 0.633333,
+   "abs_delta": 0.0,
+   "rel_delta": 0.0,
+   "cohens_h": 0.0,
+   "effect_size": "可忽略"
+  },
+  {
+   "baseline": "baseline_airline",
+   "treatment": "dpo_recovery",
+   "metric": "pass_hat_k",
+   "baseline_value": 0.2,
+   "treatment_value": 0.2,
+   "abs_delta": 0.0,
+   "rel_delta": 0.0,
+   "cohens_h": 0.0,
+   "effect_size": "可忽略"
+  },
+  {
+   "baseline": "baseline_airline",
+   "treatment": "dpo_recovery",
+   "metric": "delta_stability",
+   "baseline_value": -0.433333,
+   "treatment_value": -0.433333,
+   "abs_delta": 0.0,
+   "rel_delta": -0.0,
+   "cohens_h": 0.0,
+   "effect_size": "可忽略"
+  },
+  {
+   "baseline": "baseline_airline",
+   "treatment": "sft_only",
+   "metric": "accuracy",
+   "baseline_value": 0.416667,
+   "treatment_value": 0.416667,
+   "abs_delta": 0.0,
+   "rel_delta": 0.0,
+   "cohens_h": 0.0,
+   "effect_size": "可忽略"
+  },
+  {
+   "baseline": "baseline_airline",
+   "treatment": "sft_only",
+   "metric": "pass_at_k",
+   "baseline_value": 0.633333,
+   "treatment_value": 0.633333,
+   "abs_delta": 0.0,
+   "rel_delta": 0.0,
+   "cohens_h": 0.0,
+   "effect_size": "可忽略"
+  },
+  {
+   "baseline": "baseline_airline",
+   "treatment": "sft_only",
+   "metric": "pass_hat_k",
+   "baseline_value": 0.2,
+   "treatment_value": 0.2,
+   "abs_delta": 0.0,
+   "rel_delta": 0.0,
+   "cohens_h": 0.0,
+   "effect_size": "可忽略"
+  },
+  {
+   "baseline": "baseline_airline",
+   "treatment": "sft_only",
+   "metric": "delta_stability",
+   "baseline_value": -0.433333,
+   "treatment_value": -0.433333,
+   "abs_delta": 0.0,
+   "rel_delta": -0.0,
+   "cohens_h": 0.0,
+   "effect_size": "可忽略"
+  }
+ ]
+}

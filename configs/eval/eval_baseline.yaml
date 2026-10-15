@@ -1,0 +1,45 @@
+{
+  "_comment": "基线评测配置：原始 Qwen2.5-1.5B-Instruct，不做任何微调。",
+  "_purpose": "Week 1 的诊断数据来源。所有后续实验都与这份结果对比。",
+  "_alignment": "评测协议（采样数、k 值、任务集、温度）一经确定不得修改，否则历史结果失去可比性。",
+
+  "experiment": "baseline",
+  "description": "未训练基线",
+
+  "model": {
+    "name": "Qwen/Qwen2.5-1.5B-Instruct",
+    "adapter_path": null,
+    "_adapter_path_note": "null 表示用原始基座；微调后的实验填 outputs/<exp>/final"
+  },
+
+  "generation": {
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_new_tokens": 1536,
+    "do_sample": true
+  },
+
+  "eval": {
+    "task_source": "builtin",
+    "num_samples_per_task": 4,
+    "k_values": [1, 2, 4],
+    "primary_k": 4,
+    "max_turns": 8,
+    "task_limit": 0
+  },
+
+  "variants": {
+    "_note": "以下变体用于排除混淆因素，见 docs/ablation/ablation_plan.md §0",
+    "system_prompt_lite": false,
+    "_system_prompt_lite_note": "true 时用精简版 system prompt：验证提升是否只是来自更啰嗦的提示词",
+    "tool_names": null,
+    "_tool_names_note": "限定工具集合，例如 [\"search_flights\", \"get_weather\"]；用于测试选择空间大小是否影响幻觉率",
+    "include_observations": true
+  },
+
+  "output": {
+    "dir": "experiments/baseline_airline",
+    "write_predictions": true,
+    "write_report": true
+  }
+}

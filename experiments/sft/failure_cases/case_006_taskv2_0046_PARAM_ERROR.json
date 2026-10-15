@@ -1,0 +1,34 @@
+{
+ "case_id": "case_006",
+ "task_id": "taskv2_0046",
+ "category": "baggage",
+ "difficulty": "easy",
+ "visibility": "seen",
+ "is_mock": false,
+ "expected": {
+  "tool": "check_baggage",
+  "args": {
+   "booking_id": "BKE93945"
+  }
+ },
+ "classification": {
+  "category": "PARAM_ERROR",
+  "category_zh": "参数错误",
+  "detail": {
+   "category": "PARAM_ERROR",
+   "category_zh": "参数错误",
+   "subtype": "wrong_value",
+   "subtype_zh": "参数值不对",
+   "message": "参数值不对：booking_id 期望 'BKE93945' 实际 'BK9B9E8C'",
+   "fields": [
+    "booking_id"
+   ],
+   "evidence": "<tool_call>{\"name\": \"check_baggage\", \"arguments\": {\"booking_id\": \"BK9B9E8C\"}}</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": true
+ },
+ "defects": [],
+ "raw_output": "<tool_call>{\"name\": \"check_baggage\", \"arguments\": {\"booking_id\": \"BK9B9E8C\"}}</tool_call>",
+ "finish_reason": "stop"
+}

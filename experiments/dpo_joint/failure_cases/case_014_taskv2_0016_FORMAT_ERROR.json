@@ -1,0 +1,37 @@
+{
+ "case_id": "case_014",
+ "task_id": "taskv2_0016",
+ "category": "flight_search",
+ "difficulty": "hard",
+ "visibility": "unseen",
+ "is_mock": false,
+ "expected": {
+  "tool": "search_flights",
+  "args": {
+   "origin": "KHN",
+   "destination": "NTG",
+   "date": "2026-11-07"
+  }
+ },
+ "classification": {
+  "category": "FORMAT_ERROR",
+  "category_zh": "格式错误",
+  "detail": {
+   "category": "FORMAT_ERROR",
+   "category_zh": "格式错误",
+   "subtype": "no_tool_call",
+   "subtype_zh": "完全没有 tool_call 标签",
+   "message": "输出里没有 <tool_call> 标签",
+   "fields": [],
+   "evidence": ">To return the result in JSON format, please follow the JSON question format strictly, with each tool call wrapped inside <tools> tags like this: {\"name\": \"tool name\", \"arguments\": \"{'parameter': 'value'}\". Never leave any parameters empty or use placeholder strings.\n\nBased on the date you provided (\"2026-11-07\" for南昌-ncc and 南通-nqt), there are no direct flights available from南昌-ncc to南通-nqt on th"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [
+  "missing_tool_call_tag",
+  "single_quoted_keys"
+ ],
+ "raw_output": ">To return the result in JSON format, please follow the JSON question format strictly, with each tool call wrapped inside <tools> tags like this: {\"name\": \"tool name\", \"arguments\": \"{'parameter': 'value'}\". Never leave any parameters empty or use placeholder strings.\n\nBased on the date you provided (\"2026-11-07\" for南昌-ncc and 南通-nqt), there are no direct flights available from南昌-ncc to南通-nqt on this specific date. Please check if there have been any recent updates to flight schedules or if there might be a mistake in the departure or arrival cities. If you need to book a flight, you can try searching for flights again using a different date or airport. The flight search tool can help with this: {\"name\": \"search_flights\", \"arguments\": \"{'origin': 'NCC', 'destination': 'NQT', 'date': '2026-11-07'}\". Please let me know if you need assistance with booking a flight instead of just checking the availability.\n\n---\n\n{\"name\": \"search_flights\", \"arguments\": \"{'origin': 'NCC', 'destination': 'NQT', 'date': '2026-11-07'}\"}",
+ "finish_reason": "stop"
+}

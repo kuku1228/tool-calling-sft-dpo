@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "backend": "native",
+  "rasterEngine": "pdfium",
+  "source": "saved",
+  "inputPath": "D:\\HuaweiMoveData\\Users\\马琬蕊\\Desktop\\项目2\\agent-optimization\\scripts\\report\\回应文档_修订版v2.pdf",
+  "sourceSha256": "9c9f173cf0210c1cb0762b4a6a7933ae142e8510b5f5efada8de34af012ef9e9",
+  "dpi": 90,
+  "pageCount": 8,
+  "images": [
+    {
+      "index": 1,
+      "page": 1,
+      "path": "D:\\HuaweiMoveData\\Users\\马琬蕊\\Desktop\\项目2\\agent-optimization\\scripts\\report\\preview_v2\\page-0001.png",
+      "width": 765,
+      "height": 990,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 816,
+        "height": 1056
+      },
+      "byteLength": 103507
+    },
+    {
+      "index": 2,
+      "page": 2,
+      "path": "D:\\HuaweiMoveData\\Users\\马琬蕊\\Desktop\\项目2\\agent-optimization\\scripts\\report\\preview_v2\\page-0002.png",
+      "width": 765,
+      "height": 990,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 816,
+        "height": 1056
+      },
+      "byteLength": 220463
+    }
+  ],
+  "missingFonts": []
+}

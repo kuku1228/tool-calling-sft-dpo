@@ -1,0 +1,34 @@
+{
+ "case_id": "case_007",
+ "task_id": "taskv2_0047",
+ "category": "baggage",
+ "difficulty": "easy",
+ "visibility": "seen",
+ "is_mock": false,
+ "expected": {
+  "tool": "check_baggage",
+  "args": {
+   "booking_id": "BK0E947A"
+  }
+ },
+ "classification": {
+  "category": "FORMAT_ERROR",
+  "category_zh": "格式错误",
+  "detail": {
+   "category": "FORMAT_ERROR",
+   "category_zh": "格式错误",
+   "subtype": "json_broken",
+   "subtype_zh": "JSON 语法非法",
+   "message": "检测到 tool_call 标签但 arguments 是字符串但无法解析成 JSON（无法解析出合法 JSON）",
+   "fields": [],
+   "evidence": "<tool_call>{\"name\": \"check_baggage\", \"arguments\": \"{'booking_id': 'BK0E947A'}\"}</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [
+  "single_quoted_keys"
+ ],
+ "raw_output": "<tool_call>{\"name\": \"check_baggage\", \"arguments\": \"{'booking_id': 'BK0E947A'}\"}</tool_call>",
+ "finish_reason": "stop"
+}

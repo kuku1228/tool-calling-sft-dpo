@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "backend": "native",
+  "rasterEngine": "pdfium",
+  "source": "saved",
+  "inputPath": "D:\\HuaweiMoveData\\Users\\马琬蕊\\Desktop\\项目2\\agent-optimization\\scripts\\report\\专家问题核对清单.pdf",
+  "sourceSha256": "66a9ec3f198ec47807e4ebe3ba277b5b20fa8950a27a2290b1e03acf3e7241f9",
+  "dpi": 100,
+  "pageCount": 5,
+  "images": [
+    {
+      "index": 1,
+      "page": 1,
+      "path": "D:\\HuaweiMoveData\\Users\\马琬蕊\\Desktop\\项目2\\agent-optimization\\scripts\\report\\preview_ck\\page-0001.png",
+      "width": 850,
+      "height": 1100,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 816,
+        "height": 1056
+      },
+      "byteLength": 98438
+    },
+    {
+      "index": 2,
+      "page": 2,
+      "path": "D:\\HuaweiMoveData\\Users\\马琬蕊\\Desktop\\项目2\\agent-optimization\\scripts\\report\\preview_ck\\page-0002.png",
+      "width": 850,
+      "height": 1100,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 816,
+        "height": 1056
+      },
+      "byteLength": 62053
+    }
+  ],
+  "missingFonts": []
+}

@@ -1,0 +1,36 @@
+{
+ "case_id": "case_022",
+ "task_id": "task_0021",
+ "category": "flight_search",
+ "difficulty": "hard",
+ "visibility": "unseen",
+ "is_mock": true,
+ "expected": {
+  "tool": "search_flights",
+  "args": {
+   "origin": "PEK",
+   "destination": "SHA",
+   "date": "2025-07-21"
+  }
+ },
+ "classification": {
+  "category": "FORMAT_ERROR",
+  "category_zh": "格式错误",
+  "detail": {
+   "category": "FORMAT_ERROR",
+   "category_zh": "格式错误",
+   "subtype": "promise_only",
+   "subtype_zh": "只承诺要查，没真的调用",
+   "message": "只承诺要查询，没有真的输出 tool_call",
+   "fields": [],
+   "evidence": "正在为您查询相关信息，马上就好。"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [
+  "missing_tool_call_tag"
+ ],
+ "raw_output": "正在为您查询相关信息，马上就好。",
+ "finish_reason": "stop"
+}

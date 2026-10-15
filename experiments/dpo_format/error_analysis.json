@@ -1,0 +1,169 @@
+{
+ "label": "dpo_format",
+ "is_mock": false,
+ "n_tasks": 106,
+ "format_accuracy": 0.808962,
+ "format_accuracy_task_aware": 0.879717,
+ "format_ok_value_wrong": 15,
+ "format_ok_value_wrong_rate": 0.035377,
+ "distribution": {
+  "total": 424,
+  "success_count": 346,
+  "success_rate": 0.816038,
+  "counts": {
+   "FORMAT_ERROR": 1,
+   "PARAM_ERROR": 19,
+   "SUCCESS": 346,
+   "WRONG_TOOL": 58
+  },
+  "counts_zh": {
+   "格式错误": 1,
+   "参数错误": 19,
+   "成功": 346,
+   "工具选错": 58
+  },
+  "rates": {
+   "SUCCESS": 0.816038,
+   "FORMAT_ERROR": 0.002358,
+   "HALLUCINATION": 0.0,
+   "WRONG_TOOL": 0.136792,
+   "PARAM_ERROR": 0.044811,
+   "REFUSED": 0.0,
+   "UNKNOWN": 0.0
+  },
+  "failure_share": {
+   "FORMAT_ERROR": 0.012821,
+   "HALLUCINATION": 0.0,
+   "WRONG_TOOL": 0.74359,
+   "PARAM_ERROR": 0.24359,
+   "REFUSED": 0.0,
+   "UNKNOWN": 0.0
+  },
+  "subtype_counts": {
+   "-": 344,
+   "should_clarify": 58,
+   "wrong_value": 19,
+   "clarify_instead": 2,
+   "json_broken": 1
+  },
+  "failure_subtype_counts": {
+   "should_clarify": 58,
+   "wrong_value": 19,
+   "json_broken": 1
+  },
+  "subtype_counts_zh": {
+   "信息不足时应先追问，却直接调用了工具": 58,
+   "参数值不对": 19,
+   "JSON 语法非法": 1
+  },
+  "exemplars": {
+   "PARAM_ERROR": [
+    {
+     "task_id": "taskv2_0027",
+     "subtype": "wrong_value",
+     "message": "参数值不对：flight_id 期望 '3U2775' 实际 'CA9900'",
+     "evidence": "{\"name\": \"book_flight\", \"arguments\": {\"flight_id\": \"CA9900\", \"passenger_name\": \"王芳\"}}</tool_call>",
+     "category": "booking_flow",
+     "difficulty": "hard",
+     "sample_index": 0
+    },
+    {
+     "task_id": "taskv2_0027",
+     "subtype": "wrong_value",
+     "message": "参数值不对：flight_id 期望 '3U2775' 实际 'CA9900'",
+     "evidence": "{\"name\": \"book_flight\", \"arguments\": {\"flight_id\": \"CA9900\", \"passenger_name\": \"王芳\"}}</tool_call>",
+     "category": "booking_flow",
+     "difficulty": "hard",
+     "sample_index": 1
+    },
+    {
+     "task_id": "taskv2_0027",
+     "subtype": "wrong_value",
+     "message": "参数值不对：flight_id 期望 '3U2775' 实际 'CA9900'",
+     "evidence": "{\"name\": \"book_flight\", \"arguments\": {\"flight_id\": \"CA9900\", \"passenger_name\": \"王芳\"}}</tool_call>",
+     "category": "booking_flow",
+     "difficulty": "hard",
+     "sample_index": 2
+    }
+   ],
+   "FORMAT_ERROR": [
+    {
+     "task_id": "taskv2_0047",
+     "subtype": "json_broken",
+     "message": "检测到 tool_call 标签但 arguments 是字符串但无法解析成 JSON（无法解析出合法 JSON）",
+     "evidence": "<tool_call>{\"name\": \"check_baggage\", \"arguments\": \"{'booking_id': 'BK0E947A'}\"}</tool_call>",
+     "category": "baggage",
+     "difficulty": "easy",
+     "sample_index": 1
+    }
+   ],
+   "WRONG_TOOL": [
+    {
+     "task_id": "taskv2_0062",
+     "subtype": "should_clarify",
+     "message": "信息不足时应先追问，模型却直接调用了 cancel_booking",
+     "evidence": "{\"name\": \"cancel_booking\", \"arguments\": {\"booking_id\": \"BK39E995\", \"reason\": \"行程变更\"}}</tool_call>",
+     "category": "cancellation",
+     "difficulty": "hard",
+     "sample_index": 0
+    },
+    {
+     "task_id": "taskv2_0062",
+     "subtype": "should_clarify",
+     "message": "信息不足时应先追问，模型却直接调用了 cancel_booking",
+     "evidence": "{\"name\": \"cancel_booking\", \"arguments\": {\"booking_id\": \"BK39E995\", \"reason\": \"行程变更\"}}</tool_call>",
+     "category": "cancellation",
+     "difficulty": "hard",
+     "sample_index": 1
+    },
+    {
+     "task_id": "taskv2_0062",
+     "subtype": "should_clarify",
+     "message": "信息不足时应先追问，模型却直接调用了 cancel_booking",
+     "evidence": "{\"name\": \"cancel_booking\", \"arguments\": {\"booking_id\": \"BK39E995\", \"reason\": \"行程变更\"}}</tool_call>",
+     "category": "cancellation",
+     "difficulty": "hard",
+     "sample_index": 2
+    }
+   ]
+  }
+ },
+ "limitations": [
+  {
+   "id": "visibility_meaningless",
+   "severity": "高",
+   "statement": "`seen`/`unseen` 标签**与训练暴露无关**：seen 组签名被训练覆盖 66/67（99%），unseen 组 39/39（100%）。该标签的赋值从不读取训练数据（是按序号/骨架哈希轮转）。",
+   "do_not_claim": "**不要**把 seen 与 unseen 的差值解释为泛化差距 —— 那是哈希分组的噪声。改用「实体重合度」三档（见 `scripts/eval/audit_eval_overlap.py`）。",
+   "verify": "python -c \"import sys;sys.path.insert(0,'.');from src.data.task_manifest_v2 import report_visibility_warning as W;print(W())\""
+  },
+  {
+   "id": "duplicate_expected_calls",
+   "severity": "高",
+   "statement": "106 个任务只有 **92 个不同期望调用** —— 14 个任务是重复计数。最大的簇有 **15 个任务**，它们的期望调用完全相同：`(None, ())`。",
+   "do_not_claim": "**不要**说「15 个独立样本」—— 有效独立样本是**1 个行为**，15 是**触发方式**的数量。统计必须按**簇**重采样（`paired_stats.paired_bootstrap_clustered`），它给出更宽的置信区间（这是更保守的口径）。",
+   "verify": "python scripts/eval/paired_significance.py --a X --b Y "
+  },
+  {
+   "id": "distribution_mismatch",
+   "severity": "中",
+   "statement": "训练语料里 `search_flights` 占 40.5%，而评测里只占 30.2% —— 训练分布偏向搜索工具。",
+   "do_not_claim": "**不要**把绝对准确率外推到其他分布。但**组间对比**（SFT vs DPO）不受影响：两者用同一份训练数据、同一分布，偏差对它们**对称**。",
+   "verify": "python scripts/prepare/verify_all.py"
+  },
+  {
+   "id": "sft_no_negative_samples",
+   "severity": "低（且加强论点）",
+   "statement": "SFT 训练数据 2635 条里，`chosen` **不含** `tool_call` 的有 **0 条** —— 纯正例监督在结构上无法表达「此处不该调用工具」。",
+   "do_not_claim": "**不要**把这说成「SFT 因为数据里没有所以做不到」就完了 —— 实测**系统提示里明确写着**「信息不足时先向用户追问」，所以这是**指令遵循失败**，不是数据缺口。这反而加强了论点。",
+   "verify": "python scripts/prepare/inspect_preferences.py"
+  }
+ ],
+ "clustered": {
+  "mean": 0.9351449275362319,
+  "ci_lo": 0.8784420289855072,
+  "ci_hi": 0.9782608695652174,
+  "n_clusters": 92,
+  "n_tasks": 106,
+  "cluster_shrinkage": 14
+ }
+}

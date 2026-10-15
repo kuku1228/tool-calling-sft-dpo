@@ -1,0 +1,36 @@
+{
+ "case_id": "case_035",
+ "task_id": "task_0038",
+ "category": "booking_flow",
+ "difficulty": "easy",
+ "visibility": "seen",
+ "is_mock": true,
+ "expected": {
+  "tool": "search_flights",
+  "args": {
+   "origin": "XMN",
+   "destination": "NKG",
+   "date": "2025-07-21"
+  }
+ },
+ "classification": {
+  "category": "PARAM_ERROR",
+  "category_zh": "参数错误",
+  "detail": {
+   "category": "PARAM_ERROR",
+   "category_zh": "参数错误",
+   "subtype": "placeholder_value",
+   "subtype_zh": "参数填了占位符",
+   "message": "参数填了占位符：['destination']",
+   "fields": [
+    "destination"
+   ],
+   "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"XMN\", \"destination\": \"previous_value\", \"date\": \"2025-07-21\"}}</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [],
+ "raw_output": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"XMN\", \"destination\": \"previous_value\", \"date\": \"2025-07-21\"}}</tool_call>",
+ "finish_reason": "stop"
+}

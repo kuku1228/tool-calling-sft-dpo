@@ -1,0 +1,36 @@
+{
+ "case_id": "case_029",
+ "task_id": "taskv2_0022",
+ "category": "flight_search",
+ "difficulty": "hard",
+ "visibility": "seen",
+ "is_mock": false,
+ "expected": {
+  "tool": "search_flights",
+  "args": {
+   "origin": "YBP",
+   "destination": "YIH",
+   "date": "2026-11-13"
+  }
+ },
+ "classification": {
+  "category": "FORMAT_ERROR",
+  "category_zh": "格式错误",
+  "detail": {
+   "category": "FORMAT_ERROR",
+   "category_zh": "格式错误",
+   "subtype": "no_tool_call",
+   "subtype_zh": "完全没有 tool_call 标签",
+   "message": "输出里没有 <tool_call> 标签",
+   "fields": [],
+   "evidence": "ralei rairey, please ask me questions one by one instead of asking about multiple destinations at once. based on your inquiry \"2026-11-13宜宾出发到宜昌的飞机\", I can only help you find flights from yiyang to yiyang on that specific date. could you confirm if you want to search for flights from yiyang to yiyang on November 13, 2026? if so, I will be able to assist you better. if not, could you please provide"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [
+  "missing_tool_call_tag"
+ ],
+ "raw_output": "ralei rairey, please ask me questions one by one instead of asking about multiple destinations at once. based on your inquiry \"2026-11-13宜宾出发到宜昌的飞机\", I can only help you find flights from yiyang to yiyang on that specific date. could you confirm if you want to search for flights from yiyang to yiyang on November 13, 2026? if so, I will be able to assist you better. if not, could you please provide me with the information to search for a flight from yiernali to yierey where \"yiernali\" and \"yierey\" are indeed two airports in yunnan province?",
+ "finish_reason": "stop"
+}

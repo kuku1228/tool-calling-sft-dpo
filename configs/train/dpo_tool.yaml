@@ -1,0 +1,46 @@
+{
+  "_comment": "扩展实验：只用工具选择偏好对，单独定位「幻觉」这一维度的可改善程度。",
+  "_hypothesis": "工具名幻觉是「记不住白名单」的问题，与格式能力正交。用命名变体假工具（find_flights vs search_flights）作硬负样本，应当能显著压低幻觉率。",
+  "_why_separate": "把它单独跑一组，是为了回答「幻觉率的下降是格式训练的副产物，还是需要专门的数据」。如果 dpo_format 也能压低幻觉率，说明幻觉其实是格式问题的表象。",
+  "_expected": "幻觉率显著下降；格式正确率几乎不动（数据里没有格式对比）；参数错误几乎不动。",
+  "_falsifier": "若幻觉率下降但整体准确率不动，说明模型只是学会了「不造工具名」，但仍然选不对工具或填不对参数 —— 这时要看 WRONG_TOOL 与 PARAM_ERROR 的占比是否上升（错误只是被挪走了）。",
+  "experiment": "dpo_tool",
+  "description": "扩展：工具选择偏好对（仅 tool_selection）",
+  "pairs": {
+    "pair_types": [
+      "tool_selection"
+    ],
+    "train_file": "data/preferences/dpo_tool.train.jsonl",
+    "dev_file": "data/preferences/dpo_tool.dev.jsonl",
+    "max_samples": 0
+  },
+  "train": {
+    "beta": 0.1,
+    "loss_type": "sigmoid",
+    "lr": 5e-05,
+    "epochs": 2,
+    "batch_size": 2,
+    "grad_accum": 8,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "gradient_checkpointing": true,
+    "bf16": true,
+    "max_length": 1280,
+    "max_prompt_length": 1152,
+    "save_steps": 50,
+    "eval_steps": 50,
+    "seed": 42,
+    "logging_steps": 5
+  },
+  "output": {
+    "dir": "outputs/dpo_tool",
+    "final_adapter_dir": "outputs/dpo_tool/final"
+  },
+  "eval_after_train": {
+    "enabled": true,
+    "report_dir": "experiments/dpo_tool",
+    "extra_metrics": [
+      "hallucination_rate"
+    ]
+  }
+}

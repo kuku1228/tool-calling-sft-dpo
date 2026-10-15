@@ -1,0 +1,63 @@
+{
+  "_comment": "默认评测协议。所有实验必须共用同一份协议，否则消融对比表失去意义。",
+  "_frozen_fields": [
+    "generation",
+    "eval.num_samples_per_task",
+    "eval.k_values",
+    "eval.primary_k",
+    "eval.task_source",
+    "variants"
+  ],
+  "_why_frozen": "评测协议是消融实验的「量尺」。量尺变了，两次测量就不可比。修改本文件里 _frozen_fields 列出的任何字段，都会让此前所有实验结果作废，必须全部重跑。",
+
+  "protocol_version": "1.0",
+  "protocol_frozen_at": "2025-07",
+
+  "generation": {
+    "temperature": 0.7,
+    "_temperature_note": "必须 > 0。温度为 0 时同一任务的多次采样结果相同，pass^k 会恒等于 accuracy，「稳定性」维度被静默抹掉。τ-bench 的 agent 温度默认 0，随机性主要来自 user simulator；本项目没有真实 simulator，所以随机性必须由采样温度提供。",
+    "top_p": 0.9,
+    "max_new_tokens": 1536,
+    "_max_new_tokens_note": "1024 对「长思考 + tool_call」的小模型经常截断，会产生大量 FORMAT_ERROR(truncated) 假阳性。1536 是观察到截断率降到可接受水平的下限。",
+    "do_sample": true
+  },
+
+  "eval": {
+    "task_source": "experiments/tasks_airline_v1.json",
+    "_task_source_note": "用固化的任务集而不是每次现生成，保证两次实验确实跑在同一套任务上",
+    "num_samples_per_task": 4,
+    "k_values": [1, 2, 4],
+    "primary_k": 4,
+    "task_limit": 0,
+    "max_turns": 8,
+    "max_corrections": 2
+  },
+
+  "variants": {
+    "_note": "混淆因素排查开关。默认全关；每开一个都要在报告里单独说明结论。",
+    "system_prompt_lite": false,
+    "tool_names": null,
+    "include_observations": true
+  },
+
+  "metrics": {
+    "primary": "pass_hat_k",
+    "secondary": ["accuracy", "pass_at_k", "delta_stability", "format_accuracy", "param_accuracy"],
+    "degenerate_mode_guards": ["format_ok_value_wrong_rate", "hallucination_rate", "repetition_rate"],
+    "confidence_interval": {
+      "method": "task_level_bootstrap",
+      "n_resamples": 1000,
+      "unit": "task",
+      "_unit_note": "重采样单位必须是任务。同一任务的多次采样高度相关，按样本重采样会严重低估区间宽度。",
+      "alpha": 0.05
+    }
+  },
+
+  "output": {
+    "write_predictions": true,
+    "write_report": true,
+    "report_name_real": "eval_report.json",
+    "report_name_mock": "eval_report.mock.json",
+    "_isolation_note": "真实结果与 mock 结果必须落在不同文件。mock 文件带 .mock 后缀且内部带 is_mock=true，汇总脚本默认拒绝读取。"
+  }
+}

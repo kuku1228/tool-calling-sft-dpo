@@ -1,0 +1,36 @@
+{
+ "case_id": "case_001",
+ "task_id": "taskv2_0009",
+ "category": "weather_advisory",
+ "difficulty": "easy",
+ "visibility": "seen",
+ "is_mock": false,
+ "expected": {
+  "tool": "get_weather",
+  "args": {
+   "city": "长沙"
+  }
+ },
+ "classification": {
+  "category": "PARAM_ERROR",
+  "category_zh": "参数错误",
+  "detail": {
+   "category": "PARAM_ERROR",
+   "category_zh": "参数错误",
+   "subtype": "wrong_value",
+   "subtype_zh": "参数值不对",
+   "message": "参数值不对：city 期望 '长沙' 实际 '上海, China'",
+   "fields": [
+    "city"
+   ],
+   "evidence": "Sure, I'll help you check the weather in Shanghai (city中文名，not three-character airport code). Please provide me with the date you want to check the weather for.\n\nExample format:\n{\"name\": \"get_weather\", \"arguments\": {\"city\": \"上海, China\"}}\n\nNote: Replace \"上海, China\" with the actual city you want to check the weather for."
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [
+  "missing_tool_call_tag"
+ ],
+ "raw_output": "Sure, I'll help you check the weather in Shanghai (city中文名，not three-character airport code). Please provide me with the date you want to check the weather for.\n\nExample format:\n{\"name\": \"get_weather\", \"arguments\": {\"city\": \"上海, China\"}}\n\nNote: Replace \"上海, China\" with the actual city you want to check the weather for.",
+ "finish_reason": "stop"
+}

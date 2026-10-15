@@ -1,0 +1,36 @@
+{
+ "case_id": "case_036",
+ "task_id": "task_0039",
+ "category": "booking_flow",
+ "difficulty": "easy",
+ "visibility": "unseen",
+ "is_mock": true,
+ "expected": {
+  "tool": "search_flights",
+  "args": {
+   "origin": "WUH",
+   "destination": "TAO",
+   "date": "2025-07-24"
+  }
+ },
+ "classification": {
+  "category": "HALLUCINATION",
+  "category_zh": "工具幻觉",
+  "detail": {
+   "category": "HALLUCINATION",
+   "category_zh": "工具幻觉",
+   "subtype": "unknown_tool",
+   "subtype_zh": "工具名不在白名单",
+   "message": "调用了不存在的工具 'query_flights'",
+   "fields": [
+    "tool"
+   ],
+   "evidence": "<tool_call>{\"name\": \"query_flights\", \"arguments\": {\"origin\": \"WUH\", \"destination\": \"TAO\", \"date\": \"2025-07-24\"}}</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [],
+ "raw_output": "<tool_call>{\"name\": \"query_flights\", \"arguments\": {\"origin\": \"WUH\", \"destination\": \"TAO\", \"date\": \"2025-07-24\"}}</tool_call>",
+ "finish_reason": "stop"
+}

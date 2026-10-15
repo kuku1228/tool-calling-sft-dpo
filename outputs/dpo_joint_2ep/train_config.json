@@ -1,0 +1,20 @@
+{
+  "experiment": "dpo_joint",
+  "output_dir": "D:\\HuaweiMoveData\\Users\\马琬蕊\\Desktop\\项目2\\agent-optimization\\outputs\\dpo_joint",
+  "num_epochs": 2,
+  "steps_per_epoch": 60,
+  "eval_every": 20,
+  "batch_size": 2,
+  "lr": 5e-05,
+  "beta": 0.1,
+  "seed": 42,
+  "seq_len": 48,
+  "optimize": true,
+  "is_mock": true,
+  "pair_types": [
+    "format_constraint",
+    "error_recovery",
+    "clarify_boundary"
+  ],
+  "num_pairs": 2443
+}

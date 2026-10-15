@@ -1,0 +1,35 @@
+{
+ "case_id": "case_020",
+ "task_id": "task_0024",
+ "category": "booking_flow",
+ "difficulty": "medium",
+ "visibility": "unseen",
+ "is_mock": true,
+ "expected": {
+  "tool": "book_flight",
+  "args": {
+   "flight_id": "MU1037",
+   "passenger_name": "李娜"
+  }
+ },
+ "classification": {
+  "category": "HALLUCINATION",
+  "category_zh": "工具幻觉",
+  "detail": {
+   "category": "HALLUCINATION",
+   "category_zh": "工具幻觉",
+   "subtype": "unknown_tool",
+   "subtype_zh": "工具名不在白名单",
+   "message": "调用了不存在的工具 'reserve_flight'",
+   "fields": [
+    "tool"
+   ],
+   "evidence": "<tool_call>{\"name\": \"reserve_flight\", \"arguments\": {\"flight_id\": \"MU1037\", \"passenger_name\": \"李娜\"}}</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [],
+ "raw_output": "<tool_call>{\"name\": \"reserve_flight\", \"arguments\": {\"flight_id\": \"MU1037\", \"passenger_name\": \"李娜\"}}</tool_call>",
+ "finish_reason": "stop"
+}

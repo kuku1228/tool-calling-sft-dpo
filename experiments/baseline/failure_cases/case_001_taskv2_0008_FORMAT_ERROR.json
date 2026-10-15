@@ -1,0 +1,34 @@
+{
+ "case_id": "case_001",
+ "task_id": "taskv2_0008",
+ "category": "weather_advisory",
+ "difficulty": "easy",
+ "visibility": "unseen",
+ "is_mock": false,
+ "expected": {
+  "tool": "get_weather",
+  "args": {
+   "city": "北海"
+  }
+ },
+ "classification": {
+  "category": "FORMAT_ERROR",
+  "category_zh": "格式错误",
+  "detail": {
+   "category": "FORMAT_ERROR",
+   "category_zh": "格式错误",
+   "subtype": "empty",
+   "subtype_zh": "输出为空",
+   "message": "模型输出为空",
+   "fields": [],
+   "evidence": ""
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [
+  "empty_output"
+ ],
+ "raw_output": "",
+ "finish_reason": "stop"
+}

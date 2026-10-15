@@ -1,0 +1,255 @@
+{
+ "label": "dpo_joint",
+ "is_mock": true,
+ "n_tasks": 30,
+ "format_accuracy": 0.883333,
+ "format_accuracy_task_aware": 0.883333,
+ "format_ok_value_wrong": 5,
+ "format_ok_value_wrong_rate": 0.083333,
+ "distribution": {
+  "total": 60,
+  "success_count": 25,
+  "success_rate": 0.416667,
+  "counts": {
+   "FORMAT_ERROR": 15,
+   "HALLUCINATION": 6,
+   "PARAM_ERROR": 9,
+   "REFUSED": 1,
+   "SUCCESS": 25,
+   "WRONG_TOOL": 4
+  },
+  "counts_zh": {
+   "格式错误": 15,
+   "工具幻觉": 6,
+   "参数错误": 9,
+   "拒绝作答": 1,
+   "成功": 25,
+   "工具选错": 4
+  },
+  "rates": {
+   "SUCCESS": 0.416667,
+   "FORMAT_ERROR": 0.25,
+   "HALLUCINATION": 0.1,
+   "WRONG_TOOL": 0.066667,
+   "PARAM_ERROR": 0.15,
+   "REFUSED": 0.016667,
+   "UNKNOWN": 0.0
+  },
+  "failure_share": {
+   "FORMAT_ERROR": 0.428571,
+   "HALLUCINATION": 0.171429,
+   "WRONG_TOOL": 0.114286,
+   "PARAM_ERROR": 0.257143,
+   "REFUSED": 0.028571,
+   "UNKNOWN": 0.0
+  },
+  "subtype_counts": {
+   "-": 25,
+   "json_broken": 8,
+   "unknown_tool": 6,
+   "wrong_value": 5,
+   "placeholder_value": 4,
+   "promise_only": 4,
+   "adjacent_tool": 4,
+   "no_tool_call": 2,
+   "truncated": 1,
+   "cannot_help": 1
+  },
+  "failure_subtype_counts": {
+   "json_broken": 8,
+   "unknown_tool": 6,
+   "wrong_value": 5,
+   "placeholder_value": 4,
+   "promise_only": 4,
+   "adjacent_tool": 4,
+   "no_tool_call": 2,
+   "truncated": 1,
+   "cannot_help": 1
+  },
+  "subtype_counts_zh": {
+   "JSON 语法非法": 8,
+   "工具名不在白名单": 6,
+   "参数值不对": 5,
+   "参数填了占位符": 4,
+   "只承诺要查，没真的调用": 4,
+   "工具名属于同域相邻工具": 4,
+   "完全没有 tool_call 标签": 2,
+   "输出被 max_new_tokens 截断": 1,
+   "模型表示无法完成": 1
+  },
+  "exemplars": {
+   "PARAM_ERROR": [
+    {
+     "task_id": "task_0002",
+     "subtype": "placeholder_value",
+     "message": "参数填了占位符：['destination']",
+     "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"SHA\", \"destination\": \"previous_value\", \"date\": \"2025-07-18\"}}</tool_call>",
+     "category": "flight_search",
+     "difficulty": "hard",
+     "sample_index": 0
+    },
+    {
+     "task_id": "task_0003",
+     "subtype": "wrong_value",
+     "message": "参数值不对：date 期望 '2025-07-21' 实际 '2025-17-21'",
+     "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"SZX\", \"destination\": \"CTU\", \"date\": \"2025-17-21\"}}</tool_call>",
+     "category": "flight_search",
+     "difficulty": "hard",
+     "sample_index": 0
+    },
+    {
+     "task_id": "task_0009",
+     "subtype": "placeholder_value",
+     "message": "参数填了占位符：['date']",
+     "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"HRB\", \"destination\": \"TSN\", \"date\": \"未知\"}}</tool_call>",
+     "category": "flight_search",
+     "difficulty": "hard",
+     "sample_index": 1
+    }
+   ],
+   "FORMAT_ERROR": [
+    {
+     "task_id": "task_0002",
+     "subtype": "json_broken",
+     "message": "检测到 tool_call 标签但 JSON 解析失败（无法解析出合法 JSON）",
+     "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {origin: \"SHA\", destination: \"CAN\", date: \"2025-07-18\"}}</tool_call>",
+     "category": "flight_search",
+     "difficulty": "hard",
+     "sample_index": 1
+    },
+    {
+     "task_id": "task_0003",
+     "subtype": "truncated",
+     "message": "输出因达到 max_new_tokens 被截断，tool_call 不完整",
+     "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {origin: \"SZX\", destination: \"CTU\", date: \"2025-07-21\"}}</tool_call>",
+     "category": "flight_search",
+     "difficulty": "hard",
+     "sample_index": 1
+    },
+    {
+     "task_id": "task_0004",
+     "subtype": "promise_only",
+     "message": "只承诺要查询，没有真的输出 tool_call",
+     "evidence": "好的，我这就为您处理这个问题。",
+     "category": "flight_search",
+     "difficulty": "hard",
+     "sample_index": 0
+    }
+   ],
+   "HALLUCINATION": [
+    {
+     "task_id": "task_0007",
+     "subtype": "unknown_tool",
+     "message": "调用了不存在的工具 'flight_search'",
+     "evidence": "<tool_call>{\"name\": \"flight_search\", \"arguments\": {\"origin\": \"WUH\", \"destination\": \"TAO\", \"date\": \"2025-08-05\"}}</tool_call>",
+     "category": "flight_search",
+     "difficulty": "hard",
+     "sample_index": 0
+    },
+    {
+     "task_id": "task_0011",
+     "subtype": "unknown_tool",
+     "message": "调用了不存在的工具 'flight_search'",
+     "evidence": "<tool_call>{\"name\": \"flight_search\", \"arguments\": {\"origin\": \"PEK\", \"destination\": \"SHA\", \"date\": \"2025-07-21\"}}</tool_call>",
+     "category": "flight_search",
+     "difficulty": "hard",
+     "sample_index": 0
+    },
+    {
+     "task_id": "task_0020",
+     "subtype": "unknown_tool",
+     "message": "调用了不存在的工具 'search_flight'",
+     "evidence": "<tool_call>{\"name\": \"search_flight\", \"arguments\": {\"origin\": \"URC\", \"destination\": \"LXA\", \"date\": \"2025-07-18\"}}</tool_call>",
+     "category": "flight_search",
+     "difficulty": "hard",
+     "sample_index": 1
+    }
+   ],
+   "WRONG_TOOL": [
+    {
+     "task_id": "task_0012",
+     "subtype": "adjacent_tool",
+     "message": "工具选错：期望 'search_flights'，实际 'get_weather'",
+     "evidence": "<tool_call>{\"name\": \"get_weather\", \"arguments\": {\"city\": \"汕头\"}}</tool_call>",
+     "category": "flight_search",
+     "difficulty": "hard",
+     "sample_index": 1
+    },
+    {
+     "task_id": "task_0019",
+     "subtype": "adjacent_tool",
+     "message": "工具选错：期望 'search_flights'，实际 'get_weather'",
+     "evidence": "<tool_call>{\"name\": \"get_weather\", \"arguments\": {\"city\": \"南通\"}}</tool_call>",
+     "category": "flight_search",
+     "difficulty": "hard",
+     "sample_index": 1
+    },
+    {
+     "task_id": "task_0028",
+     "subtype": "adjacent_tool",
+     "message": "工具选错：期望 'book_flight'，实际 'search_flights'",
+     "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"HAK\", \"destination\": \"CAN\", \"date\": \"2025-07-18\"}}</tool_call>",
+     "category": "booking_flow",
+     "difficulty": "hard",
+     "sample_index": 0
+    }
+   ],
+   "REFUSED": [
+    {
+     "task_id": "task_0019",
+     "subtype": "cannot_help",
+     "message": "模型表示无法完成该任务",
+     "evidence": "抱歉，我无法完成这个请求。",
+     "category": "flight_search",
+     "difficulty": "hard",
+     "sample_index": 0
+    }
+   ]
+  }
+ },
+ "limitations": [
+  {
+   "id": "visibility_meaningless",
+   "severity": "高",
+   "statement": "`seen`/`unseen` 标签**与训练暴露无关**：seen 组签名被训练覆盖 20/20（100%），unseen 组 10/10（100%）。该标签的赋值从不读取训练数据（是按序号/骨架哈希轮转）。",
+   "do_not_claim": "**不要**把 seen 与 unseen 的差值解释为泛化差距 —— 那是哈希分组的噪声。改用「实体重合度」三档（见 `scripts/eval/audit_eval_overlap.py`）。",
+   "verify": "python -c \"import sys;sys.path.insert(0,'.');from src.data.task_manifest_v2 import report_visibility_warning as W;print(W())\""
+  },
+  {
+   "id": "duplicate_expected_calls",
+   "severity": "高",
+   "statement": "30 个任务只有 **28 个不同期望调用** —— 2 个任务是重复计数。最大的簇有 **2 个任务**，它们的期望调用完全相同：`('search_flights', (('date', '2025-07-18'), ('destination', 'LXA'), ('origin', 'URC')))`。",
+   "do_not_claim": "**不要**说「2 个独立样本」—— 有效独立样本是**1 个行为**，2 是**触发方式**的数量。统计必须按**簇**重采样（`paired_stats.paired_bootstrap_clustered`），它给出更宽的置信区间（这是更保守的口径）。",
+   "verify": "python scripts/eval/paired_significance.py --a X --b Y "
+  },
+  {
+   "id": "entity_leaks",
+   "severity": "中",
+   "statement": "有 **33 个**评测任务的完整期望调用与某条训练样本完全相同：['task_0015', 'task_0017', 'task_0023', 'task_0024', 'task_0025']。这些任务上「答对」可能来自匹配记忆中的训练样本，而不是学会规则。",
+   "do_not_claim": "**不要**把这几个任务计入无污染的指标 —— 应同时给出「剔除它们之后」的干净子集指标。",
+   "verify": "python scripts/eval/audit_eval_overlap.py "
+  },
+  {
+   "id": "distribution_mismatch",
+   "severity": "中",
+   "statement": "训练语料里 `search_flights` 占 40.5%，而评测里只占 80.0% —— 训练分布偏向搜索工具。",
+   "do_not_claim": "**不要**把绝对准确率外推到其他分布。但**组间对比**（SFT vs DPO）不受影响：两者用同一份训练数据、同一分布，偏差对它们**对称**。",
+   "verify": "python scripts/prepare/verify_all.py"
+  },
+  {
+   "id": "sft_no_negative_samples",
+   "severity": "低（且加强论点）",
+   "statement": "SFT 训练数据 2635 条里，`chosen` **不含** `tool_call` 的有 **0 条** —— 纯正例监督在结构上无法表达「此处不该调用工具」。",
+   "do_not_claim": "**不要**把这说成「SFT 因为数据里没有所以做不到」就完了 —— 实测**系统提示里明确写着**「信息不足时先向用户追问」，所以这是**指令遵循失败**，不是数据缺口。这反而加强了论点。",
+   "verify": "python scripts/prepare/inspect_preferences.py"
+  }
+ ],
+ "clustered": {
+  "mean": 0.4017857142857143,
+  "ci_lo": 0.26785714285714285,
+  "ci_hi": 0.5446428571428571,
+  "n_clusters": 28,
+  "n_tasks": 30,
+  "cluster_shrinkage": 2
+ }
+}

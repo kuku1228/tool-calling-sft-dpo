@@ -1,0 +1,47 @@
+{
+  "_comment": "对照实验：仅 SFT（只用 chosen 做监督，不含对比信号）。",
+  "_purpose": "这是本项目最重要的对照组，也是自证伪机制。它要回答的问题是：",
+  "_question": "提升到底来自「偏好对齐的对比信号」，还是仅仅来自「更多同分布监督」？",
+  "_design": [
+    "数据与 dpo_joint 共享同一批 chosen（格式/工具选择/参数三类），保证监督信号的总量可比",
+    "故意不含 error_recovery —— 恢复能力无法由「只有正确答案」的数据教出来，这正是要被检验的假设",
+    "若本组在恢复率上也取得与 dpo_joint 相当的提升，则本项目的核心论点不成立，结论需相应改写"
+  ],
+  "_how_to_run": "把同一份偏好数据当 SFT 数据用：只取 chosen，配一个标准 causal LM 训练目标。见 scripts/train/sft_only.py 的说明（本项目提供数据切分，训练用 transformers.Trainer 或 trl.SFTTrainer）。",
+  "experiment": "sft_only",
+  "description": "对照：仅 SFT（无对比信号，无恢复类样本）",
+  "pairs": {
+    "pair_types": [
+      "format_constraint",
+      "tool_selection",
+      "param_constraint"
+    ],
+    "train_file": "data/preferences/sft_only.train.jsonl",
+    "dev_file": "data/preferences/sft_only.dev.jsonl",
+    "max_samples": 0
+  },
+  "sft": {
+    "_note": "SFT 只用 chosen 一侧；rejected 被丢弃。",
+    "use_side": "chosen",
+    "lr": 0.0001,
+    "epochs": 2,
+    "batch_size": 2,
+    "grad_accum": 8,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "gradient_checkpointing": true,
+    "bf16": true,
+    "max_length": 1280,
+    "save_steps": 50,
+    "seed": 42
+  },
+  "output": {
+    "dir": "outputs/sft_only",
+    "final_adapter_dir": "outputs/sft_only/final"
+  },
+  "eval_after_train": {
+    "enabled": true,
+    "report_dir": "experiments/sft_only",
+    "_comparison_note": "必须与 dpo_joint 在完全相同的评测协议下比较（同一任务集、同一采样数、同一温度）"
+  }
+}

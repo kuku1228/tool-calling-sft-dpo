@@ -1,0 +1,1867 @@
+{
+ "num": 106,
+ "report": {
+  "n": 106,
+  "violations": [],
+  "cross_category_skeleton_reuse": {
+   "帮我查一下订单<BID>的行李额度": 2
+  },
+  "skeleton_total": 105,
+  "skeleton_ratio": 0.991,
+  "by_category": {
+   "baggage": {
+    "n": 14,
+    "skeletons": 14,
+    "ratio": 1.0,
+    "signatures": 2
+   },
+   "booking_flow": {
+    "n": 15,
+    "skeletons": 15,
+    "ratio": 1.0,
+    "signatures": 1
+   },
+   "cancellation": {
+    "n": 22,
+    "skeletons": 22,
+    "ratio": 1.0,
+    "signatures": 2
+   },
+   "error_correction": {
+    "n": 15,
+    "skeletons": 15,
+    "ratio": 1.0,
+    "signatures": 6
+   },
+   "flight_search": {
+    "n": 14,
+    "skeletons": 14,
+    "ratio": 1.0,
+    "signatures": 1
+   },
+   "multi_tool": {
+    "n": 10,
+    "skeletons": 10,
+    "ratio": 1.0,
+    "signatures": 1
+   },
+   "multi_turn": {
+    "n": 6,
+    "skeletons": 6,
+    "ratio": 1.0,
+    "signatures": 3
+   },
+   "weather_advisory": {
+    "n": 10,
+    "skeletons": 10,
+    "ratio": 1.0,
+    "signatures": 1
+   }
+  }
+ },
+ "dates": [
+  "2026-11-02",
+  "2026-11-03",
+  "2026-11-04",
+  "2026-11-05",
+  "2026-11-06",
+  "2026-11-07",
+  "2026-11-08",
+  "2026-11-09",
+  "2026-11-10",
+  "2026-11-11",
+  "2026-11-12",
+  "2026-11-13",
+  "2026-11-14",
+  "2026-11-15",
+  "2026-11-16",
+  "2026-11-17",
+  "2026-11-18",
+  "2026-11-19",
+  "2026-11-20",
+  "2026-11-21",
+  "2026-11-22",
+  "2026-11-23",
+  "2026-11-24",
+  "2026-11-25",
+  "2026-11-26",
+  "2026-11-27",
+  "2026-11-28",
+  "2026-11-29",
+  "2026-11-30",
+  "2026-12-01",
+  "2026-12-02",
+  "2026-12-03",
+  "2026-12-04",
+  "2026-12-05",
+  "2026-12-06",
+  "2026-12-07",
+  "2026-12-08",
+  "2026-12-09",
+  "2026-12-10",
+  "2026-12-11",
+  "2026-12-13",
+  "2026-12-15",
+  "2026-12-21"
+ ],
+ "booking_ids_unique": 43,
+ "tasks": [
+  {
+   "task_id": "taskv2_0001",
+   "category": "weather_advisory",
+   "visibility": "unseen",
+   "difficulty": "easy",
+   "user": "三亚今天的天气怎么样？",
+   "tool": "get_weather",
+   "args": {
+    "city": "三亚"
+   },
+   "num_turns": 1,
+   "tags": [
+    "param_semantics"
+   ]
+  },
+  {
+   "task_id": "taskv2_0002",
+   "category": "weather_advisory",
+   "visibility": "seen",
+   "difficulty": "easy",
+   "user": "帮我看看上海今天会不会下雨",
+   "tool": "get_weather",
+   "args": {
+    "city": "上海"
+   },
+   "num_turns": 1,
+   "tags": [
+    "param_semantics"
+   ]
+  },
+  {
+   "task_id": "taskv2_0003",
+   "category": "weather_advisory",
+   "visibility": "seen",
+   "difficulty": "easy",
+   "user": "查一下临沂的天气",
+   "tool": "get_weather",
+   "args": {
+    "city": "临沂"
+   },
+   "num_turns": 1,
+   "tags": [
+    "param_semantics"
+   ]
+  },
+  {
+   "task_id": "taskv2_0004",
+   "category": "weather_advisory",
+   "visibility": "unseen",
+   "difficulty": "easy",
+   "user": "丽江现在多少度？",
+   "tool": "get_weather",
+   "args": {
+    "city": "丽江"
+   },
+   "num_turns": 1,
+   "tags": [
+    "param_semantics"
+   ]
+  },
+  {
+   "task_id": "taskv2_0005",
+   "category": "weather_advisory",
+   "visibility": "seen",
+   "difficulty": "easy",
+   "user": "我想知道乌鲁木齐今天的天气情况",
+   "tool": "get_weather",
+   "args": {
+    "city": "乌鲁木齐"
+   },
+   "num_turns": 1,
+   "tags": [
+    "param_semantics"
+   ]
+  },
+  {
+   "task_id": "taskv2_0006",
+   "category": "weather_advisory",
+   "visibility": "seen",
+   "difficulty": "easy",
+   "user": "兰州今天适合出门吗，天气如何",
+   "tool": "get_weather",
+   "args": {
+    "city": "兰州"
+   },
+   "num_turns": 1,
+   "tags": [
+    "param_semantics"
+   ]
+  },
+  {
+   "task_id": "taskv2_0007",
+   "category": "weather_advisory",
+   "visibility": "unseen",
+   "difficulty": "easy",
+   "user": "麻烦看一下北京今天的天气",
+   "tool": "get_weather",
+   "args": {
+    "city": "北京"
+   },
+   "num_turns": 1,
+   "tags": [
+    "param_semantics"
+   ]
+  },
+  {
+   "task_id": "taskv2_0008",
+   "category": "weather_advisory",
+   "visibility": "unseen",
+   "difficulty": "easy",
+   "user": "北海今天有雨吗？",
+   "tool": "get_weather",
+   "args": {
+    "city": "北海"
+   },
+   "num_turns": 1,
+   "tags": [
+    "param_semantics"
+   ]
+  },
+  {
+   "task_id": "taskv2_0009",
+   "category": "weather_advisory",
+   "visibility": "seen",
+   "difficulty": "easy",
+   "user": "帮我查查南京的天气状况",
+   "tool": "get_weather",
+   "args": {
+    "city": "南京"
+   },
+   "num_turns": 1,
+   "tags": [
+    "param_semantics"
+   ]
+  },
+  {
+   "task_id": "taskv2_0010",
+   "category": "weather_advisory",
+   "visibility": "unseen",
+   "difficulty": "easy",
+   "user": "看一下南宁今日天气",
+   "tool": "get_weather",
+   "args": {
+    "city": "南宁"
+   },
+   "num_turns": 1,
+   "tags": [
+    "param_semantics"
+   ]
+  },
+  {
+   "task_id": "taskv2_0011",
+   "category": "flight_search",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "帮我查一下2026-11-02从三亚到上海的航班",
+   "tool": "search_flights",
+   "args": {
+    "origin": "SYX",
+    "destination": "SHA",
+    "date": "2026-11-02"
+   },
+   "num_turns": 1,
+   "tags": [
+    "city_to_code",
+    "date_extract"
+   ]
+  },
+  {
+   "task_id": "taskv2_0012",
+   "category": "flight_search",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "2026-11-03临沂飞丽江有什么航班？",
+   "tool": "search_flights",
+   "args": {
+    "origin": "LYI",
+    "destination": "LJG",
+    "date": "2026-11-03"
+   },
+   "num_turns": 1,
+   "tags": [
+    "city_to_code",
+    "date_extract"
+   ]
+  },
+  {
+   "task_id": "taskv2_0013",
+   "category": "flight_search",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "我想2026-11-04去兰州，从乌鲁木齐出发，看看有哪些航班",
+   "tool": "search_flights",
+   "args": {
+    "origin": "URC",
+    "destination": "LHW",
+    "date": "2026-11-04"
+   },
+   "num_turns": 1,
+   "tags": [
+    "city_to_code",
+    "date_extract"
+   ]
+  },
+  {
+   "task_id": "taskv2_0014",
+   "category": "flight_search",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "请搜索2026-11-05 北京到北海的机票",
+   "tool": "search_flights",
+   "args": {
+    "origin": "PEK",
+    "destination": "BHY",
+    "date": "2026-11-05"
+   },
+   "num_turns": 1,
+   "tags": [
+    "city_to_code",
+    "date_extract"
+   ]
+  },
+  {
+   "task_id": "taskv2_0015",
+   "category": "flight_search",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "2026-11-06我要从南京去南宁，帮我看看航班",
+   "tool": "search_flights",
+   "args": {
+    "origin": "NKG",
+    "destination": "NNG",
+    "date": "2026-11-06"
+   },
+   "num_turns": 1,
+   "tags": [
+    "city_to_code",
+    "date_extract"
+   ]
+  },
+  {
+   "task_id": "taskv2_0016",
+   "category": "flight_search",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "麻烦帮我看看2026-11-07南昌到南通有没有航班",
+   "tool": "search_flights",
+   "args": {
+    "origin": "KHN",
+    "destination": "NTG",
+    "date": "2026-11-07"
+   },
+   "num_turns": 1,
+   "tags": [
+    "city_to_code",
+    "date_extract"
+   ]
+  },
+  {
+   "task_id": "taskv2_0017",
+   "category": "flight_search",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "2026-11-08想去合肥，从厦门走，有哪些航班可选",
+   "tool": "search_flights",
+   "args": {
+    "origin": "XMN",
+    "destination": "HFE",
+    "date": "2026-11-08"
+   },
+   "num_turns": 1,
+   "tags": [
+    "city_to_code",
+    "date_extract"
+   ]
+  },
+  {
+   "task_id": "taskv2_0018",
+   "category": "flight_search",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "查询呼和浩特到哈尔滨 2026-11-09的航班信息",
+   "tool": "search_flights",
+   "args": {
+    "origin": "HET",
+    "destination": "HRB",
+    "date": "2026-11-09"
+   },
+   "num_turns": 1,
+   "tags": [
+    "city_to_code",
+    "date_extract"
+   ]
+  },
+  {
+   "task_id": "taskv2_0019",
+   "category": "flight_search",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "我2026-11-10要从大理出发去大连，帮我找一下航班",
+   "tool": "search_flights",
+   "args": {
+    "origin": "DLU",
+    "destination": "DLC",
+    "date": "2026-11-10"
+   },
+   "num_turns": 1,
+   "tags": [
+    "city_to_code",
+    "date_extract"
+   ]
+  },
+  {
+   "task_id": "taskv2_0020",
+   "category": "flight_search",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "有没有2026-11-11从天津飞往太原的航班？",
+   "tool": "search_flights",
+   "args": {
+    "origin": "TSN",
+    "destination": "TYN",
+    "date": "2026-11-11"
+   },
+   "num_turns": 1,
+   "tags": [
+    "city_to_code",
+    "date_extract"
+   ]
+  },
+  {
+   "task_id": "taskv2_0021",
+   "category": "flight_search",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "2026-11-12威海—宁波的航班有哪些",
+   "tool": "search_flights",
+   "args": {
+    "origin": "WEH",
+    "destination": "NGB",
+    "date": "2026-11-12"
+   },
+   "num_turns": 1,
+   "tags": [
+    "city_to_code",
+    "date_extract"
+   ]
+  },
+  {
+   "task_id": "taskv2_0022",
+   "category": "flight_search",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "帮我搜一下2026-11-13 宜宾出发到宜昌的飞机",
+   "tool": "search_flights",
+   "args": {
+    "origin": "YBP",
+    "destination": "YIH",
+    "date": "2026-11-13"
+   },
+   "num_turns": 1,
+   "tags": [
+    "city_to_code",
+    "date_extract"
+   ]
+  },
+  {
+   "task_id": "taskv2_0023",
+   "category": "flight_search",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "想订2026-11-14常州去广州的票，先看看有什么航班",
+   "tool": "search_flights",
+   "args": {
+    "origin": "CZX",
+    "destination": "CAN",
+    "date": "2026-11-14"
+   },
+   "num_turns": 1,
+   "tags": [
+    "city_to_code",
+    "date_extract"
+   ]
+  },
+  {
+   "task_id": "taskv2_0024",
+   "category": "flight_search",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "麻烦查2026-11-15从张家界到徐州的航班班次",
+   "tool": "search_flights",
+   "args": {
+    "origin": "DYG",
+    "destination": "XUZ",
+    "date": "2026-11-15"
+   },
+   "num_turns": 1,
+   "tags": [
+    "city_to_code",
+    "date_extract"
+   ]
+  },
+  {
+   "task_id": "taskv2_0025",
+   "category": "booking_flow",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "帮我订一张2026-11-16 北京到成都的机票，乘客是张伟，经济舱就行",
+   "tool": "book_flight",
+   "args": {
+    "flight_id": "CZ4978",
+    "passenger_name": "张伟"
+   },
+   "num_turns": 2,
+   "tags": [
+    "write_tool",
+    "two_step"
+   ]
+  },
+  {
+   "task_id": "taskv2_0026",
+   "category": "booking_flow",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "李娜需要2026-11-17从上海飞广州，直接帮我订上",
+   "tool": "book_flight",
+   "args": {
+    "flight_id": "CA3840",
+    "passenger_name": "李娜"
+   },
+   "num_turns": 2,
+   "tags": [
+    "write_tool",
+    "two_step"
+   ]
+  },
+  {
+   "task_id": "taskv2_0027",
+   "category": "booking_flow",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "给王芳订2026-11-18深圳到西安的票",
+   "tool": "book_flight",
+   "args": {
+    "flight_id": "3U2775",
+    "passenger_name": "王芳"
+   },
+   "num_turns": 2,
+   "tags": [
+    "write_tool",
+    "two_step"
+   ]
+  },
+  {
+   "task_id": "taskv2_0028",
+   "category": "booking_flow",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "我要帮刘洋订2026-11-19杭州去昆明的航班",
+   "tool": "book_flight",
+   "args": {
+    "flight_id": "MF2593",
+    "passenger_name": "刘洋"
+   },
+   "num_turns": 2,
+   "tags": [
+    "write_tool",
+    "two_step"
+   ]
+  },
+  {
+   "task_id": "taskv2_0029",
+   "category": "booking_flow",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "2026-11-20重庆到南京的机票帮我订一下，乘客陈静",
+   "tool": "book_flight",
+   "args": {
+    "flight_id": "ZH7520",
+    "passenger_name": "陈静"
+   },
+   "num_turns": 2,
+   "tags": [
+    "write_tool",
+    "two_step"
+   ]
+  },
+  {
+   "task_id": "taskv2_0030",
+   "category": "booking_flow",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "帮赵磊预订2026-11-21厦门飞青岛的机票",
+   "tool": "book_flight",
+   "args": {
+    "flight_id": "MF665",
+    "passenger_name": "赵磊"
+   },
+   "num_turns": 2,
+   "tags": [
+    "write_tool",
+    "two_step"
+   ]
+  },
+  {
+   "task_id": "taskv2_0031",
+   "category": "booking_flow",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "订2026-11-22武汉到长沙的票，乘客是孙悦",
+   "tool": "book_flight",
+   "args": {
+    "flight_id": "SC3146",
+    "passenger_name": "孙悦"
+   },
+   "num_turns": 2,
+   "tags": [
+    "write_tool",
+    "two_step"
+   ]
+  },
+  {
+   "task_id": "taskv2_0032",
+   "category": "booking_flow",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "周杰要去天津，2026-11-23从三亚出发，帮我订票",
+   "tool": "book_flight",
+   "args": {
+    "flight_id": "ZH1928",
+    "passenger_name": "周杰"
+   },
+   "num_turns": 2,
+   "tags": [
+    "write_tool",
+    "two_step"
+   ]
+  },
+  {
+   "task_id": "taskv2_0033",
+   "category": "booking_flow",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "帮我给吴敏订2026-11-24哈尔滨到海口的机票",
+   "tool": "book_flight",
+   "args": {
+    "flight_id": "MU4045",
+    "passenger_name": "吴敏"
+   },
+   "num_turns": 2,
+   "tags": [
+    "write_tool",
+    "two_step"
+   ]
+  },
+  {
+   "task_id": "taskv2_0034",
+   "category": "booking_flow",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "2026-11-25从乌鲁木齐到沈阳，乘客郑凯，帮我下单",
+   "tool": "book_flight",
+   "args": {
+    "flight_id": "HU7563",
+    "passenger_name": "郑凯"
+   },
+   "num_turns": 2,
+   "tags": [
+    "write_tool",
+    "two_step"
+   ]
+  },
+  {
+   "task_id": "taskv2_0035",
+   "category": "booking_flow",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "给冯雪安排2026-11-26大连到郑州的行程",
+   "tool": "book_flight",
+   "args": {
+    "flight_id": "CZ5930",
+    "passenger_name": "冯雪"
+   },
+   "num_turns": 2,
+   "tags": [
+    "write_tool",
+    "two_step"
+   ]
+  },
+  {
+   "task_id": "taskv2_0036",
+   "category": "booking_flow",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "帮我订2026-11-27拉萨飞济南的票，乘客何涛",
+   "tool": "book_flight",
+   "args": {
+    "flight_id": "SC7138",
+    "passenger_name": "何涛"
+   },
+   "num_turns": 2,
+   "tags": [
+    "write_tool",
+    "two_step"
+   ]
+  },
+  {
+   "task_id": "taskv2_0037",
+   "category": "booking_flow",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "许静 2026-11-28从福州到南昌，订经济舱",
+   "tool": "book_flight",
+   "args": {
+    "flight_id": "ZH4772",
+    "passenger_name": "许静"
+   },
+   "num_turns": 2,
+   "tags": [
+    "write_tool",
+    "two_step"
+   ]
+  },
+  {
+   "task_id": "taskv2_0038",
+   "category": "booking_flow",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "订一张2026-11-29贵阳到南宁的票给邓超",
+   "tool": "book_flight",
+   "args": {
+    "flight_id": "HU2023",
+    "passenger_name": "邓超"
+   },
+   "num_turns": 2,
+   "tags": [
+    "write_tool",
+    "two_step"
+   ]
+  },
+  {
+   "task_id": "taskv2_0039",
+   "category": "booking_flow",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "曾毅的机票：2026-11-30太原到石家庄，帮我订上",
+   "tool": "book_flight",
+   "args": {
+    "flight_id": "MU4297",
+    "passenger_name": "曾毅"
+   },
+   "num_turns": 2,
+   "tags": [
+    "write_tool",
+    "two_step"
+   ]
+  },
+  {
+   "task_id": "taskv2_0040",
+   "category": "baggage",
+   "visibility": "unseen",
+   "difficulty": "easy",
+   "user": "帮我查一下订单BK0B1707的行李额度",
+   "tool": "check_baggage",
+   "args": {
+    "booking_id": "BK0B1707"
+   },
+   "num_turns": 1,
+   "tags": [
+    "id_format"
+   ]
+  },
+  {
+   "task_id": "taskv2_0041",
+   "category": "baggage",
+   "visibility": "seen",
+   "difficulty": "easy",
+   "user": "订单BK30723C还能免费托运多少公斤？",
+   "tool": "check_baggage",
+   "args": {
+    "booking_id": "BK30723C"
+   },
+   "num_turns": 1,
+   "tags": [
+    "id_format"
+   ]
+  },
+  {
+   "task_id": "taskv2_0042",
+   "category": "baggage",
+   "visibility": "unseen",
+   "difficulty": "easy",
+   "user": "我想知道BK55CD71这个订单的行李限额",
+   "tool": "check_baggage",
+   "args": {
+    "booking_id": "BK55CD71"
+   },
+   "num_turns": 1,
+   "tags": [
+    "id_format"
+   ]
+  },
+  {
+   "task_id": "taskv2_0043",
+   "category": "baggage",
+   "visibility": "seen",
+   "difficulty": "easy",
+   "user": "BK7A28A6这个订单能托运多少行李？",
+   "tool": "check_baggage",
+   "args": {
+    "booking_id": "BK7A28A6"
+   },
+   "num_turns": 1,
+   "tags": [
+    "id_format"
+   ]
+  },
+  {
+   "task_id": "taskv2_0044",
+   "category": "baggage",
+   "visibility": "unseen",
+   "difficulty": "easy",
+   "user": "查一下BK9F83DB的行李额度是多少",
+   "tool": "check_baggage",
+   "args": {
+    "booking_id": "BK9F83DB"
+   },
+   "num_turns": 1,
+   "tags": [
+    "id_format"
+   ]
+  },
+  {
+   "task_id": "taskv2_0045",
+   "category": "baggage",
+   "visibility": "seen",
+   "difficulty": "easy",
+   "user": "订单BKC4DE10的免费行李限额是多少公斤",
+   "tool": "check_baggage",
+   "args": {
+    "booking_id": "BKC4DE10"
+   },
+   "num_turns": 1,
+   "tags": [
+    "id_format"
+   ]
+  },
+  {
+   "task_id": "taskv2_0046",
+   "category": "baggage",
+   "visibility": "seen",
+   "difficulty": "easy",
+   "user": "BKE93945可以托运几公斤行李？",
+   "tool": "check_baggage",
+   "args": {
+    "booking_id": "BKE93945"
+   },
+   "num_turns": 1,
+   "tags": [
+    "id_format"
+   ]
+  },
+  {
+   "task_id": "taskv2_0047",
+   "category": "baggage",
+   "visibility": "seen",
+   "difficulty": "easy",
+   "user": "帮我确认一下BK0E947A的托运额度",
+   "tool": "check_baggage",
+   "args": {
+    "booking_id": "BK0E947A"
+   },
+   "num_turns": 1,
+   "tags": [
+    "id_format"
+   ]
+  },
+  {
+   "task_id": "taskv2_0048",
+   "category": "baggage",
+   "visibility": "unseen",
+   "difficulty": "easy",
+   "user": "把订单BK33EFAF的行李额度改成23公斤",
+   "tool": "modify_baggage",
+   "args": {
+    "booking_id": "BK33EFAF",
+    "new_baggage_kg": 23
+   },
+   "num_turns": 1,
+   "tags": [
+    "write_tool",
+    "numeric_param"
+   ]
+  },
+  {
+   "task_id": "taskv2_0049",
+   "category": "baggage",
+   "visibility": "seen",
+   "difficulty": "easy",
+   "user": "BK584AE4的行李额度帮我调到25公斤",
+   "tool": "modify_baggage",
+   "args": {
+    "booking_id": "BK584AE4",
+    "new_baggage_kg": 25
+   },
+   "num_turns": 1,
+   "tags": [
+    "write_tool",
+    "numeric_param"
+   ]
+  },
+  {
+   "task_id": "taskv2_0050",
+   "category": "baggage",
+   "visibility": "seen",
+   "difficulty": "easy",
+   "user": "订单BK7DA519要改成28公斤行李",
+   "tool": "modify_baggage",
+   "args": {
+    "booking_id": "BK7DA519",
+    "new_baggage_kg": 28
+   },
+   "num_turns": 1,
+   "tags": [
+    "write_tool",
+    "numeric_param"
+   ]
+  },
+  {
+   "task_id": "taskv2_0051",
+   "category": "baggage",
+   "visibility": "unseen",
+   "difficulty": "easy",
+   "user": "帮我把BKA2004E的额度改为32公斤",
+   "tool": "modify_baggage",
+   "args": {
+    "booking_id": "BKA2004E",
+    "new_baggage_kg": 32
+   },
+   "num_turns": 1,
+   "tags": [
+    "write_tool",
+    "numeric_param"
+   ]
+  },
+  {
+   "task_id": "taskv2_0052",
+   "category": "baggage",
+   "visibility": "seen",
+   "difficulty": "easy",
+   "user": "BKC75B83的行李额改成35公斤",
+   "tool": "modify_baggage",
+   "args": {
+    "booking_id": "BKC75B83",
+    "new_baggage_kg": 35
+   },
+   "num_turns": 1,
+   "tags": [
+    "write_tool",
+    "numeric_param"
+   ]
+  },
+  {
+   "task_id": "taskv2_0053",
+   "category": "baggage",
+   "visibility": "seen",
+   "difficulty": "easy",
+   "user": "我想把BKECB6B8的行李额度提到40公斤",
+   "tool": "modify_baggage",
+   "args": {
+    "booking_id": "BKECB6B8",
+    "new_baggage_kg": 40
+   },
+   "num_turns": 1,
+   "tags": [
+    "write_tool",
+    "numeric_param"
+   ]
+  },
+  {
+   "task_id": "taskv2_0054",
+   "category": "cancellation",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "我要取消订单BK1111ED，原因是行程变更",
+   "tool": "cancel_booking",
+   "args": {
+    "booking_id": "BK1111ED",
+    "reason": "行程变更"
+   },
+   "num_turns": 3,
+   "tags": [
+    "write_tool",
+    "confirmation"
+   ]
+  },
+  {
+   "task_id": "taskv2_0055",
+   "category": "cancellation",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "帮我取消BK366C22，身体不适",
+   "tool": "cancel_booking",
+   "args": {
+    "booking_id": "BK366C22",
+    "reason": "身体不适"
+   },
+   "num_turns": 3,
+   "tags": [
+    "write_tool",
+    "confirmation"
+   ]
+  },
+  {
+   "task_id": "taskv2_0056",
+   "category": "cancellation",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "BK5BC757这个订单我要退掉，会议取消",
+   "tool": "cancel_booking",
+   "args": {
+    "booking_id": "BK5BC757",
+    "reason": "会议取消"
+   },
+   "num_turns": 3,
+   "tags": [
+    "write_tool",
+    "confirmation"
+   ]
+  },
+  {
+   "task_id": "taskv2_0057",
+   "category": "cancellation",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "取消BK80228C，找到更合适的航班",
+   "tool": "cancel_booking",
+   "args": {
+    "booking_id": "BK80228C",
+    "reason": "找到更合适的航班"
+   },
+   "num_turns": 3,
+   "tags": [
+    "write_tool",
+    "confirmation"
+   ]
+  },
+  {
+   "task_id": "taskv2_0058",
+   "category": "cancellation",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "BKA57DC1退了吧，天气原因",
+   "tool": "cancel_booking",
+   "args": {
+    "booking_id": "BKA57DC1",
+    "reason": "天气原因"
+   },
+   "num_turns": 3,
+   "tags": [
+    "write_tool",
+    "confirmation"
+   ]
+  },
+  {
+   "task_id": "taskv2_0059",
+   "category": "cancellation",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "帮我取消BKCAD8F6，临时有事去不了",
+   "tool": "cancel_booking",
+   "args": {
+    "booking_id": "BKCAD8F6",
+    "reason": "临时有事去不了"
+   },
+   "num_turns": 3,
+   "tags": [
+    "write_tool",
+    "confirmation"
+   ]
+  },
+  {
+   "task_id": "taskv2_0060",
+   "category": "cancellation",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "把BKEF332B取消掉，个人原因",
+   "tool": "cancel_booking",
+   "args": {
+    "booking_id": "BKEF332B",
+    "reason": "个人原因"
+   },
+   "num_turns": 3,
+   "tags": [
+    "write_tool",
+    "confirmation"
+   ]
+  },
+  {
+   "task_id": "taskv2_0061",
+   "category": "cancellation",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "请取消订单BK148E60，公司临时安排出差",
+   "tool": "cancel_booking",
+   "args": {
+    "booking_id": "BK148E60",
+    "reason": "公司临时安排出差"
+   },
+   "num_turns": 3,
+   "tags": [
+    "write_tool",
+    "confirmation"
+   ]
+  },
+  {
+   "task_id": "taskv2_0062",
+   "category": "cancellation",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "我不想要BK39E995这个订单了",
+   "tool": null,
+   "args": {},
+   "num_turns": 1,
+   "tags": [
+    "clarify_first"
+   ]
+  },
+  {
+   "task_id": "taskv2_0063",
+   "category": "cancellation",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "BK5E44CA这个订单帮我处理一下",
+   "tool": null,
+   "args": {},
+   "num_turns": 1,
+   "tags": [
+    "clarify_first"
+   ]
+  },
+  {
+   "task_id": "taskv2_0064",
+   "category": "cancellation",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "BK839FFF我想退掉",
+   "tool": null,
+   "args": {},
+   "num_turns": 1,
+   "tags": [
+    "clarify_first"
+   ]
+  },
+  {
+   "task_id": "taskv2_0065",
+   "category": "cancellation",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "帮我取消BKA8FA34",
+   "tool": null,
+   "args": {},
+   "num_turns": 1,
+   "tags": [
+    "clarify_first"
+   ]
+  },
+  {
+   "task_id": "taskv2_0066",
+   "category": "cancellation",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "BK61C13D不想要了",
+   "tool": null,
+   "args": {},
+   "num_turns": 1,
+   "tags": [
+    "clarify_first"
+   ]
+  },
+  {
+   "task_id": "taskv2_0067",
+   "category": "cancellation",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "麻烦处理一下BK861C72",
+   "tool": null,
+   "args": {},
+   "num_turns": 1,
+   "tags": [
+    "clarify_first"
+   ]
+  },
+  {
+   "task_id": "taskv2_0068",
+   "category": "cancellation",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "BKAB77A7退掉吧",
+   "tool": null,
+   "args": {},
+   "num_turns": 1,
+   "tags": [
+    "clarify_first"
+   ]
+  },
+  {
+   "task_id": "taskv2_0069",
+   "category": "cancellation",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "把BKD0D2DC取消",
+   "tool": null,
+   "args": {},
+   "num_turns": 1,
+   "tags": [
+    "clarify_first"
+   ]
+  },
+  {
+   "task_id": "taskv2_0070",
+   "category": "cancellation",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "BKF52D11帮我退一下",
+   "tool": null,
+   "args": {},
+   "num_turns": 1,
+   "tags": [
+    "clarify_first"
+   ]
+  },
+  {
+   "task_id": "taskv2_0071",
+   "category": "cancellation",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "这个订单BK1A8846我不要了",
+   "tool": null,
+   "args": {},
+   "num_turns": 1,
+   "tags": [
+    "clarify_first"
+   ]
+  },
+  {
+   "task_id": "taskv2_0072",
+   "category": "cancellation",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "BK3FE37B想退掉",
+   "tool": null,
+   "args": {},
+   "num_turns": 1,
+   "tags": [
+    "clarify_first"
+   ]
+  },
+  {
+   "task_id": "taskv2_0073",
+   "category": "cancellation",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "麻烦帮我退BK643EB0",
+   "tool": null,
+   "args": {},
+   "num_turns": 1,
+   "tags": [
+    "clarify_first"
+   ]
+  },
+  {
+   "task_id": "taskv2_0074",
+   "category": "cancellation",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "BK8999E5取消一下",
+   "tool": null,
+   "args": {},
+   "num_turns": 1,
+   "tags": [
+    "clarify_first"
+   ]
+  },
+  {
+   "task_id": "taskv2_0075",
+   "category": "cancellation",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "我要把BKAEF41A退掉",
+   "tool": null,
+   "args": {},
+   "num_turns": 1,
+   "tags": [
+    "clarify_first"
+   ]
+  },
+  {
+   "task_id": "taskv2_0076",
+   "category": "multi_tool",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "2026-12-01我要从成都去扬州，顺便帮我看看成都当天的天气",
+   "tool": "search_flights",
+   "args": {
+    "origin": "CTU",
+    "destination": "YTY",
+    "date": "2026-12-01"
+   },
+   "num_turns": 3,
+   "tags": [
+    "multi_tool",
+    "tool_chaining",
+    "get_weather"
+   ]
+  },
+  {
+   "task_id": "taskv2_0077",
+   "category": "multi_tool",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "帮我查2026-12-02拉萨到无锡的航班，另外拉萨那天天气怎么样",
+   "tool": "search_flights",
+   "args": {
+    "origin": "LXA",
+    "destination": "WUX",
+    "date": "2026-12-02"
+   },
+   "num_turns": 3,
+   "tags": [
+    "multi_tool",
+    "tool_chaining",
+    "get_weather"
+   ]
+  },
+  {
+   "task_id": "taskv2_0078",
+   "category": "multi_tool",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "2026-12-03去杭州，从昆明走；先看看昆明天气如何",
+   "tool": "search_flights",
+   "args": {
+    "origin": "KMG",
+    "destination": "HGH",
+    "date": "2026-12-03"
+   },
+   "num_turns": 3,
+   "tags": [
+    "multi_tool",
+    "tool_chaining",
+    "get_weather"
+   ]
+  },
+  {
+   "task_id": "taskv2_0079",
+   "category": "multi_tool",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "我要2026-12-04从柳州飞桂林，还想知道柳州当天会不会下雨",
+   "tool": "search_flights",
+   "args": {
+    "origin": "LZH",
+    "destination": "KWL",
+    "date": "2026-12-04"
+   },
+   "num_turns": 3,
+   "tags": [
+    "multi_tool",
+    "tool_chaining",
+    "get_weather"
+   ]
+  },
+  {
+   "task_id": "taskv2_0080",
+   "category": "multi_tool",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "武汉到汕头 2026-12-05的航班帮我查一下，顺便看看武汉的天气",
+   "tool": "search_flights",
+   "args": {
+    "origin": "WUH",
+    "destination": "SWA",
+    "date": "2026-12-05"
+   },
+   "num_turns": 3,
+   "tags": [
+    "multi_tool",
+    "tool_chaining",
+    "get_weather"
+   ]
+  },
+  {
+   "task_id": "taskv2_0081",
+   "category": "multi_tool",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "2026-12-06从沈阳到洛阳，出发前想先了解沈阳的天气",
+   "tool": "search_flights",
+   "args": {
+    "origin": "SHE",
+    "destination": "LYA",
+    "date": "2026-12-06"
+   },
+   "num_turns": 3,
+   "tags": [
+    "multi_tool",
+    "tool_chaining",
+    "get_weather"
+   ]
+  },
+  {
+   "task_id": "taskv2_0082",
+   "category": "multi_tool",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "帮我安排2026-12-07济南去海口，另外济南那天冷不冷",
+   "tool": "search_flights",
+   "args": {
+    "origin": "TNA",
+    "destination": "HAK",
+    "date": "2026-12-07"
+   },
+   "num_turns": 3,
+   "tags": [
+    "multi_tool",
+    "tool_chaining",
+    "get_weather"
+   ]
+  },
+  {
+   "task_id": "taskv2_0083",
+   "category": "multi_tool",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "2026-12-08深圳前往温州，同时查一下深圳的天气情况",
+   "tool": "search_flights",
+   "args": {
+    "origin": "SZX",
+    "destination": "WNZ",
+    "date": "2026-12-08"
+   },
+   "num_turns": 3,
+   "tags": [
+    "multi_tool",
+    "tool_chaining",
+    "get_weather"
+   ]
+  },
+  {
+   "task_id": "taskv2_0084",
+   "category": "multi_tool",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "我要2026-12-09湛江到潍坊的航班，出发地天气也帮我看看",
+   "tool": "search_flights",
+   "args": {
+    "origin": "ZHA",
+    "destination": "WEF",
+    "date": "2026-12-09"
+   },
+   "num_turns": 3,
+   "tags": [
+    "multi_tool",
+    "tool_chaining",
+    "get_weather"
+   ]
+  },
+  {
+   "task_id": "taskv2_0085",
+   "category": "multi_tool",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "烟台2026-12-10飞珠海有哪些航班，烟台那天有雨吗",
+   "tool": "search_flights",
+   "args": {
+    "origin": "YNT",
+    "destination": "ZUH",
+    "date": "2026-12-10"
+   },
+   "num_turns": 3,
+   "tags": [
+    "multi_tool",
+    "tool_chaining",
+    "get_weather"
+   ]
+  },
+  {
+   "task_id": "taskv2_0086",
+   "category": "error_correction",
+   "visibility": "unseen",
+   "difficulty": "medium",
+   "user": "查一下2026-11-12上海到成都的航班",
+   "tool": "search_flights",
+   "args": {
+    "origin": "SHA",
+    "destination": "CTU",
+    "date": "2026-11-12"
+   },
+   "num_turns": 3,
+   "tags": [
+    "error_correction",
+    "recovery",
+    "format_ignore"
+   ]
+  },
+  {
+   "task_id": "taskv2_0087",
+   "category": "error_correction",
+   "visibility": "seen",
+   "difficulty": "medium",
+   "user": "查一下我的订单BK4A71C2还能托运多少行李",
+   "tool": "check_baggage",
+   "args": {
+    "booking_id": "BK4A71C2"
+   },
+   "num_turns": 3,
+   "tags": [
+    "error_correction",
+    "recovery",
+    "hallucinated_tool"
+   ]
+  },
+  {
+   "task_id": "taskv2_0088",
+   "category": "error_correction",
+   "visibility": "unseen",
+   "difficulty": "medium",
+   "user": "帮我调整一下订单BK9D3E64的行李限额，要 23 公斤",
+   "tool": "modify_baggage",
+   "args": {
+    "booking_id": "BK9D3E64",
+    "new_baggage_kg": 23
+   },
+   "num_turns": 3,
+   "tags": [
+    "error_correction",
+    "recovery",
+    "wrong_tool"
+   ]
+  },
+  {
+   "task_id": "taskv2_0089",
+   "category": "error_correction",
+   "visibility": "unseen",
+   "difficulty": "medium",
+   "user": "帮我查一下订单BK2F80B7的行李额度",
+   "tool": "check_baggage",
+   "args": {
+    "booking_id": "BK2F80B7"
+   },
+   "num_turns": 3,
+   "tags": [
+    "error_correction",
+    "recovery",
+    "param_placeholder"
+   ]
+  },
+  {
+   "task_id": "taskv2_0090",
+   "category": "error_correction",
+   "visibility": "unseen",
+   "difficulty": "medium",
+   "user": "2026-11-15从重庆飞厦门有哪些航班",
+   "tool": "search_flights",
+   "args": {
+    "origin": "CKG",
+    "destination": "XMN",
+    "date": "2026-11-15"
+   },
+   "num_turns": 3,
+   "tags": [
+    "error_correction",
+    "recovery",
+    "city_code"
+   ]
+  },
+  {
+   "task_id": "taskv2_0091",
+   "category": "error_correction",
+   "visibility": "unseen",
+   "difficulty": "medium",
+   "user": "给苏晴订2026-11-18从南京到武汉的机票",
+   "tool": "search_flights",
+   "args": {
+    "origin": "NKG",
+    "destination": "WUH",
+    "date": "2026-11-18"
+   },
+   "num_turns": 3,
+   "tags": [
+    "error_correction",
+    "recovery",
+    "repeated_same_error"
+   ]
+  },
+  {
+   "task_id": "taskv2_0092",
+   "category": "error_correction",
+   "visibility": "seen",
+   "difficulty": "medium",
+   "user": "我要查一下行李额度",
+   "tool": null,
+   "args": {},
+   "num_turns": 3,
+   "tags": [
+    "error_correction",
+    "recovery",
+    "missing_booking_id"
+   ]
+  },
+  {
+   "task_id": "taskv2_0093",
+   "category": "error_correction",
+   "visibility": "seen",
+   "difficulty": "medium",
+   "user": "后天从青岛到长沙的航班有哪些",
+   "tool": "search_flights",
+   "args": {
+    "origin": "TAO",
+    "destination": "CSX",
+    "date": "2026-11-08"
+   },
+   "num_turns": 3,
+   "tags": [
+    "error_correction",
+    "recovery",
+    "wrong_date"
+   ]
+  },
+  {
+   "task_id": "taskv2_0094",
+   "category": "error_correction",
+   "visibility": "seen",
+   "difficulty": "medium",
+   "user": "三亚到哈尔滨 2026-11-25 的航班，直接订最便宜那班，乘客韩雪",
+   "tool": "book_flight",
+   "args": {
+    "passenger_name": "韩雪"
+   },
+   "num_turns": 3,
+   "tags": [
+    "error_correction",
+    "recovery",
+    "overbook"
+   ]
+  },
+  {
+   "task_id": "taskv2_0095",
+   "category": "error_correction",
+   "visibility": "unseen",
+   "difficulty": "medium",
+   "user": "温州今天天气怎么样",
+   "tool": "get_weather",
+   "args": {
+    "city": "温州"
+   },
+   "num_turns": 3,
+   "tags": [
+    "error_correction",
+    "recovery",
+    "wrong_city_param"
+   ]
+  },
+  {
+   "task_id": "taskv2_0096",
+   "category": "error_correction",
+   "visibility": "seen",
+   "difficulty": "medium",
+   "user": "帮我看看海口的天气",
+   "tool": "get_weather",
+   "args": {
+    "city": "海口"
+   },
+   "num_turns": 3,
+   "tags": [
+    "error_correction",
+    "recovery",
+    "hallucinated_weather_tool"
+   ]
+  },
+  {
+   "task_id": "taskv2_0097",
+   "category": "error_correction",
+   "visibility": "seen",
+   "difficulty": "medium",
+   "user": "查一下订单BK8B24F3的行李额度",
+   "tool": "check_baggage",
+   "args": {
+    "booking_id": "BK8B24F3"
+   },
+   "num_turns": 3,
+   "tags": [
+    "error_correction",
+    "recovery",
+    "format_json_broken"
+   ]
+  },
+  {
+   "task_id": "taskv2_0098",
+   "category": "error_correction",
+   "visibility": "seen",
+   "difficulty": "medium",
+   "user": "把订单BK1E97A5的行李额度改成 60 公斤",
+   "tool": "modify_baggage",
+   "args": {
+    "booking_id": "BK1E97A5",
+    "new_baggage_kg": 40
+   },
+   "num_turns": 3,
+   "tags": [
+    "error_correction",
+    "recovery",
+    "overflow_baggage"
+   ]
+  },
+  {
+   "task_id": "taskv2_0099",
+   "category": "error_correction",
+   "visibility": "seen",
+   "difficulty": "medium",
+   "user": "查一下 2026-12-07 郑州到济南的航班",
+   "tool": "search_flights",
+   "args": {
+    "origin": "CGO",
+    "destination": "TNA",
+    "date": "2026-12-07"
+   },
+   "num_turns": 3,
+   "tags": [
+    "error_correction",
+    "recovery",
+    "extra_param"
+   ]
+  },
+  {
+   "task_id": "taskv2_0100",
+   "category": "error_correction",
+   "visibility": "seen",
+   "difficulty": "medium",
+   "user": "查一下订单 bk8e51a3 的行李额度",
+   "tool": "check_baggage",
+   "args": {
+    "booking_id": "BK3A5C18"
+   },
+   "num_turns": 3,
+   "tags": [
+    "error_correction",
+    "recovery",
+    "wrong_id_format"
+   ]
+  },
+  {
+   "task_id": "taskv2_0101",
+   "category": "multi_turn",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "2026-12-11北京到上海的航班有哪些",
+   "tool": "search_flights",
+   "args": {
+    "origin": "PEK",
+    "destination": "SHA",
+    "date": "2026-12-12"
+   },
+   "num_turns": 3,
+   "tags": [
+    "multi_turn",
+    "user_flips_date"
+   ]
+  },
+  {
+   "task_id": "taskv2_0102",
+   "category": "multi_turn",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "2026-12-13从广州到成都的航班",
+   "tool": "search_flights",
+   "args": {
+    "origin": "CAN",
+    "destination": "KMG",
+    "date": "2026-12-13"
+   },
+   "num_turns": 3,
+   "tags": [
+    "multi_turn",
+    "user_changes_dest"
+   ]
+  },
+  {
+   "task_id": "taskv2_0103",
+   "category": "multi_turn",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "帮我订2026-12-15深圳到杭州的机票，乘客沈括",
+   "tool": "book_flight",
+   "args": {
+    "flight_id": "MU3311",
+    "passenger_name": "沈括"
+   },
+   "num_turns": 3,
+   "tags": [
+    "multi_turn",
+    "user_changes_class"
+   ]
+  },
+  {
+   "task_id": "taskv2_0104",
+   "category": "multi_turn",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "帮我查订单BK9F2C41的行李额度",
+   "tool": "modify_baggage",
+   "args": {
+    "booking_id": "BK9F2C41",
+    "new_baggage_kg": 35
+   },
+   "num_turns": 3,
+   "tags": [
+    "multi_turn",
+    "user_adds_baggage"
+   ]
+  },
+  {
+   "task_id": "taskv2_0105",
+   "category": "multi_turn",
+   "visibility": "seen",
+   "difficulty": "hard",
+   "user": "帮我看看订单BK3D7B58的行李额度",
+   "tool": "search_flights",
+   "args": {
+    "origin": "KMG",
+    "destination": "XMN",
+    "date": "2026-12-19"
+   },
+   "num_turns": 3,
+   "tags": [
+    "multi_turn",
+    "user_reconsiders_cancel"
+   ]
+  },
+  {
+   "task_id": "taskv2_0106",
+   "category": "multi_turn",
+   "visibility": "unseen",
+   "difficulty": "hard",
+   "user": "太原到石家庄2026-12-21，给雷鸣订一张",
+   "tool": "book_flight",
+   "args": {
+    "flight_id": "CZ5522",
+    "passenger_name": "傅莹"
+   },
+   "num_turns": 3,
+   "tags": [
+    "multi_turn",
+    "user_corrects_passenger"
+   ]
+  }
+ ]
+}

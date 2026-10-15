@@ -1,0 +1,35 @@
+{
+ "case_id": "case_022",
+ "task_id": "task_0024",
+ "category": "booking_flow",
+ "difficulty": "medium",
+ "visibility": "unseen",
+ "is_mock": true,
+ "expected": {
+  "tool": "book_flight",
+  "args": {
+   "flight_id": "MU1037",
+   "passenger_name": "李娜"
+  }
+ },
+ "classification": {
+  "category": "WRONG_TOOL",
+  "category_zh": "工具选错",
+  "detail": {
+   "category": "WRONG_TOOL",
+   "category_zh": "工具选错",
+   "subtype": "adjacent_tool",
+   "subtype_zh": "工具名属于同域相邻工具",
+   "message": "工具选错：期望 'book_flight'，实际 'check_baggage'",
+   "fields": [
+    "tool"
+   ],
+   "evidence": "<tool_call>{\"name\": \"check_baggage\", \"arguments\": {\"booking_id\": \"BK7F2A9C\"}}</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [],
+ "raw_output": "<tool_call>{\"name\": \"check_baggage\", \"arguments\": {\"booking_id\": \"BK7F2A9C\"}}</tool_call>",
+ "finish_reason": "stop"
+}

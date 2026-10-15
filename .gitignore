@@ -1,0 +1,95 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# ---- 模型与训练权重 ----
+models/
+checkpoints/
+*.safetensors
+*.bin
+*.pt
+*.pth
+adapter_model/
+*.gguf
+
+# ---- 数据（大文件不入库）----
+data/preferences/*.jsonl
+data/sft/*.jsonl
+data/raw/*.jsonl
+!data/preferences/.gitkeep
+!data/sft/.gitkeep
+
+# ---- 实验产物 ----
+# 说明：experiments/ 下的 eval_report.json 通常几 MB，
+# 但它是项目核心证据，默认保留。若过大可取消下面注释。
+# experiments/**/eval_report.json
+outputs/**/checkpoint-*/
+outputs/**/*.safetensors
+outputs/**/optimizer.pt
+outputs/**/scheduler.pt
+outputs/**/rng_state.pth
+outputs/**/trainer_state.json
+
+# 适配器与合并模型的目录里含 11 MB 的 tokenizer 副本，不入库；
+# 只保留 adapter_config.json（记录 LoRA 超参，是复现所需的最小信息）。
+outputs/**/tokenizer.json
+outputs/**/vocab.json
+outputs/**/merges.txt
+outputs/**/added_tokens.json
+outputs/**/special_tokens_map.json
+outputs/**/tokenizer_config.json
+outputs/**/base_with_init_adapter/
+outputs/**/training_args.bin
+outputs/**/README.md
+
+# mock 流水线会把偏好数据整体复制一份到 outputs/ 下，体积可达数百 MB
+outputs/mock_pipeline/
+outputs/**/*.jsonl
+# 保留训练日志（机制分析要用）
+!outputs/**/train_log.jsonl
+
+
+# ---- 缓存 ----
+.cache/
+*.log
+wandb/
+.cache/huggingface/
+~$*
+
+# ---- 编辑器 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---- 临时目录 ----
+.tmp/
+
+# ---- 本地环境与缓存（不入库） ----
+.venv/
+.venv-full/
+# HF 缓存：huggingface_hub 会在这里建符号链接；无符号链接权限时会失败，
+# 因此本仓库改用 tokenizer_qwen25/ 直下方式（见下）
+.hf-cache/
+# Qwen2.5 分词器文件（约 11.5 MB）：只为 CPU 侧长度体检而下载，非项目资产
+tokenizer_qwen25/
+
+# 审计脚本的运行产物（快照，可由脚本重新生成）
+docs/audit/audit_report.txt
+
+# 本次会话的临时目录
+_incoming/
+
+# 部署包（构建产物，按需生成）
+deploy/
+
+# 例外：这些日志是实验证据，必须入库
+!experiments/summary_final/*.log
+

@@ -1,0 +1,34 @@
+{
+ "case_id": "case_013",
+ "task_id": "task_0015",
+ "category": "flight_search",
+ "difficulty": "medium",
+ "visibility": "unseen",
+ "is_mock": true,
+ "expected": {
+  "tool": "search_flights",
+  "args": {
+   "origin": "CKG",
+   "destination": "KMG",
+   "date": "2025-07-20"
+  }
+ },
+ "classification": {
+  "category": "FORMAT_ERROR",
+  "category_zh": "格式错误",
+  "detail": {
+   "category": "FORMAT_ERROR",
+   "category_zh": "格式错误",
+   "subtype": "truncated",
+   "subtype_zh": "输出被 max_new_tokens 截断",
+   "message": "输出因达到 max_new_tokens 被截断，tool_call 不完整",
+   "fields": [],
+   "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {origin: \"CKG\", destination: \"KMG\", date: \"2025-07-20\"}}</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [],
+ "raw_output": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {origin: \"CKG\", destination: \"KMG\", date: \"2025-07-20\"}}</tool_call>",
+ "finish_reason": "length"
+}

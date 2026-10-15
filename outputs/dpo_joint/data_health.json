@@ -1,0 +1,85 @@
+{
+ "train_file": "/root/autodl-tmp/agent-optimization/data/preferences/dpo_joint.train.jsonl",
+ "dev_file": "/root/autodl-tmp/agent-optimization/data/preferences/dpo_joint.dev.jsonl",
+ "num_train": 2443,
+ "stats": {
+  "total": 2443,
+  "by_pair_type": {
+   "format_constraint": 1014,
+   "error_recovery": 1065,
+   "clarify_boundary": 364
+  },
+  "by_negative_kind": {
+   "hard": 1225,
+   "simple": 1160,
+   "recovery": 58
+  },
+  "by_split": {
+   "train": 2443
+  },
+  "by_target_error": {
+   "FORMAT_ERROR": 1191,
+   "HALLUCINATION": 163,
+   "WRONG_TOOL": 520,
+   "PARAM_ERROR": 471,
+   "NO_RECOVERY": 98
+  },
+  "avg_chosen_chars": 93.5,
+  "avg_rejected_chars": 61.3
+ },
+ "audit": {
+  "checked": 2443,
+  "num_issues": {
+   "sides_equivalent": 0,
+   "chosen_not_canonical": 0,
+   "chosen_unknown_tool": 0,
+   "rejected_unknown_tool_ok": 4,
+   "prompt_missing_assistant_head": 0,
+   "empty_side": 0
+  },
+  "problem_counts": {},
+  "examples": {},
+  "passed": true
+ },
+ "prompt_consistency": {
+  "checked": 2443,
+  "num_mismatch": 0,
+  "consistent": true,
+  "num_uncheckable": 0,
+  "examples": []
+ },
+ "token_length": {
+  "num_samples": 400,
+  "tokenizer_name": "/root/autodl-tmp/models/Qwen2.5-1.5B-Instruct",
+  "prompt_tokens": {
+   "p50": 1008,
+   "p90": 1046,
+   "p99": 1085,
+   "max": 1086
+  },
+  "prompt_plus_completion_tokens": {
+   "p50": 1039,
+   "p90": 1086,
+   "p99": 1116,
+   "max": 1119
+  },
+  "completion_tokens": {
+   "p50": 37,
+   "p99": 43,
+   "max": 52
+  }
+ },
+ "recommended_max_length": {
+  "max_length": 1152,
+  "max_prompt_length": 1152
+ },
+ "truncation": {
+  "num_sampled": 400,
+  "max_length": 1280,
+  "max_prompt_length": 1152,
+  "prompt_truncation_rate": 0.0,
+  "completion_truncation_rate": 0.0,
+  "degenerate_after_truncation_rate": 0.0,
+  "note": "degenerate_after_truncation_rate 是「截断后 chosen 与 rejected 变得完全相同」的比例 —— 这些样本对 DPO 是纯噪声。若 > 5% 请调大 max_length 或过滤长样本。"
+ }
+}

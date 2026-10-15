@@ -1,0 +1,36 @@
+{
+ "case_id": "case_003",
+ "task_id": "taskv2_0011",
+ "category": "flight_search",
+ "difficulty": "hard",
+ "visibility": "unseen",
+ "is_mock": false,
+ "expected": {
+  "tool": "search_flights",
+  "args": {
+   "origin": "SYX",
+   "destination": "SHA",
+   "date": "2026-11-02"
+  }
+ },
+ "classification": {
+  "category": "FORMAT_ERROR",
+  "category_zh": "格式错误",
+  "detail": {
+   "category": "FORMAT_ERROR",
+   "category_zh": "格式错误",
+   "subtype": "no_tool_call",
+   "subtype_zh": "完全没有 tool_call 标签",
+   "message": "输出里没有 <tool_call> 标签",
+   "fields": [],
+   "evidence": "ralei to shaanxi zhongguancun from xiamen airport to shanghai pudong airport on 2026-11-02"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [
+  "missing_tool_call_tag"
+ ],
+ "raw_output": "ralei to shaanxi zhongguancun from xiamen airport to shanghai pudong airport on 2026-11-02",
+ "finish_reason": "stop"
+}

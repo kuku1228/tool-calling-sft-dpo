@@ -1,0 +1,35 @@
+{
+ "case_id": "case_033",
+ "task_id": "task_0032",
+ "category": "booking_flow",
+ "difficulty": "medium",
+ "visibility": "seen",
+ "is_mock": true,
+ "expected": {
+  "tool": "book_flight",
+  "args": {
+   "flight_id": "MU1333",
+   "passenger_name": "孙悦"
+  }
+ },
+ "classification": {
+  "category": "PARAM_ERROR",
+  "category_zh": "参数错误",
+  "detail": {
+   "category": "PARAM_ERROR",
+   "category_zh": "参数错误",
+   "subtype": "placeholder_value",
+   "subtype_zh": "参数填了占位符",
+   "message": "参数填了占位符：['flight_id']",
+   "fields": [
+    "flight_id"
+   ],
+   "evidence": "<tool_call>{\"name\": \"book_flight\", \"arguments\": {\"flight_id\": \"previous_reservation\", \"passenger_name\": \"孙悦\"}}</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [],
+ "raw_output": "<tool_call>{\"name\": \"book_flight\", \"arguments\": {\"flight_id\": \"previous_reservation\", \"passenger_name\": \"孙悦\"}}</tool_call>",
+ "finish_reason": "stop"
+}

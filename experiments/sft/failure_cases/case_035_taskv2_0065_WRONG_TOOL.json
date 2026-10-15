@@ -1,0 +1,32 @@
+{
+ "case_id": "case_035",
+ "task_id": "taskv2_0065",
+ "category": "cancellation",
+ "difficulty": "hard",
+ "visibility": "unseen",
+ "is_mock": false,
+ "expected": {
+  "tool": null,
+  "args": {}
+ },
+ "classification": {
+  "category": "WRONG_TOOL",
+  "category_zh": "工具选错",
+  "detail": {
+   "category": "WRONG_TOOL",
+   "category_zh": "工具选错",
+   "subtype": "should_clarify",
+   "subtype_zh": "信息不足时应先追问，却直接调用了工具",
+   "message": "信息不足时应先追问，模型却直接调用了 cancel_booking",
+   "fields": [
+    "tool"
+   ],
+   "evidence": "<tool_call>{\"name\": \"cancel_booking\", \"arguments\": {\"booking_id\": \"BKA8FA34\", \"reason\": \"行程变更\"}}</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [],
+ "raw_output": "<tool_call>{\"name\": \"cancel_booking\", \"arguments\": {\"booking_id\": \"BKA8FA34\", \"reason\": \"行程变更\"}}</tool_call>",
+ "finish_reason": "stop"
+}

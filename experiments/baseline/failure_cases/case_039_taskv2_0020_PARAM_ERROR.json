@@ -1,0 +1,37 @@
+{
+ "case_id": "case_039",
+ "task_id": "taskv2_0020",
+ "category": "flight_search",
+ "difficulty": "hard",
+ "visibility": "unseen",
+ "is_mock": false,
+ "expected": {
+  "tool": "search_flights",
+  "args": {
+   "origin": "TSN",
+   "destination": "TYN",
+   "date": "2026-11-11"
+  }
+ },
+ "classification": {
+  "category": "PARAM_ERROR",
+  "category_zh": "参数错误",
+  "detail": {
+   "category": "PARAM_ERROR",
+   "category_zh": "参数错误",
+   "subtype": "wrong_value",
+   "subtype_zh": "参数值不对",
+   "message": "参数值不对：origin 期望 'TSN' 实际 'TPE'; destination 期望 'TYN' 实际 'PZH'",
+   "fields": [
+    "origin",
+    "destination"
+   ],
+   "evidence": "<tool_call>\n{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"TPE\", \"destination\": \"PZH\", \"date\": \"2026-11-11\"}}\n</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": true
+ },
+ "defects": [],
+ "raw_output": "<tool_call>\n{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"TPE\", \"destination\": \"PZH\", \"date\": \"2026-11-11\"}}\n</tool_call>",
+ "finish_reason": "stop"
+}

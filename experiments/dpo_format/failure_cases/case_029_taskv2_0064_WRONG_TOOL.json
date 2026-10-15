@@ -1,0 +1,34 @@
+{
+ "case_id": "case_029",
+ "task_id": "taskv2_0064",
+ "category": "cancellation",
+ "difficulty": "hard",
+ "visibility": "seen",
+ "is_mock": false,
+ "expected": {
+  "tool": null,
+  "args": {}
+ },
+ "classification": {
+  "category": "WRONG_TOOL",
+  "category_zh": "工具选错",
+  "detail": {
+   "category": "WRONG_TOOL",
+   "category_zh": "工具选错",
+   "subtype": "should_clarify",
+   "subtype_zh": "信息不足时应先追问，却直接调用了工具",
+   "message": "信息不足时应先追问，模型却直接调用了 cancel_booking",
+   "fields": [
+    "tool"
+   ],
+   "evidence": "{\"name\": \"cancel_booking\", \"arguments\": {\"booking_id\": \"BK839FFF\", \"reason\": \"误选座位不适\"}}</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [
+  "missing_tool_call_tag"
+ ],
+ "raw_output": "{\"name\": \"cancel_booking\", \"arguments\": {\"booking_id\": \"BK839FFF\", \"reason\": \"误选座位不适\"}}</tool_call>",
+ "finish_reason": "stop"
+}

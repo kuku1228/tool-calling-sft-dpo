@@ -1,0 +1,102 @@
+{
+  "_comment": "全局默认配置。所有字段都能被环境变量或命令行覆盖。",
+  "_note_on_yaml": "为了让 PyYAML 缺失的环境也能解析（退化到 json.loads），本项目所有 yaml 都写成 JSON 兼容子集：键加引号、不用锚点/多行标量。",
+
+  "seed": 42,
+  "run_tag": "",
+
+  "model": {
+    "name": "Qwen/Qwen2.5-1.5B-Instruct",
+    "_model_choice": "0.5B=CPU 调试 / 1.5B=单卡 3090 主线 / 3B=单卡 4090 备选",
+    "temperature": 0.7,
+    "_temperature_note": "必须 > 0，否则同一任务多次采样结果相同，pass^k 恒等于 accuracy",
+    "top_p": 0.9,
+    "max_new_tokens": 1536,
+    "max_seq_len": 2048,
+    "dtype": "bfloat16",
+    "device": "auto",
+    "local_path": "",
+    "hf_endpoint": ""
+  },
+
+  "eval": {
+    "num_samples_per_task": 4,
+    "_samples_note": "pass^k 需要 k <= num_samples_per_task",
+    "pass_k_values": [1, 2, 4],
+    "primary_k": 4,
+    "num_tasks": 100
+  },
+
+  "train": {
+    "beta": 0.1,
+    "_beta_note": "DPO 论文主实验用 0.1；1.5B 小模型上 0.1 通常比 0.5 更有效",
+    "loss_type": "sigmoid",
+    "_loss_type_note": "TRL 的 loss_type 不支持 simpo/orpo（那两者是独立 Trainer）",
+    "label_smoothing": 0.0,
+    "reference_free": false,
+
+    "lr": 5e-5,
+    "_lr_note": "DPO 论文用 1e-6，但那是全参微调；LoRA 下 5e-5 是更常见的量级",
+    "epochs": 2,
+    "batch_size": 2,
+    "grad_accum": 8,
+    "warmup_ratio": 0.1,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "lr_scheduler": "cosine",
+
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "lora_target_modules": "all-linear",
+
+    "gradient_checkpointing": true,
+    "bf16": true,
+    "max_length": 1536,
+    "max_prompt_length": 1024,
+
+    "logging_steps": 5,
+    "save_steps": 50,
+    "eval_steps": 50,
+    "save_total_limit": 3,
+    "seed": 42,
+    "report_to": "tensorboard"
+  },
+
+  "preference": {
+    "n_format": 1200,
+    "n_recovery": 1200,
+    "n_tool_selection": 600,
+    "seed": 42,
+    "max_pairs_per_task": 8,
+    "hard_negative_ratio": 0.35
+  },
+
+  "mock": {
+    "_warning": "以下数字是待验证的假设值，不是项目结论。仅用于在没有 GPU 时跑通流水线。",
+    "baseline_error_rates": {
+      "FORMAT_ERROR": 0.180,
+      "HALLUCINATION": 0.105,
+      "WRONG_TOOL": 0.075,
+      "PARAM_ERROR": 0.160,
+      "NO_RECOVERY": 0.060
+    },
+    "easy_task_bonus": 0.15,
+    "hard_task_penalty": 0.08,
+    "mitigation_factors": {
+      "baseline":  { "FORMAT_ERROR": 1.00, "HALLUCINATION": 1.00, "WRONG_TOOL": 1.00, "PARAM_ERROR": 1.00, "NO_RECOVERY": 1.00 },
+      "dpo_format":{ "FORMAT_ERROR": 0.35, "HALLUCINATION": 0.95, "WRONG_TOOL": 0.92, "PARAM_ERROR": 0.90, "NO_RECOVERY": 0.95 },
+      "dpo_recovery":{ "FORMAT_ERROR": 0.95, "HALLUCINATION": 1.00, "WRONG_TOOL": 0.95, "PARAM_ERROR": 0.92, "NO_RECOVERY": 0.40 },
+      "dpo_joint": { "FORMAT_ERROR": 0.35, "HALLUCINATION": 0.40, "WRONG_TOOL": 0.75, "PARAM_ERROR": 0.70, "NO_RECOVERY": 0.35 },
+      "sft_only":  { "FORMAT_ERROR": 0.40, "HALLUCINATION": 0.60, "WRONG_TOOL": 0.85, "PARAM_ERROR": 0.80, "NO_RECOVERY": 0.90 }
+    },
+    "_sft_only_note": "假设：SFT 能从 chosen 学会格式与工具名，但学不到『被纠正后改对』（chosen 里没有『先错后改』的样本），所以 NO_RECOVERY 几乎不降。真实实验若发现 SFT 在恢复率上也大幅提升，则本项目核心论点不成立，结论需相应改写。",
+    "recovery_gain": {
+      "baseline": 1.0,
+      "dpo_format": 0.95,
+      "dpo_recovery": 2.30,
+      "dpo_joint": 3.10,
+      "sft_only": 1.15
+    }
+  }
+}

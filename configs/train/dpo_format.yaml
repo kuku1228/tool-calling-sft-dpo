@@ -1,0 +1,43 @@
+{
+  "_comment": "Exp 1：格式约束偏好对 DPO。",
+  "_hypothesis": "模型最大的问题是「没把意图落成工具调用」（FORMAT_ERROR 占比最高）。只训格式类偏好对就应该把格式错误率大幅压低。",
+  "_expected": "格式正确率明显上升；整体准确率小幅上升；错误恢复率几乎不动（因为数据里没有恢复信号）。",
+  "_falsifier": "如果格式正确率上升但整体准确率不动，说明模型学会了「格式对的捷径」——output 合法但实体乱填。这正是本项目必须监控 format_ok_value_wrong 的原因。",
+  "experiment": "dpo_format",
+  "description": "Exp 1：格式约束偏好对（仅 format_constraint）",
+  "pairs": {
+    "pair_types": [
+      "format_constraint"
+    ],
+    "train_file": "data/preferences/dpo_format.train.jsonl",
+    "_train_file_note": "由 scripts/prepare/build_preferences.py 生成；不要指向 outputs/mock_pipeline/ 下的 mock 数据",
+    "dev_file": "data/preferences/dpo_format.dev.jsonl",
+    "max_samples": 0
+  },
+  "train": {
+    "beta": 0.1,
+    "loss_type": "sigmoid",
+    "lr": 5e-05,
+    "epochs": 2,
+    "batch_size": 2,
+    "grad_accum": 8,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "gradient_checkpointing": true,
+    "bf16": true,
+    "max_length": 1280,
+    "max_prompt_length": 1152,
+    "save_steps": 50,
+    "eval_steps": 50,
+    "seed": 42,
+    "logging_steps": 5
+  },
+  "output": {
+    "dir": "outputs/dpo_format",
+    "final_adapter_dir": "outputs/dpo_format/final"
+  },
+  "eval_after_train": {
+    "enabled": true,
+    "report_dir": "experiments/dpo_format"
+  }
+}

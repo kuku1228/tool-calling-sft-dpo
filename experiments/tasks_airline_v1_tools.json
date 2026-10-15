@@ -1,0 +1,221 @@
+{
+ "num_tools": 6,
+ "tools": [
+  {
+   "name": "search_flights",
+   "kind": "read",
+   "description": "搜索指定日期从出发地到目的地的可售航班，返回航班列表。",
+   "required": [
+    "origin",
+    "destination",
+    "date"
+   ],
+   "optional": [
+    "max_price"
+   ],
+   "schema": {
+    "type": "function",
+    "function": {
+     "name": "search_flights",
+     "description": "搜索指定日期从出发地到目的地的可售航班，返回航班列表。",
+     "parameters": {
+      "type": "object",
+      "properties": {
+       "origin": {
+        "type": "string",
+        "description": "出发城市的三字机场代码，例如 PEK。不要写城市中文名。"
+       },
+       "destination": {
+        "type": "string",
+        "description": "到达城市的三字机场代码，例如 SHA。"
+       },
+       "date": {
+        "type": "string",
+        "description": "出发日期，必须是 YYYY-MM-DD 格式。相对日期（明天/下周五）必须先换算成绝对日期。"
+       },
+       "max_price": {
+        "type": "number",
+        "description": "可选，价格上限（人民币元）。"
+       }
+      },
+      "required": [
+       "origin",
+       "destination",
+       "date"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "name": "book_flight",
+   "kind": "write",
+   "description": "为指定乘客预订一个航班座位。必须先用 search_flights 拿到 flight_id。",
+   "required": [
+    "flight_id",
+    "passenger_name"
+   ],
+   "optional": [
+    "cabin"
+   ],
+   "schema": {
+    "type": "function",
+    "function": {
+     "name": "book_flight",
+     "description": "为指定乘客预订一个航班座位。必须先用 search_flights 拿到 flight_id。",
+     "parameters": {
+      "type": "object",
+      "properties": {
+       "flight_id": {
+        "type": "string",
+        "description": "航班号，必须来自 search_flights 的返回结果，不能自己编造。"
+       },
+       "passenger_name": {
+        "type": "string",
+        "description": "乘客姓名，与证件一致。"
+       },
+       "cabin": {
+        "type": "string",
+        "description": "舱位，默认 economy。",
+        "enum": [
+         "economy",
+         "business",
+         "first"
+        ]
+       }
+      },
+      "required": [
+       "flight_id",
+       "passenger_name"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "name": "check_baggage",
+   "kind": "read",
+   "description": "查询某个订单的免费行李额度与已用额度。",
+   "required": [
+    "booking_id"
+   ],
+   "optional": [],
+   "schema": {
+    "type": "function",
+    "function": {
+     "name": "check_baggage",
+     "description": "查询某个订单的免费行李额度与已用额度。",
+     "parameters": {
+      "type": "object",
+      "properties": {
+       "booking_id": {
+        "type": "string",
+        "description": "订单号，格式为 BK + 6 位大写字母或数字，例如 BK7F2A9C。"
+       }
+      },
+      "required": [
+       "booking_id"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "name": "modify_baggage",
+   "kind": "write",
+   "description": "修改订单的行李额度。会立即产生费用，属于写操作。",
+   "required": [
+    "booking_id",
+    "new_baggage_kg"
+   ],
+   "optional": [],
+   "schema": {
+    "type": "function",
+    "function": {
+     "name": "modify_baggage",
+     "description": "修改订单的行李额度。会立即产生费用，属于写操作。",
+     "parameters": {
+      "type": "object",
+      "properties": {
+       "booking_id": {
+        "type": "string",
+        "description": "订单号，格式 BK + 6 位。"
+       },
+       "new_baggage_kg": {
+        "type": "number",
+        "description": "目标行李额度（公斤），必须在 0 到 50 之间。"
+       }
+      },
+      "required": [
+       "booking_id",
+       "new_baggage_kg"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "name": "cancel_booking",
+   "kind": "write",
+   "description": "取消一个订单。不可逆，调用前需要确认用户意图。",
+   "required": [
+    "booking_id",
+    "reason"
+   ],
+   "optional": [],
+   "schema": {
+    "type": "function",
+    "function": {
+     "name": "cancel_booking",
+     "description": "取消一个订单。不可逆，调用前需要确认用户意图。",
+     "parameters": {
+      "type": "object",
+      "properties": {
+       "booking_id": {
+        "type": "string",
+        "description": "要取消的订单号。"
+       },
+       "reason": {
+        "type": "string",
+        "description": "取消原因，用一句话说明，不能留空或写占位符。"
+       }
+      },
+      "required": [
+       "booking_id",
+       "reason"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "name": "get_weather",
+   "kind": "read",
+   "description": "查询某个城市当天的天气，用于提醒旅客是否会影响出行。",
+   "required": [
+    "city"
+   ],
+   "optional": [],
+   "schema": {
+    "type": "function",
+    "function": {
+     "name": "get_weather",
+     "description": "查询某个城市当天的天气，用于提醒旅客是否会影响出行。",
+     "parameters": {
+      "type": "object",
+      "properties": {
+       "city": {
+        "type": "string",
+        "description": "城市中文名，例如 北京。注意这个参数是中文城市名，不是机场三字码。"
+       }
+      },
+      "required": [
+       "city"
+      ]
+     }
+    }
+   }
+  }
+ ],
+ "manual_rendered": "- search_flights(origin, destination, date; 可选: max_price)\n    搜索指定日期从出发地到目的地的可售航班，返回航班列表。\n      · origin [string, 必填]（示例: PEK）\n        出发城市的三字机场代码，例如 PEK。不要写城市中文名。\n      · destination [string, 必填]（示例: SHA）\n        到达城市的三字机场代码，例如 SHA。\n      · date [string, 必填]（示例: 2025-07-15）\n        出发日期，必须是 YYYY-MM-DD 格式。相对日期（明天/下周五）必须先换算成绝对日期。\n      · max_price [number, 可选]（示例: 1500）\n        可选，价格上限（人民币元）。\n- book_flight(flight_id, passenger_name; 可选: cabin)\n    为指定乘客预订一个航班座位。必须先用 search_flights 拿到 flight_id。\n      · flight_id [string, 必填]（示例: MU5101）\n        航班号，必须来自 search_flights 的返回结果，不能自己编造。\n      · passenger_name [string, 必填]（示例: 张伟）\n        乘客姓名，与证件一致。\n      · cabin [string, 可选]（取值: economy / business / first；示例: economy）\n        舱位，默认 economy。\n- check_baggage(booking_id)\n    查询某个订单的免费行李额度与已用额度。\n      · booking_id [string, 必填]（示例: BK7F2A9C）\n        订单号，格式为 BK + 6 位大写字母或数字，例如 BK7F2A9C。\n- modify_baggage(booking_id, new_baggage_kg)\n    修改订单的行李额度。会立即产生费用，属于写操作。\n      · booking_id [string, 必填]（示例: BK7F2A9C）\n        订单号，格式 BK + 6 位。\n      · new_baggage_kg [number, 必填]（范围 0~50；示例: 30）\n        目标行李额度（公斤），必须在 0 到 50 之间。\n- cancel_booking(booking_id, reason)\n    取消一个订单。不可逆，调用前需要确认用户意图。\n      · booking_id [string, 必填]（示例: BK7F2A9C）\n        要取消的订单号。\n      · reason [string, 必填]（示例: 行程变更）\n        取消原因，用一句话说明，不能留空或写占位符。\n- get_weather(city)\n    查询某个城市当天的天气，用于提醒旅客是否会影响出行。\n      · city [string, 必填]（示例: 北京）\n        城市中文名，例如 北京。注意这个参数是中文城市名，不是机场三字码。\n\n注意：上面「示例」只是写法示范，**必须替换成用户实际提供的信息**，不要照抄示例值。"
+}

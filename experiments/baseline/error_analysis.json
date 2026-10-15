@@ -1,0 +1,230 @@
+{
+ "label": "baseline",
+ "is_mock": false,
+ "num_predictions": 424,
+ "distribution": {
+  "total": 424,
+  "success_count": 165,
+  "success_rate": 0.389151,
+  "counts": {
+   "FORMAT_ERROR": 141,
+   "PARAM_ERROR": 111,
+   "SUCCESS": 165,
+   "WRONG_TOOL": 7
+  },
+  "counts_zh": {
+   "格式错误": 141,
+   "参数错误": 111,
+   "成功": 165,
+   "工具选错": 7
+  },
+  "rates": {
+   "SUCCESS": 0.389151,
+   "FORMAT_ERROR": 0.332547,
+   "HALLUCINATION": 0.0,
+   "WRONG_TOOL": 0.016509,
+   "PARAM_ERROR": 0.261792,
+   "REFUSED": 0.0,
+   "UNKNOWN": 0.0
+  },
+  "failure_share": {
+   "FORMAT_ERROR": 0.544402,
+   "HALLUCINATION": 0.0,
+   "WRONG_TOOL": 0.027027,
+   "PARAM_ERROR": 0.428571,
+   "REFUSED": 0.0,
+   "UNKNOWN": 0.0
+  },
+  "subtype_counts": {
+   "wrong_value": 111,
+   "-": 106,
+   "clarify_instead": 74,
+   "action_hallucination": 65,
+   "promise_only": 27,
+   "no_tool_call": 26,
+   "empty": 8,
+   "adjacent_tool": 6,
+   "should_clarify": 1
+  },
+  "failure_subtype_counts": {
+   "wrong_value": 111,
+   "action_hallucination": 65,
+   "promise_only": 27,
+   "no_tool_call": 26,
+   "empty": 8,
+   "adjacent_tool": 6,
+   "should_clarify": 1
+  },
+  "subtype_counts_zh": {
+   "参数值不对": 111,
+   "声称已完成操作（编造执行结果）": 65,
+   "只承诺要查，没真的调用": 27,
+   "完全没有 tool_call 标签": 26,
+   "输出为空": 8,
+   "工具名属于同域相邻工具": 6,
+   "信息不足时应先追问，却直接调用了工具": 1
+  },
+  "exemplars": {
+   "FORMAT_ERROR": [
+    {
+     "task_id": "taskv2_0004",
+     "subtype": "empty",
+     "message": "模型输出为空",
+     "evidence": "",
+     "category": "weather_advisory",
+     "difficulty": "easy",
+     "visibility": "unseen",
+     "sample_index": 0
+    },
+    {
+     "task_id": "taskv2_0004",
+     "subtype": "empty",
+     "message": "模型输出为空",
+     "evidence": "",
+     "category": "weather_advisory",
+     "difficulty": "easy",
+     "visibility": "unseen",
+     "sample_index": 1
+    },
+    {
+     "task_id": "taskv2_0008",
+     "subtype": "empty",
+     "message": "模型输出为空",
+     "evidence": "",
+     "category": "weather_advisory",
+     "difficulty": "easy",
+     "visibility": "unseen",
+     "sample_index": 0
+    }
+   ],
+   "PARAM_ERROR": [
+    {
+     "task_id": "taskv2_0011",
+     "subtype": "wrong_value",
+     "message": "参数值不对：origin 期望 'SYX' 实际 'SZA'",
+     "evidence": "<tool_call>\n{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"SZA\", \"destination\": \"SHA\", \"date\": \"2026-11-02\"}}\n</tool_call>",
+     "category": "flight_search",
+     "difficulty": "hard",
+     "visibility": "unseen",
+     "sample_index": 0
+    },
+    {
+     "task_id": "taskv2_0011",
+     "subtype": "wrong_value",
+     "message": "参数值不对：origin 期望 'SYX' 实际 'SIN'",
+     "evidence": "<tool_call>\n{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"SIN\", \"destination\": \"SHA\", \"date\": \"2026-11-02\"}}\n</tool_call>",
+     "category": "flight_search",
+     "difficulty": "hard",
+     "visibility": "unseen",
+     "sample_index": 1
+    },
+    {
+     "task_id": "taskv2_0011",
+     "subtype": "wrong_value",
+     "message": "参数值不对：origin 期望 'SYX' 实际 'SIN'",
+     "evidence": "<tool_call>\n{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"SIN\", \"destination\": \"SHA\", \"date\": \"2026-11-02\"}}\n</tool_call>",
+     "category": "flight_search",
+     "difficulty": "hard",
+     "visibility": "unseen",
+     "sample_index": 2
+    }
+   ],
+   "WRONG_TOOL": [
+    {
+     "task_id": "taskv2_0069",
+     "subtype": "should_clarify",
+     "message": "信息不足时应先追问，模型却直接调用了 cancel_booking",
+     "evidence": "{\"name\": \"cancel_booking\", \"arguments\": {\"booking_id\": \"BKD0D2DC\", \"reason\": \"行程变更\"}}",
+     "category": "cancellation",
+     "difficulty": "hard",
+     "visibility": "seen",
+     "sample_index": 1
+    },
+    {
+     "task_id": "taskv2_0087",
+     "subtype": "adjacent_tool",
+     "message": "工具选错：期望 'check_baggage'，实际 'search_flights'",
+     "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"PEK\", \"destination\": \"SHA\", \"date\": \"2025-07-15\", \"max_price\": 1500}}",
+     "category": "error_correction",
+     "difficulty": "medium",
+     "visibility": "seen",
+     "sample_index": 0
+    },
+    {
+     "task_id": "taskv2_0087",
+     "subtype": "adjacent_tool",
+     "message": "工具选错：期望 'check_baggage'，实际 'search_flights'",
+     "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"PEK\", \"destination\": \"SHA\", \"date\": \"2023-04-01\", \"max_price\": 1500}}",
+     "category": "error_correction",
+     "difficulty": "medium",
+     "visibility": "seen",
+     "sample_index": 1
+    }
+   ]
+  }
+ },
+ "cross_tab": {
+  "easy": {
+   "FORMAT_ERROR": 13,
+   "PARAM_ERROR": 9
+  },
+  "unseen": {
+   "FORMAT_ERROR": 48,
+   "PARAM_ERROR": 43,
+   "WRONG_TOOL": 4
+  },
+  "hard": {
+   "PARAM_ERROR": 98,
+   "FORMAT_ERROR": 107,
+   "WRONG_TOOL": 5
+  },
+  "seen": {
+   "PARAM_ERROR": 68,
+   "FORMAT_ERROR": 93,
+   "WRONG_TOOL": 3
+  },
+  "medium": {
+   "PARAM_ERROR": 4,
+   "WRONG_TOOL": 2,
+   "FORMAT_ERROR": 21
+  }
+ },
+ "cross_tab_totals": {
+  "easy": {
+   "SUCCESS": 74,
+   "FORMAT_ERROR": 13,
+   "PARAM_ERROR": 9
+  },
+  "unseen": {
+   "SUCCESS": 61,
+   "FORMAT_ERROR": 48,
+   "PARAM_ERROR": 43,
+   "WRONG_TOOL": 4
+  },
+  "seen": {
+   "SUCCESS": 104,
+   "PARAM_ERROR": 68,
+   "FORMAT_ERROR": 93,
+   "WRONG_TOOL": 3
+  },
+  "hard": {
+   "PARAM_ERROR": 98,
+   "FORMAT_ERROR": 107,
+   "SUCCESS": 58,
+   "WRONG_TOOL": 5
+  },
+  "medium": {
+   "PARAM_ERROR": 4,
+   "SUCCESS": 33,
+   "WRONG_TOOL": 2,
+   "FORMAT_ERROR": 21
+  }
+ },
+ "recovery": {},
+ "remedies": {
+  "FORMAT_ERROR": "格式约束偏好对：chosen 是合法 tool_call，rejected 是纯文本/坏 JSON",
+  "WRONG_TOOL": "工具选择偏好对：同一请求下正确工具 vs 相邻语义工具",
+  "PARAM_ERROR": "参数约束偏好对：chosen 是真实实体，rejected 是占位符/错格式/编造值"
+ },
+ "remediation_note": "每一类错误对应一种偏好数据构造策略，见 docs/method/preference_data_design.md"
+}

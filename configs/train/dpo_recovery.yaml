@@ -1,0 +1,47 @@
+{
+  "_comment": "Exp 2：错误恢复偏好对 DPO。",
+  "_hypothesis": "小模型没学过「用户纠错 → 我改正」这个模式。用「首轮错误 + 用户纠错 + 正确修正」构造偏好对，可以直接示范这个模式。",
+  "_novelty": "这是本项目相对「拿开源 preference dataset 直接训」的核心原创点：SFT 的 chosen 里只有正确答案，永远学不到「先错后改」。",
+  "_expected": "错误恢复率显著上升（这是主目标）；首轮错误率下降有限（数据没针对首轮错误）；整体准确率中等上升。",
+  "_falsifier": "如果恢复率上升但 pass^k 不动，说明模型虽然能改对、但不稳定——需要看 Δstability 而不是单看 recovery_rate。",
+  "experiment": "dpo_recovery",
+  "description": "Exp 2：错误恢复偏好对（仅 error_recovery）",
+  "pairs": {
+    "pair_types": [
+      "error_recovery"
+    ],
+    "train_file": "data/preferences/dpo_recovery.train.jsonl",
+    "dev_file": "data/preferences/dpo_recovery.dev.jsonl",
+    "max_samples": 0
+  },
+  "train": {
+    "beta": 0.1,
+    "loss_type": "sigmoid",
+    "lr": 5e-05,
+    "epochs": 2,
+    "batch_size": 2,
+    "grad_accum": 8,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "gradient_checkpointing": true,
+    "bf16": true,
+    "max_length": 1280,
+    "max_prompt_length": 1152,
+    "save_steps": 50,
+    "eval_steps": 50,
+    "seed": 42,
+    "logging_steps": 5
+  },
+  "output": {
+    "dir": "outputs/dpo_recovery",
+    "final_adapter_dir": "outputs/dpo_recovery/final"
+  },
+  "eval_after_train": {
+    "enabled": true,
+    "report_dir": "experiments/dpo_recovery",
+    "extra_metrics": [
+      "recovery_rate",
+      "repeat_rate"
+    ]
+  }
+}

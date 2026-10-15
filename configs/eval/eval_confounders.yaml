@@ -1,0 +1,60 @@
+{
+  "_comment": "混淆因素排查配置集。",
+  "_purpose": "消融实验看到的提升，可能来自与被测方法无关的因素。这一组配置逐一排除这些替代解释。每一条都必须跑，并在报告里给出结论——无论结果是「排除了」还是「没排除」。",
+  "_principle": "一次只改一个变量，其余全部与 eval_protocol.yaml 一致。",
+
+  "experiments": {
+    "baseline_lite": {
+      "_question": "提升是否只是来自「更啰嗦的 system prompt」？",
+      "_why_it_matters": "完整的 system prompt 里有工具清单 + 格式规范 + 5 条规则。如果换一个精简 prompt 效果就一样，那 DPO 的贡献无从谈起。",
+      "variants": {
+        "system_prompt_lite": true
+      },
+      "compare_to": "baseline",
+      "_expected": "精简版应当明显更差（尤其格式错误率上升）。若几乎无差异，则说明本项目的 prompt 设计本身不是关键变量，需要在报告中说明。"
+    },
+
+    "baseline_tools3": {
+      "_question": "提升是否只是来自「工具选择空间变小」？",
+      "_why_it_matters": "工具越少，幻觉率天然越低。如果只给 3 个工具就能达标，那问题不是模型能力而是任务设定。",
+      "variants": {
+        "tool_names": ["search_flights", "book_flight", "get_weather"]
+      },
+      "compare_to": "baseline",
+      "_expected": "幻觉率应当下降，但 WRONG_TOOL 与 PARAM_ERROR 不应当改善。这能证明「幻觉」与「参数正确性」是正交的两个问题。"
+    },
+
+    "baseline_no_obs": {
+      "_question": "提升是否只是来自「能看见工具返回结果」？",
+      "_why_it_matters": "多轮任务里 observation 提供了可复用的实体（flight_id、booking_id）。如果把这些替换成占位说明后模型仍然表现相同，说明它根本没在用工具返回结果 —— 那多轮设定就是虚设。",
+      "variants": {
+        "include_observations": false
+      },
+      "compare_to": "baseline",
+      "_expected": "依赖 observation 的任务（booking_flow 的从结果取 flight_id）应当显著变差。若不降反升，说明 observation 里可能混入了答案泄露。"
+    },
+
+    "baseline_temp0": {
+      "_question": "pass^k 的稳定性结论是否依赖采样温度？",
+      "_why_it_matters": "温度是 pass^k 的方差来源。如果温度太低，多次采样几乎相同，pass^k 会虚高。",
+      "variants": {
+        "generation": {
+          "temperature": 0.3
+        }
+      },
+      "compare_to": "baseline",
+      "_expected": "pass^k 上升、pass@k 基本不变、Δstability 收窄。这**不是**能力提升，只是方差变小 —— 报告中必须明确区分。"
+    }
+  },
+
+  "usage": {
+    "command_template": "python scripts/eval/run_baseline.py --config configs/eval/eval_baseline.yaml --label <name> <extra_args>",
+    "examples": [
+      "python scripts/eval/run_baseline.py --label baseline_lite --lite-system",
+      "python scripts/eval/run_baseline.py --label baseline_tools3 --tools search_flights,book_flight,get_weather",
+      "python scripts/eval/run_baseline.py --label baseline_no_obs --no-observations",
+      "python scripts/eval/run_baseline.py --label baseline_temp0 --temperature 0.3"
+    ],
+    "then": "python scripts/eval/collect_results.py --experiments baseline,baseline_lite,baseline_tools3,baseline_no_obs,baseline_temp0"
+  }
+}

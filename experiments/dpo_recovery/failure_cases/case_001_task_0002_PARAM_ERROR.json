@@ -1,0 +1,36 @@
+{
+ "case_id": "case_001",
+ "task_id": "task_0002",
+ "category": "flight_search",
+ "difficulty": "easy",
+ "visibility": "seen",
+ "is_mock": true,
+ "expected": {
+  "tool": "search_flights",
+  "args": {
+   "origin": "SHA",
+   "destination": "CAN",
+   "date": "2025-07-18"
+  }
+ },
+ "classification": {
+  "category": "PARAM_ERROR",
+  "category_zh": "参数错误",
+  "detail": {
+   "category": "PARAM_ERROR",
+   "category_zh": "参数错误",
+   "subtype": "wrong_value",
+   "subtype_zh": "参数值不对",
+   "message": "参数值不对：origin 期望 'SHA' 实际 'SRA'",
+   "fields": [
+    "origin"
+   ],
+   "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"SRA\", \"destination\": \"CAN\", \"date\": \"2025-07-18\"}}</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": true
+ },
+ "defects": [],
+ "raw_output": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"SRA\", \"destination\": \"CAN\", \"date\": \"2025-07-18\"}}</tool_call>",
+ "finish_reason": "stop"
+}

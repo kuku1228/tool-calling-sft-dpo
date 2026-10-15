@@ -1,0 +1,35 @@
+{
+ "case_id": "case_025",
+ "task_id": "task_0026",
+ "category": "booking_flow",
+ "difficulty": "medium",
+ "visibility": "seen",
+ "is_mock": true,
+ "expected": {
+  "tool": "book_flight",
+  "args": {
+   "flight_id": "MU1111",
+   "passenger_name": "刘洋"
+  }
+ },
+ "classification": {
+  "category": "FORMAT_ERROR",
+  "category_zh": "格式错误",
+  "detail": {
+   "category": "FORMAT_ERROR",
+   "category_zh": "格式错误",
+   "subtype": "truncated",
+   "subtype_zh": "输出被 max_new_tokens 截断",
+   "message": "输出因达到 max_new_tokens 被截断，tool_call 不完整",
+   "fields": [],
+   "evidence": "好的，我来帮您查询一下，请稍等。"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [
+  "missing_tool_call_tag"
+ ],
+ "raw_output": "好的，我来帮您查询一下，请稍等。",
+ "finish_reason": "length"
+}

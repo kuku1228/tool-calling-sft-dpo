@@ -1,0 +1,45 @@
+{
+  "_comment": "Exp 3：联合方案（格式约束 + 错误恢复），本项目的主方案。",
+  "_hypothesis": "格式与恢复命中的是两类不同的失败模式，效应应当叠加。",
+  "_expected": "格式正确率与错误恢复率同时上升，整体准确率与 pass^k 的提升大于两个单方案之和（超加性）。",
+  "_falsifier": "如果联合方案的提升只是「取两个单方案的最大值」，说明两类数据在争抢同一份模型容量，而不是解决正交问题。这是本实验最需要如实记录的负面结果。",
+  "experiment": "dpo_joint",
+  "description": "Exp 3：联合方案（format_constraint + error_recovery）",
+  "pairs": {
+    "pair_types": [
+      "format_constraint",
+      "error_recovery",
+      "clarify_boundary"
+    ],
+    "_balance_note": "两类各 1200 条，1:1。比例失衡会让条数多的一类主导梯度。",
+    "train_file": "data/preferences/dpo_joint.train.jsonl",
+    "dev_file": "data/preferences/dpo_joint.dev.jsonl",
+    "max_samples": 0
+  },
+  "train": {
+    "beta": 0.1,
+    "loss_type": "sigmoid",
+    "lr": 5e-05,
+    "epochs": 2,
+    "batch_size": 2,
+    "grad_accum": 8,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "gradient_checkpointing": true,
+    "bf16": true,
+    "max_length": 1280,
+    "max_prompt_length": 1152,
+    "save_steps": 50,
+    "eval_steps": 50,
+    "seed": 42,
+    "logging_steps": 5
+  },
+  "output": {
+    "dir": "outputs/dpo_joint",
+    "final_adapter_dir": "outputs/dpo_joint/final"
+  },
+  "eval_after_train": {
+    "enabled": true,
+    "report_dir": "experiments/dpo_joint"
+  }
+}

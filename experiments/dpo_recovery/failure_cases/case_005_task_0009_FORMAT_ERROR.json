@@ -1,0 +1,36 @@
+{
+ "case_id": "case_005",
+ "task_id": "task_0009",
+ "category": "flight_search",
+ "difficulty": "easy",
+ "visibility": "unseen",
+ "is_mock": true,
+ "expected": {
+  "tool": "search_flights",
+  "args": {
+   "origin": "HRB",
+   "destination": "TSN",
+   "date": "2025-07-15"
+  }
+ },
+ "classification": {
+  "category": "FORMAT_ERROR",
+  "category_zh": "格式错误",
+  "detail": {
+   "category": "FORMAT_ERROR",
+   "category_zh": "格式错误",
+   "subtype": "json_broken",
+   "subtype_zh": "JSON 语法非法",
+   "message": "检测到 tool_call 标签但 输出中没有工具调用",
+   "fields": [],
+   "evidence": "稍等片刻，我为您查一下。"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [
+  "missing_tool_call_tag"
+ ],
+ "raw_output": "稍等片刻，我为您查一下。",
+ "finish_reason": "stop"
+}

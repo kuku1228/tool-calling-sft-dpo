@@ -1,0 +1,36 @@
+{
+ "case_id": "case_038",
+ "task_id": "task_0040",
+ "category": "booking_flow",
+ "difficulty": "easy",
+ "visibility": "seen",
+ "is_mock": true,
+ "expected": {
+  "tool": "search_flights",
+  "args": {
+   "origin": "CSX",
+   "destination": "SYX",
+   "date": "2025-07-28"
+  }
+ },
+ "classification": {
+  "category": "FORMAT_ERROR",
+  "category_zh": "格式错误",
+  "detail": {
+   "category": "FORMAT_ERROR",
+   "category_zh": "格式错误",
+   "subtype": "json_broken",
+   "subtype_zh": "JSON 语法非法",
+   "message": "检测到 tool_call 标签但 输出中没有工具调用",
+   "fields": [],
+   "evidence": "我明白了，我先帮您确认一下。"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [
+  "missing_tool_call_tag"
+ ],
+ "raw_output": "我明白了，我先帮您确认一下。",
+ "finish_reason": "stop"
+}

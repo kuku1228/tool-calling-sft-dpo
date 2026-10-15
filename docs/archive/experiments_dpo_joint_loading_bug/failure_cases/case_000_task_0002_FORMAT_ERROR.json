@@ -1,0 +1,36 @@
+{
+ "case_id": "case_000",
+ "task_id": "task_0002",
+ "category": "flight_search",
+ "difficulty": "easy",
+ "visibility": "seen",
+ "is_mock": true,
+ "expected": {
+  "tool": "search_flights",
+  "args": {
+   "origin": "SHA",
+   "destination": "CAN",
+   "date": "2025-07-18"
+  }
+ },
+ "classification": {
+  "category": "FORMAT_ERROR",
+  "category_zh": "格式错误",
+  "detail": {
+   "category": "FORMAT_ERROR",
+   "category_zh": "格式错误",
+   "subtype": "truncated",
+   "subtype_zh": "输出被 max_new_tokens 截断",
+   "message": "输出因达到 max_new_tokens 被截断，tool_call 不完整",
+   "fields": [],
+   "evidence": "我明白了，我先帮您确认一下。"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [
+  "missing_tool_call_tag"
+ ],
+ "raw_output": "我明白了，我先帮您确认一下。",
+ "finish_reason": "length"
+}

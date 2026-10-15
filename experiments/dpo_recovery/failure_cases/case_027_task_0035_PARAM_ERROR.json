@@ -1,0 +1,36 @@
+{
+ "case_id": "case_027",
+ "task_id": "task_0035",
+ "category": "booking_flow",
+ "difficulty": "easy",
+ "visibility": "seen",
+ "is_mock": true,
+ "expected": {
+  "tool": "search_flights",
+  "args": {
+   "origin": "SZX",
+   "destination": "CTU",
+   "date": "2025-08-09"
+  }
+ },
+ "classification": {
+  "category": "PARAM_ERROR",
+  "category_zh": "参数错误",
+  "detail": {
+   "category": "PARAM_ERROR",
+   "category_zh": "参数错误",
+   "subtype": "placeholder_value",
+   "subtype_zh": "参数填了占位符",
+   "message": "参数填了占位符：['destination']",
+   "fields": [
+    "destination"
+   ],
+   "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"SZX\", \"destination\": \"TBD\", \"date\": \"2025-08-09\"}}</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [],
+ "raw_output": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"SZX\", \"destination\": \"TBD\", \"date\": \"2025-08-09\"}}</tool_call>",
+ "finish_reason": "stop"
+}

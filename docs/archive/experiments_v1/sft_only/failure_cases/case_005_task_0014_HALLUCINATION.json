@@ -1,0 +1,36 @@
+{
+ "case_id": "case_005",
+ "task_id": "task_0014",
+ "category": "flight_search",
+ "difficulty": "easy",
+ "visibility": "seen",
+ "is_mock": true,
+ "expected": {
+  "tool": "search_flights",
+  "args": {
+   "origin": "HGH",
+   "destination": "XIY",
+   "date": "2025-08-01"
+  }
+ },
+ "classification": {
+  "category": "HALLUCINATION",
+  "category_zh": "工具幻觉",
+  "detail": {
+   "category": "HALLUCINATION",
+   "category_zh": "工具幻觉",
+   "subtype": "unknown_tool",
+   "subtype_zh": "工具名不在白名单",
+   "message": "调用了不存在的工具 'find_flights'",
+   "fields": [
+    "tool"
+   ],
+   "evidence": "<tool_call>{\"name\": \"find_flights\", \"arguments\": {\"origin\": \"HGH\", \"destination\": \"XIY\", \"date\": \"2025-08-01\"}}</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [],
+ "raw_output": "<tool_call>{\"name\": \"find_flights\", \"arguments\": {\"origin\": \"HGH\", \"destination\": \"XIY\", \"date\": \"2025-08-01\"}}</tool_call>",
+ "finish_reason": "stop"
+}

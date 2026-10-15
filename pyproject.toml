@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-optimization"
+version = "0.1.0"
+description = "小模型工具调用智能体的 DPO 偏好对齐优化：诊断 → 偏好数据构造 → 消融实验 → 结论"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "马琬蕊" }]
+keywords = ["dpo", "preference-alignment", "tool-calling", "agent", "lora", "qwen", "small-language-model"]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+# 运行依赖故意留空：不同运行路径需要的包差异很大，
+# 统一在 requirements.txt 里按 CORE / GPU 分段说明。
+dependencies = []
+
+[project.optional-dependencies]
+core = ["numpy>=1.24.0", "pandas>=2.0.0", "matplotlib>=3.7.0"]
+gpu = [
+    "torch>=2.1.0",
+    "accelerate>=0.25.0",
+    "transformers>=4.45.0,<4.50.0",
+    "peft>=0.7.0",
+    "trl==0.13.0",
+    "datasets>=2.16.0",
+    "PyYAML>=6.0",
+]
+dev = ["pytest>=7.4.0", "ruff>=0.4.0"]
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

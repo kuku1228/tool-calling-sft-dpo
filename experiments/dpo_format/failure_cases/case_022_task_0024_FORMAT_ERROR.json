@@ -1,0 +1,33 @@
+{
+ "case_id": "case_022",
+ "task_id": "task_0024",
+ "category": "booking_flow",
+ "difficulty": "medium",
+ "visibility": "unseen",
+ "is_mock": true,
+ "expected": {
+  "tool": "book_flight",
+  "args": {
+   "flight_id": "MU1037",
+   "passenger_name": "李娜"
+  }
+ },
+ "classification": {
+  "category": "FORMAT_ERROR",
+  "category_zh": "格式错误",
+  "detail": {
+   "category": "FORMAT_ERROR",
+   "category_zh": "格式错误",
+   "subtype": "truncated",
+   "subtype_zh": "输出被 max_new_tokens 截断",
+   "message": "输出因达到 max_new_tokens 被截断，tool_call 不完整",
+   "fields": [],
+   "evidence": "<tool_call>{\"name\": \"book_flight\", \"arguments\": {flight_id: \"MU1037\", passenger_name: \"李娜\"}}</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [],
+ "raw_output": "<tool_call>{\"name\": \"book_flight\", \"arguments\": {flight_id: \"MU1037\", passenger_name: \"李娜\"}}</tool_call>",
+ "finish_reason": "length"
+}

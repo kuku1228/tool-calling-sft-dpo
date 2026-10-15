@@ -1,0 +1,35 @@
+{
+ "case_id": "case_032",
+ "task_id": "task_0031",
+ "category": "booking_flow",
+ "difficulty": "medium",
+ "visibility": "seen",
+ "is_mock": true,
+ "expected": {
+  "tool": "book_flight",
+  "args": {
+   "flight_id": "MU1296",
+   "passenger_name": "郑爽"
+  }
+ },
+ "classification": {
+  "category": "HALLUCINATION",
+  "category_zh": "工具幻觉",
+  "detail": {
+   "category": "HALLUCINATION",
+   "category_zh": "工具幻觉",
+   "subtype": "unknown_tool",
+   "subtype_zh": "工具名不在白名单",
+   "message": "调用了不存在的工具 'create_booking'",
+   "fields": [
+    "tool"
+   ],
+   "evidence": "<tool_call>{\"name\": \"create_booking\", \"arguments\": {\"flight_id\": \"MU1296\", \"passenger_name\": \"郑爽\"}}</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [],
+ "raw_output": "<tool_call>{\"name\": \"create_booking\", \"arguments\": {\"flight_id\": \"MU1296\", \"passenger_name\": \"郑爽\"}}</tool_call>",
+ "finish_reason": "stop"
+}

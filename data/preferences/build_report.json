@@ -1,0 +1,192 @@
+{
+ "is_mock": false,
+ "seed": 42,
+ "pair_types_requested": [
+  "format_constraint",
+  "error_recovery",
+  "tool_selection",
+  "param_constraint",
+  "clarify_boundary"
+ ],
+ "num_tasks_pool": 247,
+ "num_scenarios": 84,
+ "total_pairs": 4528,
+ "train_pairs": 4064,
+ "dev_pairs": 464,
+ "stats": {
+  "generated": {
+   "format_constraint": 1128,
+   "error_recovery": 1200,
+   "tool_selection": 600,
+   "param_constraint": 1200,
+   "clarify_boundary": 400
+  },
+  "rejected_by_gate": {
+   "format_constraint": 6128,
+   "error_recovery": 551,
+   "tool_selection": 3,
+   "param_constraint": 19
+  },
+  "gate_reasons": {
+   "sides_semantically_equal": 6188,
+   "chosen_invalid_args:pattern": 137,
+   "hallucination_correction_does_not_name_fake_tool": 355,
+   "identical_sides": 21
+  },
+  "by_pair_type": {
+   "format_constraint": 1128,
+   "error_recovery": 1200,
+   "tool_selection": 600,
+   "param_constraint": 1200,
+   "clarify_boundary": 400
+  },
+  "by_negative_kind": {
+   "hard": 2097,
+   "simple": 2365,
+   "recovery": 66
+  },
+  "by_difficulty": {
+   "medium": 2861,
+   "hard": 1667
+  },
+  "by_split": {
+   "train": 4528
+  }
+ },
+ "dedup_limited_types": {
+  "格式约束对": [
+   1200,
+   1128
+  ]
+ },
+ "written": {
+  "all.train.jsonl": 4064,
+  "all.dev.jsonl": 464,
+  "dpo_format.train.jsonl": 1014,
+  "dpo_format.dev.jsonl": 114,
+  "dpo_recovery.train.jsonl": 1065,
+  "dpo_recovery.dev.jsonl": 135,
+  "dpo_joint.train.jsonl": 2443,
+  "dpo_joint.dev.jsonl": 285,
+  "dpo_joint_param.train.jsonl": 3159,
+  "dpo_joint_param.dev.jsonl": 369,
+  "dpo_tool.train.jsonl": 541,
+  "dpo_tool.dev.jsonl": 59,
+  "dpo_all.train.jsonl": 4064,
+  "dpo_all.dev.jsonl": 464,
+  "dpo_clarify.train.jsonl": 364,
+  "dpo_clarify.dev.jsonl": 36,
+  "sft_only.train.jsonl": 2635,
+  "sft_only.dev.jsonl": 293,
+  "sft_clarify.train.jsonl": 2999,
+  "sft_clarify.dev.jsonl": 329,
+  "sft_all.train.jsonl": 4064,
+  "sft_all.dev.jsonl": 464,
+  "dpo_tool_param.train.jsonl": 1621,
+  "dpo_tool_param.dev.jsonl": 179
+ },
+ "experiment_slices": {
+  "dpo_format": {
+   "pair_types": [
+    "format_constraint"
+   ],
+   "train": 1014,
+   "dev": 114
+  },
+  "dpo_recovery": {
+   "pair_types": [
+    "error_recovery"
+   ],
+   "train": 1065,
+   "dev": 135
+  },
+  "dpo_joint": {
+   "pair_types": [
+    "format_constraint",
+    "error_recovery",
+    "clarify_boundary"
+   ],
+   "train": 2443,
+   "dev": 285
+  },
+  "dpo_joint_param": {
+   "pair_types": [
+    "format_constraint",
+    "error_recovery",
+    "param_constraint"
+   ],
+   "train": 3159,
+   "dev": 369
+  },
+  "dpo_tool": {
+   "pair_types": [
+    "tool_selection"
+   ],
+   "train": 541,
+   "dev": 59
+  },
+  "dpo_all": {
+   "pair_types": [
+    "format_constraint",
+    "error_recovery",
+    "tool_selection",
+    "param_constraint",
+    "clarify_boundary"
+   ],
+   "train": 4064,
+   "dev": 464
+  },
+  "dpo_clarify": {
+   "pair_types": [
+    "clarify_boundary"
+   ],
+   "train": 364,
+   "dev": 36
+  },
+  "sft_only": {
+   "pair_types": [
+    "format_constraint",
+    "tool_selection",
+    "param_constraint"
+   ],
+   "train": 2635,
+   "dev": 293
+  },
+  "sft_clarify": {
+   "pair_types": [
+    "format_constraint",
+    "tool_selection",
+    "param_constraint",
+    "clarify_boundary"
+   ],
+   "train": 2999,
+   "dev": 329
+  },
+  "sft_all": {
+   "pair_types": [
+    "format_constraint",
+    "error_recovery",
+    "tool_selection",
+    "param_constraint",
+    "clarify_boundary"
+   ],
+   "train": 4064,
+   "dev": 464
+  },
+  "dpo_tool_param": {
+   "pair_types": [
+    "tool_selection",
+    "param_constraint"
+   ],
+   "train": 1621,
+   "dev": 179
+  }
+ },
+ "config": {
+  "n_format": 1200,
+  "n_recovery": 1200,
+  "n_tool_selection": 600,
+  "n_clarify": 400,
+  "hard_negative_ratio": 0.35
+ }
+}

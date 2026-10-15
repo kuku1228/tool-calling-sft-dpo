@@ -1,0 +1,37 @@
+{
+ "case_id": "case_003",
+ "task_id": "taskv2_0027",
+ "category": "booking_flow",
+ "difficulty": "hard",
+ "visibility": "seen",
+ "is_mock": false,
+ "expected": {
+  "tool": "book_flight",
+  "args": {
+   "flight_id": "3U2775",
+   "passenger_name": "王芳"
+  }
+ },
+ "classification": {
+  "category": "PARAM_ERROR",
+  "category_zh": "参数错误",
+  "detail": {
+   "category": "PARAM_ERROR",
+   "category_zh": "参数错误",
+   "subtype": "wrong_value",
+   "subtype_zh": "参数值不对",
+   "message": "参数值不对：flight_id 期望 '3U2775' 实际 'CA9900'",
+   "fields": [
+    "flight_id"
+   ],
+   "evidence": "{\"name\": \"book_flight\", \"arguments\": {\"flight_id\": \"CA9900\", \"passenger_name\": \"王芳\"}}</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": true
+ },
+ "defects": [
+  "missing_tool_call_tag"
+ ],
+ "raw_output": "{\"name\": \"book_flight\", \"arguments\": {\"flight_id\": \"CA9900\", \"passenger_name\": \"王芳\"}}</tool_call>",
+ "finish_reason": "stop"
+}

@@ -1,0 +1,3528 @@
+{
+ "version": "1.0",
+ "base_date": "2025-07-14",
+ "num_tasks": 100,
+ "tasks": [
+  {
+   "task_id": "task_0001",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "absolute_date"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "PEK",
+     "destination": "SHA",
+     "date": "2025-07-15"
+    },
+    "args_subset": {},
+    "note": "参数直接提取"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我查一下2025-07-15从北京到上海的航班",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0002",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "absolute_date"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "SHA",
+     "destination": "CAN",
+     "date": "2025-07-18"
+    },
+    "args_subset": {},
+    "note": "参数直接提取"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "2025-07-18上海飞广州有什么航班？",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0003",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "absolute_date"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "SZX",
+     "destination": "CTU",
+     "date": "2025-07-21"
+    },
+    "args_subset": {},
+    "note": "参数直接提取"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我想2025-07-21去成都，从深圳出发，看看有哪些航班",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0004",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "absolute_date"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "HGH",
+     "destination": "XIY",
+     "date": "2025-07-24"
+    },
+    "args_subset": {},
+    "note": "参数直接提取"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "请搜索2025-07-24 杭州到西安的机票",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0005",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "absolute_date"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "CKG",
+     "destination": "KMG",
+     "date": "2025-07-28"
+    },
+    "args_subset": {},
+    "note": "参数直接提取"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "2025-07-28我要从重庆去昆明，帮我看看航班",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0006",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "absolute_date"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "XMN",
+     "destination": "NKG",
+     "date": "2025-08-01"
+    },
+    "args_subset": {},
+    "note": "参数直接提取"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我查一下2025-08-01从厦门到南京的航班",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0007",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "absolute_date"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "WUH",
+     "destination": "TAO",
+     "date": "2025-08-05"
+    },
+    "args_subset": {},
+    "note": "参数直接提取"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "2025-08-05武汉飞青岛有什么航班？",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0008",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "absolute_date"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "CSX",
+     "destination": "SYX",
+     "date": "2025-08-09"
+    },
+    "args_subset": {},
+    "note": "参数直接提取"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我想2025-08-09去三亚，从长沙出发，看看有哪些航班",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0009",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "absolute_date"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "HRB",
+     "destination": "TSN",
+     "date": "2025-07-15"
+    },
+    "args_subset": {},
+    "note": "参数直接提取"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "请搜索2025-07-15 哈尔滨到天津的机票",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0010",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "absolute_date"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "URC",
+     "destination": "LXA",
+     "date": "2025-07-18"
+    },
+    "args_subset": {},
+    "note": "参数直接提取"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "2025-07-18我要从乌鲁木齐去拉萨，帮我看看航班",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0011",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "absolute_date"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "PEK",
+     "destination": "SHA",
+     "date": "2025-07-21"
+    },
+    "args_subset": {},
+    "note": "参数直接提取"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我查一下2025-07-21从北京到上海的航班",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0012",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "absolute_date"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "SHA",
+     "destination": "CAN",
+     "date": "2025-07-24"
+    },
+    "args_subset": {},
+    "note": "参数直接提取"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "2025-07-24上海飞广州有什么航班？",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0013",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "absolute_date"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "SZX",
+     "destination": "CTU",
+     "date": "2025-07-28"
+    },
+    "args_subset": {},
+    "note": "参数直接提取"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我想2025-07-28去成都，从深圳出发，看看有哪些航班",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0014",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "absolute_date"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "HGH",
+     "destination": "XIY",
+     "date": "2025-08-01"
+    },
+    "args_subset": {},
+    "note": "参数直接提取"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "请搜索2025-08-01 杭州到西安的机票",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0015",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "relative_date",
+    "date_conversion"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "CKG",
+     "destination": "KMG",
+     "date": "2025-07-20"
+    },
+    "args_subset": {},
+    "note": "城市名→三字码；相对日期→绝对日期"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "这周日我要从重庆去昆明，帮我看看航班",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0016",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "relative_date",
+    "date_conversion"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "XMN",
+     "destination": "NKG",
+     "date": "2025-07-17"
+    },
+    "args_subset": {},
+    "note": "城市名→三字码；相对日期→绝对日期"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我查一下三天后从厦门到南京的航班",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0017",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "relative_date",
+    "date_conversion"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "WUH",
+     "destination": "TAO",
+     "date": "2025-07-15"
+    },
+    "args_subset": {},
+    "note": "城市名→三字码；相对日期→绝对日期"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "明天武汉飞青岛有什么航班？",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0018",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "relative_date",
+    "date_conversion"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "CSX",
+     "destination": "SYX",
+     "date": "2025-07-16"
+    },
+    "args_subset": {},
+    "note": "城市名→三字码；相对日期→绝对日期"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我想后天去三亚，从长沙出发，看看有哪些航班",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0019",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "relative_date",
+    "date_conversion"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "HRB",
+     "destination": "TSN",
+     "date": "2025-07-17"
+    },
+    "args_subset": {},
+    "note": "城市名→三字码；相对日期→绝对日期"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "请搜索大后天 哈尔滨到天津的机票",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0020",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "relative_date",
+    "date_conversion"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "URC",
+     "destination": "LXA",
+     "date": "2025-07-18"
+    },
+    "args_subset": {},
+    "note": "城市名→三字码；相对日期→绝对日期"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "本周五我要从乌鲁木齐去拉萨，帮我看看航班",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0021",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "relative_date",
+    "date_conversion"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "PEK",
+     "destination": "SHA",
+     "date": "2025-07-21"
+    },
+    "args_subset": {},
+    "note": "城市名→三字码；相对日期→绝对日期"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我查一下下周一从北京到上海的航班",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0022",
+   "category": "flight_search",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "relative_date",
+    "date_conversion"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "SHA",
+     "destination": "CAN",
+     "date": "2025-07-23"
+    },
+    "args_subset": {},
+    "note": "城市名→三字码；相对日期→绝对日期"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "下周三上海飞广州有什么航班？",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0023",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "from_observation"
+   ],
+   "expected": {
+    "tool": "book_flight",
+    "args": {
+     "flight_id": "MU1000",
+     "passenger_name": "张伟"
+    },
+    "args_subset": {},
+    "note": "flight_id 必须取自 observation，不能编造"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我订一张2025-07-24 北京到上海的机票，乘客是张伟，经济舱就行",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "search_flights",
+      "result": {
+       "count": 2,
+       "flights": [
+        {
+         "flight_id": "MU1000",
+         "price_cny": 1280,
+         "depart_time": "08:20"
+        },
+        {
+         "flight_id": "MU1005",
+         "price_cny": 1620,
+         "depart_time": "19:40"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "就订 MU1000 这一班吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0024",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "from_observation"
+   ],
+   "expected": {
+    "tool": "book_flight",
+    "args": {
+     "flight_id": "MU1037",
+     "passenger_name": "李娜"
+    },
+    "args_subset": {},
+    "note": "flight_id 必须取自 observation，不能编造"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我要给李娜订2025-07-28从上海到广州的票",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "search_flights",
+      "result": {
+       "count": 2,
+       "flights": [
+        {
+         "flight_id": "MU1037",
+         "price_cny": 1280,
+         "depart_time": "08:20"
+        },
+        {
+         "flight_id": "MU1042",
+         "price_cny": 1620,
+         "depart_time": "19:40"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "就订 MU1037 这一班吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0025",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "from_observation"
+   ],
+   "expected": {
+    "tool": "book_flight",
+    "args": {
+     "flight_id": "MU1074",
+     "passenger_name": "王芳"
+    },
+    "args_subset": {},
+    "note": "flight_id 必须取自 observation，不能编造"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "王芳需要2025-08-01从深圳飞成都，直接帮我订上",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "search_flights",
+      "result": {
+       "count": 2,
+       "flights": [
+        {
+         "flight_id": "MU1074",
+         "price_cny": 1280,
+         "depart_time": "08:20"
+        },
+        {
+         "flight_id": "MU1079",
+         "price_cny": 1620,
+         "depart_time": "19:40"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "就订 MU1074 这一班吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0026",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "from_observation"
+   ],
+   "expected": {
+    "tool": "book_flight",
+    "args": {
+     "flight_id": "MU1111",
+     "passenger_name": "刘洋"
+    },
+    "args_subset": {},
+    "note": "flight_id 必须取自 observation，不能编造"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我订一张2025-08-05 杭州到西安的机票，乘客是刘洋，经济舱就行",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "search_flights",
+      "result": {
+       "count": 2,
+       "flights": [
+        {
+         "flight_id": "MU1111",
+         "price_cny": 1280,
+         "depart_time": "08:20"
+        },
+        {
+         "flight_id": "MU1116",
+         "price_cny": 1620,
+         "depart_time": "19:40"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "就订 MU1111 这一班吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0027",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "from_observation"
+   ],
+   "expected": {
+    "tool": "book_flight",
+    "args": {
+     "flight_id": "MU1148",
+     "passenger_name": "陈晓明"
+    },
+    "args_subset": {},
+    "note": "flight_id 必须取自 observation，不能编造"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我要给陈晓明订2025-08-09从重庆到昆明的票",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "search_flights",
+      "result": {
+       "count": 2,
+       "flights": [
+        {
+         "flight_id": "MU1148",
+         "price_cny": 1280,
+         "depart_time": "08:20"
+        },
+        {
+         "flight_id": "MU1153",
+         "price_cny": 1620,
+         "depart_time": "19:40"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "就订 MU1148 这一班吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0028",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "from_observation"
+   ],
+   "expected": {
+    "tool": "book_flight",
+    "args": {
+     "flight_id": "MU1185",
+     "passenger_name": "赵敏"
+    },
+    "args_subset": {},
+    "note": "flight_id 必须取自 observation，不能编造"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "赵敏需要2025-07-15从厦门飞南京，直接帮我订上",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "search_flights",
+      "result": {
+       "count": 2,
+       "flights": [
+        {
+         "flight_id": "MU1185",
+         "price_cny": 1280,
+         "depart_time": "08:20"
+        },
+        {
+         "flight_id": "MU1190",
+         "price_cny": 1620,
+         "depart_time": "19:40"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "就订 MU1185 这一班吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0029",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "from_observation"
+   ],
+   "expected": {
+    "tool": "book_flight",
+    "args": {
+     "flight_id": "MU1222",
+     "passenger_name": "周杰"
+    },
+    "args_subset": {},
+    "note": "flight_id 必须取自 observation，不能编造"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我订一张2025-07-18 武汉到青岛的机票，乘客是周杰，经济舱就行",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "search_flights",
+      "result": {
+       "count": 2,
+       "flights": [
+        {
+         "flight_id": "MU1222",
+         "price_cny": 1280,
+         "depart_time": "08:20"
+        },
+        {
+         "flight_id": "MU1227",
+         "price_cny": 1620,
+         "depart_time": "19:40"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "就订 MU1222 这一班吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0030",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "from_observation"
+   ],
+   "expected": {
+    "tool": "book_flight",
+    "args": {
+     "flight_id": "MU1259",
+     "passenger_name": "吴桐"
+    },
+    "args_subset": {},
+    "note": "flight_id 必须取自 observation，不能编造"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我要给吴桐订2025-07-21从长沙到三亚的票",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "search_flights",
+      "result": {
+       "count": 2,
+       "flights": [
+        {
+         "flight_id": "MU1259",
+         "price_cny": 1280,
+         "depart_time": "08:20"
+        },
+        {
+         "flight_id": "MU1264",
+         "price_cny": 1620,
+         "depart_time": "19:40"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "就订 MU1259 这一班吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0031",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "from_observation"
+   ],
+   "expected": {
+    "tool": "book_flight",
+    "args": {
+     "flight_id": "MU1296",
+     "passenger_name": "郑爽"
+    },
+    "args_subset": {},
+    "note": "flight_id 必须取自 observation，不能编造"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "郑爽需要2025-07-24从哈尔滨飞天津，直接帮我订上",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "search_flights",
+      "result": {
+       "count": 2,
+       "flights": [
+        {
+         "flight_id": "MU1296",
+         "price_cny": 1280,
+         "depart_time": "08:20"
+        },
+        {
+         "flight_id": "MU1301",
+         "price_cny": 1620,
+         "depart_time": "19:40"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "就订 MU1296 这一班吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0032",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "from_observation"
+   ],
+   "expected": {
+    "tool": "book_flight",
+    "args": {
+     "flight_id": "MU1333",
+     "passenger_name": "孙悦"
+    },
+    "args_subset": {},
+    "note": "flight_id 必须取自 observation，不能编造"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我订一张2025-07-28 乌鲁木齐到拉萨的机票，乘客是孙悦，经济舱就行",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "search_flights",
+      "result": {
+       "count": 2,
+       "flights": [
+        {
+         "flight_id": "MU1333",
+         "price_cny": 1280,
+         "depart_time": "08:20"
+        },
+        {
+         "flight_id": "MU1338",
+         "price_cny": 1620,
+         "depart_time": "19:40"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "就订 MU1333 这一班吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0033",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "multi_step_prefix"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "PEK",
+     "destination": "SHA",
+     "date": "2025-08-01"
+    },
+    "args_subset": {},
+    "note": "订票前置步骤：必须先搜索"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我要给徐磊订2025-08-01从北京到上海的票",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0034",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "multi_step_prefix"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "SHA",
+     "destination": "CAN",
+     "date": "2025-08-05"
+    },
+    "args_subset": {},
+    "note": "订票前置步骤：必须先搜索"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "马晓东需要2025-08-05从上海飞广州，直接帮我订上",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0035",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "multi_step_prefix"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "SZX",
+     "destination": "CTU",
+     "date": "2025-08-09"
+    },
+    "args_subset": {},
+    "note": "订票前置步骤：必须先搜索"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我订一张2025-08-09 深圳到成都的机票，乘客是张伟，经济舱就行",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0036",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "multi_step_prefix"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "HGH",
+     "destination": "XIY",
+     "date": "2025-07-15"
+    },
+    "args_subset": {},
+    "note": "订票前置步骤：必须先搜索"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我要给李娜订2025-07-15从杭州到西安的票",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0037",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "multi_step_prefix"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "CKG",
+     "destination": "KMG",
+     "date": "2025-07-18"
+    },
+    "args_subset": {},
+    "note": "订票前置步骤：必须先搜索"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "王芳需要2025-07-18从重庆飞昆明，直接帮我订上",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0038",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "multi_step_prefix"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "XMN",
+     "destination": "NKG",
+     "date": "2025-07-21"
+    },
+    "args_subset": {},
+    "note": "订票前置步骤：必须先搜索"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我订一张2025-07-21 厦门到南京的机票，乘客是刘洋，经济舱就行",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0039",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "multi_step_prefix"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "WUH",
+     "destination": "TAO",
+     "date": "2025-07-24"
+    },
+    "args_subset": {},
+    "note": "订票前置步骤：必须先搜索"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我要给陈晓明订2025-07-24从武汉到青岛的票",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0040",
+   "category": "booking_flow",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "multi_step_prefix"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "CSX",
+     "destination": "SYX",
+     "date": "2025-07-28"
+    },
+    "args_subset": {},
+    "note": "订票前置步骤：必须先搜索"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "赵敏需要2025-07-28从长沙飞三亚，直接帮我订上",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0041",
+   "category": "baggage",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "id_format"
+   ],
+   "expected": {
+    "tool": "check_baggage",
+    "args": {
+     "booking_id": "BK7F2A9C"
+    },
+    "args_subset": {},
+    "note": "订单号格式必须匹配 ^BK[A-Z0-9]{6}$"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我查一下订单BK7F2A9C的行李额度",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0042",
+   "category": "baggage",
+   "difficulty": "easy",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "id_format"
+   ],
+   "expected": {
+    "tool": "check_baggage",
+    "args": {
+     "booking_id": "BK3D8E1B"
+    },
+    "args_subset": {},
+    "note": "订单号格式必须匹配 ^BK[A-Z0-9]{6}$"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "订单BK3D8E1B还能免费托运多少公斤？",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0043",
+   "category": "baggage",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "id_format"
+   ],
+   "expected": {
+    "tool": "check_baggage",
+    "args": {
+     "booking_id": "BK9A4C6F"
+    },
+    "args_subset": {},
+    "note": "订单号格式必须匹配 ^BK[A-Z0-9]{6}$"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我想知道BK9A4C6F这个订单的行李限额",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0044",
+   "category": "baggage",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "id_format"
+   ],
+   "expected": {
+    "tool": "check_baggage",
+    "args": {
+     "booking_id": "BK2B7D5E"
+    },
+    "args_subset": {},
+    "note": "订单号格式必须匹配 ^BK[A-Z0-9]{6}$"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我查一下订单BK2B7D5E的行李额度",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0045",
+   "category": "baggage",
+   "difficulty": "easy",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "id_format"
+   ],
+   "expected": {
+    "tool": "check_baggage",
+    "args": {
+     "booking_id": "BK8C1F3A"
+    },
+    "args_subset": {},
+    "note": "订单号格式必须匹配 ^BK[A-Z0-9]{6}$"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "订单BK8C1F3A还能免费托运多少公斤？",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0046",
+   "category": "baggage",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "id_format"
+   ],
+   "expected": {
+    "tool": "check_baggage",
+    "args": {
+     "booking_id": "BK5E9B2D"
+    },
+    "args_subset": {},
+    "note": "订单号格式必须匹配 ^BK[A-Z0-9]{6}$"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我想知道BK5E9B2D这个订单的行李限额",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0047",
+   "category": "baggage",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "id_format"
+   ],
+   "expected": {
+    "tool": "check_baggage",
+    "args": {
+     "booking_id": "BK1A6C8F"
+    },
+    "args_subset": {},
+    "note": "订单号格式必须匹配 ^BK[A-Z0-9]{6}$"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我查一下订单BK1A6C8F的行李额度",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0048",
+   "category": "baggage",
+   "difficulty": "easy",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "id_format"
+   ],
+   "expected": {
+    "tool": "check_baggage",
+    "args": {
+     "booking_id": "BK4F3D7B"
+    },
+    "args_subset": {},
+    "note": "订单号格式必须匹配 ^BK[A-Z0-9]{6}$"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "订单BK4F3D7B还能免费托运多少公斤？",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0049",
+   "category": "baggage",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "id_format"
+   ],
+   "expected": {
+    "tool": "check_baggage",
+    "args": {
+     "booking_id": "BK7F2A9C"
+    },
+    "args_subset": {},
+    "note": "订单号格式必须匹配 ^BK[A-Z0-9]{6}$"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我想知道BK7F2A9C这个订单的行李限额",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0050",
+   "category": "baggage",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "write_tool",
+    "numeric_param"
+   ],
+   "expected": {
+    "tool": "modify_baggage",
+    "args": {
+     "booking_id": "BK3D8E1B",
+     "new_baggage_kg": 45
+    },
+    "args_subset": {},
+    "note": "写操作 + 数值参数类型"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "把订单BK3D8E1B的行李额度改成45公斤",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0051",
+   "category": "baggage",
+   "difficulty": "easy",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "write_tool",
+    "numeric_param"
+   ],
+   "expected": {
+    "tool": "modify_baggage",
+    "args": {
+     "booking_id": "BK9A4C6F",
+     "new_baggage_kg": 25
+    },
+    "args_subset": {},
+    "note": "写操作 + 数值参数类型"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "订单BK9A4C6F我要加到25公斤行李，可以吗",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0052",
+   "category": "baggage",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "write_tool",
+    "numeric_param"
+   ],
+   "expected": {
+    "tool": "modify_baggage",
+    "args": {
+     "booking_id": "BK2B7D5E",
+     "new_baggage_kg": 30
+    },
+    "args_subset": {},
+    "note": "写操作 + 数值参数类型"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "BK2B7D5E的行李额度改到30公斤",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0053",
+   "category": "baggage",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "write_tool",
+    "numeric_param"
+   ],
+   "expected": {
+    "tool": "modify_baggage",
+    "args": {
+     "booking_id": "BK8C1F3A",
+     "new_baggage_kg": 35
+    },
+    "args_subset": {},
+    "note": "写操作 + 数值参数类型"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "把订单BK8C1F3A的行李额度改成35公斤",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0054",
+   "category": "baggage",
+   "difficulty": "easy",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "write_tool",
+    "numeric_param"
+   ],
+   "expected": {
+    "tool": "modify_baggage",
+    "args": {
+     "booking_id": "BK5E9B2D",
+     "new_baggage_kg": 40
+    },
+    "args_subset": {},
+    "note": "写操作 + 数值参数类型"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "订单BK5E9B2D我要加到40公斤行李，可以吗",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0055",
+   "category": "baggage",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "write_tool",
+    "numeric_param"
+   ],
+   "expected": {
+    "tool": "modify_baggage",
+    "args": {
+     "booking_id": "BK1A6C8F",
+     "new_baggage_kg": 45
+    },
+    "args_subset": {},
+    "note": "写操作 + 数值参数类型"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "BK1A6C8F的行李额度改到45公斤",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0056",
+   "category": "cancellation",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "write_tool",
+    "confirmation"
+   ],
+   "expected": {
+    "tool": "cancel_booking",
+    "args": {
+     "booking_id": "BK9A4C6F"
+    },
+    "args_subset": {
+     "booking_id": "BK9A4C6F"
+    },
+    "note": "reason 由用户给出，模型只要正确转写；宽松口径只比对 booking_id"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我要取消订单BK9A4C6F，原因是行程变更",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "好的，我确认一下：您要取消订单 BK9A4C6F，原因是「行程变更」，对吗？",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "对，取消吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0057",
+   "category": "cancellation",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "write_tool",
+    "confirmation"
+   ],
+   "expected": {
+    "tool": "cancel_booking",
+    "args": {
+     "booking_id": "BK2B7D5E"
+    },
+    "args_subset": {
+     "booking_id": "BK2B7D5E"
+    },
+    "note": "reason 由用户给出，模型只要正确转写；宽松口径只比对 booking_id"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我把BK2B7D5E这个订单退掉，身体不适",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "好的，我确认一下：您要取消订单 BK2B7D5E，原因是「身体不适」，对吗？",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "对，取消吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0058",
+   "category": "cancellation",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "write_tool",
+    "confirmation"
+   ],
+   "expected": {
+    "tool": "cancel_booking",
+    "args": {
+     "booking_id": "BK8C1F3A"
+    },
+    "args_subset": {
+     "booking_id": "BK8C1F3A"
+    },
+    "note": "reason 由用户给出，模型只要正确转写；宽松口径只比对 booking_id"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "取消BK8C1F3A，因为会议取消",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "好的，我确认一下：您要取消订单 BK8C1F3A，原因是「会议取消」，对吗？",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "对，取消吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0059",
+   "category": "cancellation",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "write_tool",
+    "confirmation"
+   ],
+   "expected": {
+    "tool": "cancel_booking",
+    "args": {
+     "booking_id": "BK5E9B2D"
+    },
+    "args_subset": {
+     "booking_id": "BK5E9B2D"
+    },
+    "note": "reason 由用户给出，模型只要正确转写；宽松口径只比对 booking_id"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我要取消订单BK5E9B2D，原因是找到更合适的航班",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "好的，我确认一下：您要取消订单 BK5E9B2D，原因是「找到更合适的航班」，对吗？",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "对，取消吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0060",
+   "category": "cancellation",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "write_tool",
+    "confirmation"
+   ],
+   "expected": {
+    "tool": "cancel_booking",
+    "args": {
+     "booking_id": "BK1A6C8F"
+    },
+    "args_subset": {
+     "booking_id": "BK1A6C8F"
+    },
+    "note": "reason 由用户给出，模型只要正确转写；宽松口径只比对 booking_id"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我把BK1A6C8F这个订单退掉，天气原因",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "好的，我确认一下：您要取消订单 BK1A6C8F，原因是「天气原因」，对吗？",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "对，取消吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0061",
+   "category": "cancellation",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "write_tool",
+    "confirmation"
+   ],
+   "expected": {
+    "tool": "cancel_booking",
+    "args": {
+     "booking_id": "BK4F3D7B"
+    },
+    "args_subset": {
+     "booking_id": "BK4F3D7B"
+    },
+    "note": "reason 由用户给出，模型只要正确转写；宽松口径只比对 booking_id"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "取消BK4F3D7B，因为行程变更",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "好的，我确认一下：您要取消订单 BK4F3D7B，原因是「行程变更」，对吗？",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "对，取消吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0062",
+   "category": "cancellation",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "write_tool",
+    "confirmation"
+   ],
+   "expected": {
+    "tool": "cancel_booking",
+    "args": {
+     "booking_id": "BK7F2A9C"
+    },
+    "args_subset": {
+     "booking_id": "BK7F2A9C"
+    },
+    "note": "reason 由用户给出，模型只要正确转写；宽松口径只比对 booking_id"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我要取消订单BK7F2A9C，原因是身体不适",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "好的，我确认一下：您要取消订单 BK7F2A9C，原因是「身体不适」，对吗？",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "对，取消吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0063",
+   "category": "cancellation",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "write_tool",
+    "confirmation"
+   ],
+   "expected": {
+    "tool": "cancel_booking",
+    "args": {
+     "booking_id": "BK3D8E1B"
+    },
+    "args_subset": {
+     "booking_id": "BK3D8E1B"
+    },
+    "note": "reason 由用户给出，模型只要正确转写；宽松口径只比对 booking_id"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我把BK3D8E1B这个订单退掉，会议取消",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "好的，我确认一下：您要取消订单 BK3D8E1B，原因是「会议取消」，对吗？",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "对，取消吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0064",
+   "category": "cancellation",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "clarify_first",
+    "write_tool"
+   ],
+   "expected": {
+    "tool": null,
+    "args": {},
+    "args_subset": {},
+    "note": "信息不全时应先向用户追问原因，而不是直接调用写操作"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我不想要BK9A4C6F这个订单了",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0065",
+   "category": "cancellation",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "clarify_first",
+    "write_tool"
+   ],
+   "expected": {
+    "tool": null,
+    "args": {},
+    "args_subset": {},
+    "note": "信息不全时应先向用户追问原因，而不是直接调用写操作"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我不想要BK2B7D5E这个订单了",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0066",
+   "category": "cancellation",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "clarify_first",
+    "write_tool"
+   ],
+   "expected": {
+    "tool": null,
+    "args": {},
+    "args_subset": {},
+    "note": "信息不全时应先向用户追问原因，而不是直接调用写操作"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我不想要BK8C1F3A这个订单了",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0067",
+   "category": "cancellation",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "clarify_first",
+    "write_tool"
+   ],
+   "expected": {
+    "tool": null,
+    "args": {},
+    "args_subset": {},
+    "note": "信息不全时应先向用户追问原因，而不是直接调用写操作"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "我不想要BK5E9B2D这个订单了",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0068",
+   "category": "weather_advisory",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "param_semantics"
+   ],
+   "expected": {
+    "tool": "get_weather",
+    "args": {
+     "city": "北京"
+    },
+    "args_subset": {},
+    "note": "注意：这个工具要中文城市名，不是三字码 —— 与其他工具相反"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "北京今天的天气怎么样？",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0069",
+   "category": "weather_advisory",
+   "difficulty": "easy",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "param_semantics"
+   ],
+   "expected": {
+    "tool": "get_weather",
+    "args": {
+     "city": "上海"
+    },
+    "args_subset": {},
+    "note": "注意：这个工具要中文城市名，不是三字码 —— 与其他工具相反"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我看看上海今天会不会下雨",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0070",
+   "category": "weather_advisory",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "param_semantics"
+   ],
+   "expected": {
+    "tool": "get_weather",
+    "args": {
+     "city": "广州"
+    },
+    "args_subset": {},
+    "note": "注意：这个工具要中文城市名，不是三字码 —— 与其他工具相反"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "查一下广州的天气",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0071",
+   "category": "weather_advisory",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "param_semantics"
+   ],
+   "expected": {
+    "tool": "get_weather",
+    "args": {
+     "city": "成都"
+    },
+    "args_subset": {},
+    "note": "注意：这个工具要中文城市名，不是三字码 —— 与其他工具相反"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "成都今天的天气怎么样？",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0072",
+   "category": "weather_advisory",
+   "difficulty": "easy",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "param_semantics"
+   ],
+   "expected": {
+    "tool": "get_weather",
+    "args": {
+     "city": "三亚"
+    },
+    "args_subset": {},
+    "note": "注意：这个工具要中文城市名，不是三字码 —— 与其他工具相反"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我看看三亚今天会不会下雨",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0073",
+   "category": "weather_advisory",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "param_semantics"
+   ],
+   "expected": {
+    "tool": "get_weather",
+    "args": {
+     "city": "哈尔滨"
+    },
+    "args_subset": {},
+    "note": "注意：这个工具要中文城市名，不是三字码 —— 与其他工具相反"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "查一下哈尔滨的天气",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0074",
+   "category": "weather_advisory",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "param_semantics"
+   ],
+   "expected": {
+    "tool": "get_weather",
+    "args": {
+     "city": "北京"
+    },
+    "args_subset": {},
+    "note": "注意：这个工具要中文城市名，不是三字码 —— 与其他工具相反"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "北京今天的天气怎么样？",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0075",
+   "category": "weather_advisory",
+   "difficulty": "easy",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "param_semantics"
+   ],
+   "expected": {
+    "tool": "get_weather",
+    "args": {
+     "city": "上海"
+    },
+    "args_subset": {},
+    "note": "注意：这个工具要中文城市名，不是三字码 —— 与其他工具相反"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我看看上海今天会不会下雨",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0076",
+   "category": "weather_advisory",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "param_semantics"
+   ],
+   "expected": {
+    "tool": "get_weather",
+    "args": {
+     "city": "广州"
+    },
+    "args_subset": {},
+    "note": "注意：这个工具要中文城市名，不是三字码 —— 与其他工具相反"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "查一下广州的天气",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0077",
+   "category": "weather_advisory",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "param_semantics"
+   ],
+   "expected": {
+    "tool": "get_weather",
+    "args": {
+     "city": "成都"
+    },
+    "args_subset": {},
+    "note": "注意：这个工具要中文城市名，不是三字码 —— 与其他工具相反"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "成都今天的天气怎么样？",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0078",
+   "category": "weather_advisory",
+   "difficulty": "easy",
+   "visibility": "unseen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "param_semantics"
+   ],
+   "expected": {
+    "tool": "get_weather",
+    "args": {
+     "city": "三亚"
+    },
+    "args_subset": {},
+    "note": "注意：这个工具要中文城市名，不是三字码 —— 与其他工具相反"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我看看三亚今天会不会下雨",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0079",
+   "category": "weather_advisory",
+   "difficulty": "easy",
+   "visibility": "seen",
+   "target_turn": 1,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "param_semantics"
+   ],
+   "expected": {
+    "tool": "get_weather",
+    "args": {
+     "city": "哈尔滨"
+    },
+    "args_subset": {},
+    "note": "注意：这个工具要中文城市名，不是三字码 —— 与其他工具相反"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "查一下哈尔滨的天气",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0080",
+   "category": "multi_tool",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "multi_tool",
+    "context_switch"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "CKG",
+     "destination": "KMG",
+     "date": "2025-08-01"
+    },
+    "args_subset": {},
+    "note": "上下文已出现天气查询，模型需切换到航班工具"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "2025-08-01我要从重庆去昆明，顺便帮我看看重庆当天的天气",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "get_weather",
+      "result": {
+       "city": "重庆",
+       "condition": "小雨",
+       "temp_c": 26,
+       "flight_impact": "可能出现延误"
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "天气我看到了，现在把航班查出来吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0081",
+   "category": "multi_tool",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "multi_tool",
+    "context_switch"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "XMN",
+     "destination": "NKG",
+     "date": "2025-08-05"
+    },
+    "args_subset": {},
+    "note": "上下文已出现天气查询，模型需切换到航班工具"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "2025-08-05我要从厦门去南京，顺便帮我看看厦门当天的天气",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "get_weather",
+      "result": {
+       "city": "厦门",
+       "condition": "小雨",
+       "temp_c": 26,
+       "flight_impact": "可能出现延误"
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "天气我看到了，现在把航班查出来吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0082",
+   "category": "multi_tool",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "multi_tool",
+    "context_switch"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "WUH",
+     "destination": "TAO",
+     "date": "2025-08-09"
+    },
+    "args_subset": {},
+    "note": "上下文已出现天气查询，模型需切换到航班工具"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "2025-08-09我要从武汉去青岛，顺便帮我看看武汉当天的天气",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "get_weather",
+      "result": {
+       "city": "武汉",
+       "condition": "小雨",
+       "temp_c": 26,
+       "flight_impact": "可能出现延误"
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "天气我看到了，现在把航班查出来吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0083",
+   "category": "multi_tool",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "multi_tool",
+    "context_switch"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "CSX",
+     "destination": "SYX",
+     "date": "2025-07-15"
+    },
+    "args_subset": {},
+    "note": "上下文已出现天气查询，模型需切换到航班工具"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "2025-07-15我要从长沙去三亚，顺便帮我看看长沙当天的天气",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "get_weather",
+      "result": {
+       "city": "长沙",
+       "condition": "小雨",
+       "temp_c": 26,
+       "flight_impact": "可能出现延误"
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "天气我看到了，现在把航班查出来吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0084",
+   "category": "multi_tool",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "multi_tool",
+    "context_switch"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "HRB",
+     "destination": "TSN",
+     "date": "2025-07-18"
+    },
+    "args_subset": {},
+    "note": "上下文已出现天气查询，模型需切换到航班工具"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "2025-07-18我要从哈尔滨去天津，顺便帮我看看哈尔滨当天的天气",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "get_weather",
+      "result": {
+       "city": "哈尔滨",
+       "condition": "小雨",
+       "temp_c": 26,
+       "flight_impact": "可能出现延误"
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "天气我看到了，现在把航班查出来吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0085",
+   "category": "multi_tool",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "multi_tool",
+    "context_switch"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "URC",
+     "destination": "LXA",
+     "date": "2025-07-21"
+    },
+    "args_subset": {},
+    "note": "上下文已出现天气查询，模型需切换到航班工具"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "2025-07-21我要从乌鲁木齐去拉萨，顺便帮我看看乌鲁木齐当天的天气",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "get_weather",
+      "result": {
+       "city": "乌鲁木齐",
+       "condition": "小雨",
+       "temp_c": 26,
+       "flight_impact": "可能出现延误"
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "天气我看到了，现在把航班查出来吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0086",
+   "category": "multi_tool",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "multi_tool",
+    "context_switch"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "PEK",
+     "destination": "SHA",
+     "date": "2025-07-24"
+    },
+    "args_subset": {},
+    "note": "上下文已出现天气查询，模型需切换到航班工具"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "2025-07-24我要从北京去上海，顺便帮我看看北京当天的天气",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "get_weather",
+      "result": {
+       "city": "北京",
+       "condition": "小雨",
+       "temp_c": 26,
+       "flight_impact": "可能出现延误"
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "天气我看到了，现在把航班查出来吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0087",
+   "category": "multi_tool",
+   "difficulty": "hard",
+   "visibility": "unseen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "multi_tool",
+    "context_switch"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "SHA",
+     "destination": "CAN",
+     "date": "2025-07-28"
+    },
+    "args_subset": {},
+    "note": "上下文已出现天气查询，模型需切换到航班工具"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "2025-07-28我要从上海去广州，顺便帮我看看上海当天的天气",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "get_weather",
+      "result": {
+       "city": "上海",
+       "condition": "小雨",
+       "temp_c": 26,
+       "flight_impact": "可能出现延误"
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "天气我看到了，现在把航班查出来吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0088",
+   "category": "multi_tool",
+   "difficulty": "hard",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "initial",
+   "mistake_hint": "",
+   "tags": [
+    "multi_tool",
+    "context_switch"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "SZX",
+     "destination": "CTU",
+     "date": "2025-08-01"
+    },
+    "args_subset": {},
+    "note": "上下文已出现天气查询，模型需切换到航班工具"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "2025-08-01我要从深圳去成都，顺便帮我看看深圳当天的天气",
+     "observation": null
+    },
+    {
+     "role": "tool",
+     "content": "",
+     "observation": {
+      "ok": true,
+      "tool": "get_weather",
+      "result": {
+       "city": "深圳",
+       "condition": "小雨",
+       "temp_c": 26,
+       "flight_impact": "可能出现延误"
+      }
+     }
+    },
+    {
+     "role": "user",
+     "content": "天气我看到了，现在把航班查出来吧",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0089",
+   "category": "recovery",
+   "difficulty": "medium",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "correction",
+   "mistake_hint": "format_ignore_correction",
+   "tags": [
+    "recovery",
+    "FORMAT_ERROR",
+    "format_ignore_correction"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "PEK",
+     "destination": "SHA",
+     "date": "2025-07-18"
+    },
+    "args_subset": {},
+    "note": "用户指出格式问题后能否改成合法 tool_call"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "查一下2025-07-18北京到上海的航班",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "好的，我来帮您查询一下北京到上海的航班，请稍等。",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "你没有真的调用工具，请用规定的 <tool_call> 格式重新输出。",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0090",
+   "category": "recovery",
+   "difficulty": "medium",
+   "visibility": "unseen",
+   "target_turn": 3,
+   "target_turn_kind": "correction",
+   "mistake_hint": "hallucinated_tool_corrected",
+   "tags": [
+    "recovery",
+    "HALLUCINATION",
+    "hallucinated_tool_corrected"
+   ],
+   "expected": {
+    "tool": "check_baggage",
+    "args": {
+     "booking_id": "BK7F2A9C"
+    },
+    "args_subset": {},
+    "note": "用户指出工具幻觉后能否换成白名单里的工具"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "查一下我的订单BK7F2A9C还能托运多少行李",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "<tool_call>{\"name\": \"get_order_details\", \"arguments\": {\"order_id\": \"BK7F2A9C\"}}</tool_call>",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "工具列表里没有 get_order_details 这个工具，请用正确的工具重新调用。",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0091",
+   "category": "recovery",
+   "difficulty": "medium",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "correction",
+   "mistake_hint": "wrong_tool_corrected",
+   "tags": [
+    "recovery",
+    "WRONG_TOOL",
+    "wrong_tool_corrected"
+   ],
+   "expected": {
+    "tool": "modify_baggage",
+    "args": {
+     "booking_id": "BK7F2A9C",
+     "new_baggage_kg": 30
+    },
+    "args_subset": {},
+    "note": "用户指出选错工具后能否换到 modify_baggage"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "把订单BK7F2A9C的行李额度改成 30 公斤",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "<tool_call>{\"name\": \"check_baggage\", \"arguments\": {\"booking_id\": \"BK7F2A9C\"}}</tool_call>",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "我不是要查询，我是要改成 30 公斤，请用修改额度的工具。",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0092",
+   "category": "recovery",
+   "difficulty": "medium",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "correction",
+   "mistake_hint": "param_placeholder_corrected",
+   "tags": [
+    "recovery",
+    "PARAM_ERROR",
+    "param_placeholder_corrected"
+   ],
+   "expected": {
+    "tool": "check_baggage",
+    "args": {
+     "booking_id": "BK7F2A9C"
+    },
+    "args_subset": {},
+    "note": "占位符参数被指出后能否填回真实 ID"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我查一下订单BK7F2A9C的行李额度",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "<tool_call>{\"name\": \"check_baggage\", \"arguments\": {\"booking_id\": \"previous_booking\"}}</tool_call>",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "订单号是 BK7F2A9C，不要填 previous_booking。",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0093",
+   "category": "recovery",
+   "difficulty": "medium",
+   "visibility": "unseen",
+   "target_turn": 3,
+   "target_turn_kind": "correction",
+   "mistake_hint": "city_code_corrected",
+   "tags": [
+    "recovery",
+    "PARAM_ERROR",
+    "city_code_corrected"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "PEK",
+     "destination": "SHA",
+     "date": "2025-07-18"
+    },
+    "args_subset": {},
+    "note": "参数格式被指出后能否改成三字码"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "2025-07-18从北京飞上海有哪些航班",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"北京\", \"destination\": \"上海\", \"date\": \"2025-07-18\"}}</tool_call>",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "origin 和 destination 要填机场三字码，不要填中文城市名。",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0094",
+   "category": "recovery",
+   "difficulty": "medium",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "correction",
+   "mistake_hint": "repeated_same_error",
+   "tags": [
+    "recovery",
+    "NO_RECOVERY",
+    "repeated_same_error"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "PEK",
+     "destination": "SHA",
+     "date": "2025-07-18"
+    },
+    "args_subset": {},
+    "note": "被指出编造 flight_id 后，能否回到「先搜索」这一步"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "给张伟订2025-07-18从北京到上海的机票",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "<tool_call>{\"name\": \"book_flight\", \"arguments\": {\"flight_id\": \"CA0000\", \"passenger_name\": \"张伟\"}}</tool_call>",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "CA0000 这个航班号不存在，你必须先搜索航班再下单。",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0095",
+   "category": "recovery",
+   "difficulty": "medium",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "correction",
+   "mistake_hint": "missing_reason_corrected",
+   "tags": [
+    "recovery",
+    "PARAM_ERROR",
+    "missing_reason_corrected"
+   ],
+   "expected": {
+    "tool": null,
+    "args": {},
+    "args_subset": {},
+    "note": "被指出原因编造后，能否改为先追问而不是再次硬填"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我取消订单BK7F2A9C",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "<tool_call>{\"name\": \"cancel_booking\", \"arguments\": {\"booking_id\": \"BK7F2A9C\", \"reason\": \"用户要求\"}}</tool_call>",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "取消原因不能写「用户要求」，请先问清楚我为什么取消。",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0096",
+   "category": "recovery",
+   "difficulty": "medium",
+   "visibility": "unseen",
+   "target_turn": 3,
+   "target_turn_kind": "correction",
+   "mistake_hint": "wrong_date_corrected",
+   "tags": [
+    "recovery",
+    "PARAM_ERROR",
+    "wrong_date_corrected"
+   ],
+   "expected": {
+    "tool": "search_flights",
+    "args": {
+     "origin": "CAN",
+     "destination": "CTU",
+     "date": "2025-07-16"
+    },
+    "args_subset": {},
+    "note": "相对日期被指出后能否换算成绝对日期"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "后天从广州到成都的航班有哪些",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"CAN\", \"destination\": \"CTU\", \"date\": \"后天\"}}</tool_call>",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "date 必须是 YYYY-MM-DD 格式的绝对日期，不能写「后天」。",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0097",
+   "category": "recovery",
+   "difficulty": "medium",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "correction",
+   "mistake_hint": "overbook_corrected",
+   "tags": [
+    "recovery",
+    "WRONG_TOOL",
+    "overbook_corrected"
+   ],
+   "expected": {
+    "tool": "book_flight",
+    "args": {
+     "passenger_name": "刘洋"
+    },
+    "args_subset": {
+     "passenger_name": "刘洋"
+    },
+    "note": "被指出停在中间步骤后，能否推进到写操作"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "深圳到成都 2025-07-21 的航班，直接订最便宜那班，乘客刘洋",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"SZX\", \"destination\": \"CTU\", \"date\": \"2025-07-21\", \"max_price\": 500}}</tool_call>",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "你搜了航班但没下单，而且不该加 max_price。请完成订票。",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0098",
+   "category": "recovery",
+   "difficulty": "medium",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "correction",
+   "mistake_hint": "wrong_city_param_corrected",
+   "tags": [
+    "recovery",
+    "PARAM_ERROR",
+    "wrong_city_param_corrected"
+   ],
+   "expected": {
+    "tool": "get_weather",
+    "args": {
+     "city": "杭州"
+    },
+    "args_subset": {},
+    "note": "参数语义被指出后能否改成中文城市名"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "杭州今天天气怎么样",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "<tool_call>{\"name\": \"get_weather\", \"arguments\": {\"city\": \"HGH\"}}</tool_call>",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "city 参数要填中文城市名，不要填三字码。",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0099",
+   "category": "recovery",
+   "difficulty": "medium",
+   "visibility": "unseen",
+   "target_turn": 3,
+   "target_turn_kind": "correction",
+   "mistake_hint": "hallucinated_weather_tool_corrected",
+   "tags": [
+    "recovery",
+    "HALLUCINATION",
+    "hallucinated_weather_tool_corrected"
+   ],
+   "expected": {
+    "tool": "get_weather",
+    "args": {
+     "city": "三亚"
+    },
+    "args_subset": {},
+    "note": "第二次幻觉检测：能否在纠错后落到真实工具"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我看看三亚的天气",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "<tool_call>{\"name\": \"get_travel_advisory\", \"arguments\": {\"city\": \"三亚\"}}</tool_call>",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "没有 get_travel_advisory 这个工具，请用正确的天气工具。",
+     "observation": null
+    }
+   ]
+  },
+  {
+   "task_id": "task_0100",
+   "category": "recovery",
+   "difficulty": "medium",
+   "visibility": "seen",
+   "target_turn": 3,
+   "target_turn_kind": "correction",
+   "mistake_hint": "format_json_broken_corrected",
+   "tags": [
+    "recovery",
+    "FORMAT_ERROR",
+    "format_json_broken_corrected"
+   ],
+   "expected": {
+    "tool": "check_baggage",
+    "args": {
+     "booking_id": "BK7F2A9C"
+    },
+    "args_subset": {},
+    "note": "JSON 语法错误被指出后能否输出合法 JSON"
+   },
+   "turns": [
+    {
+     "role": "user",
+     "content": "查一下订单BK7F2A9C的行李额度",
+     "observation": null
+    },
+    {
+     "role": "assistant",
+     "content": "<tool_call>{\"name\": \"check_baggage\", \"arguments\": {booking_id: BK7F2A9C}}</tool_call>",
+     "observation": null
+    },
+    {
+     "role": "user",
+     "content": "你的 JSON 不合法（键没有引号），请输出合法 JSON。",
+     "observation": null
+    }
+   ]
+  }
+ ]
+}

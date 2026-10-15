@@ -1,0 +1,35 @@
+{
+ "case_id": "case_030",
+ "task_id": "task_0028",
+ "category": "booking_flow",
+ "difficulty": "medium",
+ "visibility": "seen",
+ "is_mock": true,
+ "expected": {
+  "tool": "book_flight",
+  "args": {
+   "flight_id": "MU1185",
+   "passenger_name": "赵敏"
+  }
+ },
+ "classification": {
+  "category": "REFUSED",
+  "category_zh": "拒绝作答",
+  "detail": {
+   "category": "REFUSED",
+   "category_zh": "拒绝作答",
+   "subtype": "cannot_help",
+   "subtype_zh": "模型表示无法完成",
+   "message": "模型表示无法完成该任务",
+   "fields": [],
+   "evidence": "抱歉，我无法完成这个请求。"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [
+  "missing_tool_call_tag"
+ ],
+ "raw_output": "抱歉，我无法完成这个请求。",
+ "finish_reason": "stop"
+}

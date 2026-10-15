@@ -1,0 +1,34 @@
+{
+ "case_id": "case_014",
+ "task_id": "task_0019",
+ "category": "flight_search",
+ "difficulty": "medium",
+ "visibility": "seen",
+ "is_mock": true,
+ "expected": {
+  "tool": "search_flights",
+  "args": {
+   "origin": "HRB",
+   "destination": "TSN",
+   "date": "2025-07-17"
+  }
+ },
+ "classification": {
+  "category": "FORMAT_ERROR",
+  "category_zh": "格式错误",
+  "detail": {
+   "category": "FORMAT_ERROR",
+   "category_zh": "格式错误",
+   "subtype": "json_broken",
+   "subtype_zh": "JSON 语法非法",
+   "message": "检测到 tool_call 标签但 JSON 解析失败（无法解析出合法 JSON）",
+   "fields": [],
+   "evidence": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {origin: \"HRB\", destination: \"TSN\", date: \"2025-07-17\"}}</tool_call>"
+  },
+  "recovered_from": null,
+  "format_ok_value_wrong": false
+ },
+ "defects": [],
+ "raw_output": "<tool_call>{\"name\": \"search_flights\", \"arguments\": {origin: \"HRB\", destination: \"TSN\", date: \"2025-07-17\"}}</tool_call>",
+ "finish_reason": "stop"
+}

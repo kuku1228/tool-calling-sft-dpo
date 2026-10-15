@@ -1,0 +1,59 @@
+{
+ "train_file": "D:\\HuaweiMoveData\\Users\\马琬蕊\\Desktop\\项目2\\agent-optimization\\data\\preferences\\dpo_joint.train.jsonl",
+ "dev_file": "D:\\HuaweiMoveData\\Users\\马琬蕊\\Desktop\\项目2\\agent-optimization\\data\\preferences\\dpo_joint.dev.jsonl",
+ "num_train": 2443,
+ "stats": {
+  "total": 2443,
+  "by_pair_type": {
+   "format_constraint": 1014,
+   "error_recovery": 1065,
+   "clarify_boundary": 364
+  },
+  "by_negative_kind": {
+   "hard": 1225,
+   "simple": 1160,
+   "recovery": 58
+  },
+  "by_split": {
+   "train": 2443
+  },
+  "by_target_error": {
+   "FORMAT_ERROR": 1191,
+   "HALLUCINATION": 163,
+   "WRONG_TOOL": 520,
+   "PARAM_ERROR": 471,
+   "NO_RECOVERY": 98
+  },
+  "avg_chosen_chars": 93.5,
+  "avg_rejected_chars": 61.3
+ },
+ "audit": {
+  "checked": 2443,
+  "num_issues": {
+   "sides_equivalent": 0,
+   "chosen_not_canonical": 0,
+   "chosen_unknown_tool": 0,
+   "rejected_unknown_tool_ok": 4,
+   "prompt_missing_assistant_head": 0,
+   "empty_side": 0
+  },
+  "problem_counts": {},
+  "examples": {},
+  "passed": true
+ },
+ "prompt_consistency": {
+  "checked": 2443,
+  "num_mismatch": 0,
+  "consistent": true,
+  "num_uncheckable": 0,
+  "examples": []
+ },
+ "token_length": {
+  "note": "未安装 transformers，跳过（用字符长度粗估）"
+ },
+ "char_length": {
+  "p50": 2312,
+  "p99": 2470,
+  "max": 2472
+ }
+}
